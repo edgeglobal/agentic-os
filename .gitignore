@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Obsidian (optional — wenn ihr Obsidian nutzt)
+.obsidian/workspace*.json
+.obsidian/cache
+
+# Tool-specific files (werden bei Init erstellt, nicht committen)
+CLAUDE.md
+GEMINI.md
+AGENTS.md.codex
+.cursor/
+
+# Lokale Daten und Builds
+node_modules/
+*.log
+.env
+.env.local
+
+# Temp
+*.tmp
+*.bak
