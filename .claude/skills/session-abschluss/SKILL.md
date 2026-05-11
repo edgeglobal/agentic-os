@@ -37,7 +37,7 @@ For each broken link:
 - If intent unclear: flag in session log for user to resolve
 
 **C. Verwaiste Dateien**
-Find files in `01-Firma Home/`, `Team-Wissen/`, `02-Vorlagen/` that have:
+Find files in `01-Firma Home/`, `Team-Wissen/`, `` that have:
 - No incoming `[[wikilink]]` from anywhere
 - No entry in their section's `INDEX.md` (if applicable)
 

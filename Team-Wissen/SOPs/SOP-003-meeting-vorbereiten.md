@@ -88,7 +88,7 @@ Die KI gibt User ein 1-Page-Briefing mit:
 
 User sagt: "Meeting fertig — hier meine Notizen: [...]"
 
-Die KI führt sich an, ein sauberes Protokoll nach [[meeting-protokoll]] zu schreiben und im richtigen Ordner abzulegen (Kunde / Projekt / 06-Meetings).
+Die KI führt sich an, ein sauberes Protokoll nach [[07-Meetings/_protokoll-vorlage]] zu schreiben und im richtigen Ordner abzulegen (Kunde / Projekt / 06-Meetings).
 
 ---
 
@@ -102,5 +102,5 @@ Nach dem Meeting:
 
 ## Referenzen
 
-- [[meeting-protokoll]] (Vorlage)
+- [[07-Meetings/_protokoll-vorlage]] (Vorlage)
 - [[markenstimme]]

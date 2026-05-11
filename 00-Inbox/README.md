@@ -16,7 +16,7 @@ Jeder im Team kann hier Dateien, Notizen, Screenshots, Voice-Memos oder Brain-Du
 
 ## Was hier NICHT rein soll
 
-- Fertige Dokumente (gehören in `01-Firma Home/` oder `02-Vorlagen/`)
+- Fertige Dokumente (gehören in `01-Firma Home/` oder ``)
 - Kunden-spezifisches Material (gehört in `03-Unternehmen/<kunde>/`)
 - Personalbezogene Daten (gehört in `06-Mitarbeiter/`)
 

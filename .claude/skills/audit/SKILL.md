@@ -71,7 +71,7 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 
 | Criterion | Points | How to detect |
 |---|---|---|
-| 3 Standard-Teams existieren (marketing-vertrieb, fulfillment, finance-hr-admin) | 10 | Count `07-Teams/*/kontext.md` ≥ 3 |
+| 3 Standard-Teams existieren (marketing-vertrieb, fulfillment, finance-hr-admin) | 10 | Count `02-Teams/*/kontext.md` ≥ 3 |
 | ≥1 zusätzlicher Spezialist gehired | 5 | Count `Team/*/AGENTS.md` > 4 |
 | ≥3 SOPs definiert | 5 | Count `Team-Wissen/SOPs/SOP-*.md` ≥ 3 |
 | ≥1 Workflow definiert | 5 | Count `Team-Wissen/Workflows/WF-*.md` ≥ 1 |

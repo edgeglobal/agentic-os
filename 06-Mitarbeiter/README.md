@@ -7,7 +7,7 @@ AI OS — Agentic Operating System für KMUs
 
 Roster aller Menschen in der Firma. Eine zentrale Liste, kein Sub-Folder pro Person.
 
-> Dieser Ordner ist fuer die **Menschen** in der Firma — also Wer-arbeitet-hier. Nicht zu verwechseln mit `07-Teams/`, das die **Funktionen** abbildet (Marketing, Vertrieb, etc.).
+> Dieser Ordner ist fuer die **Menschen** in der Firma — also Wer-arbeitet-hier. Nicht zu verwechseln mit `02-Teams/`, das die **Funktionen** abbildet (Marketing, Vertrieb, etc.).
 
 ## Aufbau
 
@@ -45,7 +45,7 @@ Sage zur KI:
 Die KI laeuft [[SOP-001-neuen-mitarbeiter-onboarden]]:
 
 1. Ergaenzt Eintrag in `team-mitglieder.md`
-2. Ergaenzt Eintrag in `07-Teams/marketing-vertrieb/kontext.md` bei "Mitglieder"
+2. Ergaenzt Eintrag in `02-Teams/marketing-vertrieb/kontext.md` bei "Mitglieder"
 3. Fragt nach optionalen Praeferenzen ("Wie soll Claude mit dir reden?")
 4. Setzt einen Session-Log-Eintrag
 
@@ -68,6 +68,6 @@ Persoenliche Daten (Gehalt, Krankschreibungen, Personalgespraechs-Notizen) **nic
 
 Die KI:
 
-1. Entfernt Max-Eintrag aus `team-mitglieder.md` und aus `07-Teams/<team>/kontext.md`
+1. Entfernt Max-Eintrag aus `team-mitglieder.md` und aus `02-Teams/<team>/kontext.md`
 2. Sucht in `03-Unternehmen/` und `05-Projekte/` nach Verweisen auf Max und markiert sie als "Nachfolger benoetigt"
 3. Schreibt Session-Log mit Datum

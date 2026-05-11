@@ -138,7 +138,7 @@ Für jeden neuen Mitarbeiter:
 4. Mitarbeiter sagt zur KI: **"Ich bin neu im Team. Onboarde mich."**
 5. Die KI fragt nach Namen, Rolle, Team
 6. Die KI trägt den Eintrag in `06-Mitarbeiter/team-mitglieder.md` ein
-7. Die KI ergänzt das Team-Mitglied in `07-Teams/<team>/kontext.md`
+7. Die KI ergänzt das Team-Mitglied in `02-Teams/<team>/kontext.md`
 8. Die KI fragt optional: "Gibt es etwas wie Claude mit dir reden soll (Tonfall, Anrede)?" — landet als Notiz in der Präferenz-Spalte des Rosters
 
 Kein separater Mitarbeiter-Folder. Persönliche Präferenzen leben im Roster, nicht in eigenen Files. Begründung: Brand-Voice ist firmenweit, persönliche Sub-Folder pro Person sind für KMU Overkill.
@@ -177,7 +177,7 @@ Beispiele was Mitarbeiter ab jetzt machen können:
 
 → Drei einfache Regeln:
 - **Persönliches** (eigene Tone of Voice, Memory, About-me) → `06-Mitarbeiter/<dein-name>/`
-- **Team-Sachen** (Prozesse, Skills die alle im Team nutzen) → `07-Teams/<dein-team>/`
+- **Team-Sachen** (Prozesse, Skills die alle im Team nutzen) → `02-Teams/<dein-team>/`
 - **Firma-weit** (Markenstimme, Wunschkunden, Strategie) → `01-Firma Home/`
 
 Permissions setzen Sie pro Sub-Folder im Cloud-Provider — nicht durch separate Folder-Wurzeln.

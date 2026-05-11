@@ -15,7 +15,7 @@ last-updated: 2026-05-11
 - **Standort:** [Stadt, Land]
 - **Webseite:** [URL]
 - **Seit wann Kontakt:** [Datum]
-- **Hauptbetreuendes Team:** [[07-Teams/marketing-vertrieb]] (oder welches passt)
+- **Hauptbetreuendes Team:** [[02-Teams/marketing-vertrieb]] (oder welches passt)
 - **Beziehungs-Status:** [Aktiv / Schlafend / Eskaliert]
 
 ## Beziehung zu uns
@@ -65,7 +65,7 @@ last-updated: 2026-05-11
 
 > Wird automatisch aus Backlinks gepflegt. Manuell ergaenzen wenn KI nicht aktualisiert.
 
-- [[08-Meetings/external/2026-MM-DD-thema]]
+- [[07-Meetings/external/2026-MM-DD-thema]]
 - [...]
 
 ## Verknuepfte Projekte

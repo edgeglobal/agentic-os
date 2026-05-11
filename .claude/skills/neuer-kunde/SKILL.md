@@ -12,7 +12,7 @@ Conducts the new-customer-onboarding flow defined in [[SOP-002-neuen-kunden-anle
 - `01-Firma Home/markenstimme.md` — fuer den Stil der Kickoff-Mail
 - `01-Firma Home/unsere-leistungen.md` — fuer korrekte Leistungs-Bezeichnung
 - `01-Firma Home/unsere-kunden.md` — fuer Persona-Zuordnung
-- `02-Vorlagen/kunden-onboarding.md` — Briefing-Template
+- `kunden-onboarding.md` — Briefing-Template
 - `Team-Wissen/Richtlinien/R-001-namenskonventionen.md` — fuer Filename-Regeln
 - `03-Unternehmen/` — pruefen dass kein Duplikat existiert
 
@@ -94,7 +94,7 @@ Cross-Links setzen:
 
 ### Step 4: Briefing-Datei
 
-Fill `briefing.md` based on `02-Vorlagen/kunden-onboarding.md`. Aus Stammdaten ausfuellen, Luecken als `[?]` markieren mit Frage zum nachtragen.
+Fill `briefing.md` based on `kunden-onboarding.md`. Aus Stammdaten ausfuellen, Luecken als `[?]` markieren mit Frage zum nachtragen.
 
 Bei Luecken (z.B. fehlende Liefermeilensteine, fehlender Kommunikations-Rhythmus): User fragen, ob er die jetzt fuellen will, oder spaeter im Kickoff-Meeting klaeren.
 

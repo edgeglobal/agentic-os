@@ -57,7 +57,7 @@ last-updated: 2026-05-11
 
 > Wird von der KI automatisch gepflegt aus Backlinks der Meeting-Notes.
 
-- [[08-Meetings/external/2026-MM-DD-thema]]
+- [[07-Meetings/external/2026-MM-DD-thema]]
 - [...]
 
 ## Notizen

@@ -1,5 +1,5 @@
 <!--
-AI OS v0.3.0 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.3.1 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT — see LICENSE
 -->
 
@@ -22,7 +22,11 @@ agentic-os/
 ├── 00-Inbox/                ← Wo Mitarbeiter rohe Inputs reinwerfen
 ├── 01-Firma Home/           ← Firmenweite SoT: markenstimme, unsere-kunden,
 │                              unsere-leistungen, unsere-tools, strategie, stakeholder
-├── 02-Vorlagen/             ← Firmenweite Templates (z.B. meeting-protokoll)
+├── 02-Teams/                ← Pro Team-Funktion eine Mini-Firma
+│   ├── marketing-vertrieb/  ← Default-Team
+│   ├── fulfillment/         ← Default-Team
+│   ├── finance-hr-admin/    ← Default-Team
+│   └── _neues-team/         ← Vorlage (kontext, vorlagen, projekte, referenzen, ablage, skills)
 ├── 03-Unternehmen/          ← Externe Firmen (Kunden, Lieferanten, Partner, Berater)
 │   ├── _neues-unternehmen/  ← Vorlage zum Duplizieren
 │   └── acme-gmbh/           ← Beispiel-Folder: kontext, gespraeche, ablage
@@ -32,14 +36,10 @@ agentic-os/
 ├── 05-Projekte/             ← Aktive firmenweite oder Cross-Team-Projekte
 ├── 06-Mitarbeiter/          ← Roster aller Menschen in der Firma
 │   └── team-mitglieder.md   ← Liste mit Name, Rolle, Team, optionale Praeferenzen
-├── 07-Teams/                ← Pro Team-Funktion eine Mini-Firma
-│   ├── marketing-vertrieb/  ← Default-Team
-│   ├── fulfillment/         ← Default-Team
-│   ├── finance-hr-admin/    ← Default-Team
-│   └── _neues-team/         ← Vorlage (kontext, vorlagen, projekte, referenzen, ablage, skills)
-├── 08-Meetings/             ← Meeting-Notes mit Wikilinks
+├── 07-Meetings/             ← Meeting-Notes mit Wikilinks
 │   ├── internal/            ← interne Meetings (Standups, GF-Runden, Strategie)
-│   └── external/            ← Meetings mit Unternehmen + Personen
+│   ├── external/            ← Meetings mit Unternehmen + Personen
+│   └── _protokoll-vorlage.md ← Standard-Meeting-Format
 ├── 99-Archiv/               ← Erledigtes
 │
 ├── Team-Wissen/             ← Operating know-how
@@ -54,8 +54,8 @@ agentic-os/
 
 ## Schichten (lebt im selben Folder, Permissions per Sub-Folder)
 
-- **Firma-weit** (`01-Firma Home/`, `02-Vorlagen/`, `05-Projekte/`, `06-Mitarbeiter/`, `.claude/skills/`) — alle Mitarbeiter lesen, Operator + Geschaeftsfuehrung schreiben
-- **Team** als Mini-Firma (`07-Teams/<team>/`) — eigene `kontext`, `vorlagen`, `projekte`, `referenzen`, `ablage`, `.claude/skills`. Team-Mitglieder schreiben, Rest liest.
+- **Firma-weit** (`01-Firma Home/`, `05-Projekte/`, `06-Mitarbeiter/`, `.claude/skills/`) — alle Mitarbeiter lesen, Operator + Geschaeftsfuehrung schreiben
+- **Team** als Mini-Firma (`02-Teams/<team>/`) — eigene `kontext`, `vorlagen`, `projekte`, `referenzen`, `ablage`, `.claude/skills`. Team-Mitglieder schreiben, Rest liest.
 - **Externe Unternehmen** (`03-Unternehmen/<firma>/`) — gezielte Freigaben pro Firma, auch fuer Externe (Steuerberater etc.) moeglich
 - **Externe Personen** (`04-Personen/<name>/`) — Ansprechpartner, Beirat, Investoren, Berater. Pflege durch Teams die Kontakt haben.
 
@@ -65,7 +65,7 @@ Permissions per Sub-Folder ueber Cloud-Provider (Google Drive / OneDrive / Dropb
 
 ## Wikilink-basiertes CRM-Light
 
-Externe Firmen und Personen werden als eigene Folder gepflegt. Meeting-Notes in `08-Meetings/external/` verlinken via Wikilinks zu `[[03-Unternehmen/...]]` und `[[04-Personen/...]]`. Backlinks in den jeweiligen kontext.md-Files bauen ueber Jahre ein Wissens-Geflecht auf — perfekt fuer KMU ohne CRM-Tool.
+Externe Firmen und Personen werden als eigene Folder gepflegt. Meeting-Notes in `07-Meetings/external/` verlinken via Wikilinks zu `[[03-Unternehmen/...]]` und `[[04-Personen/...]]`. Backlinks in den jeweiligen kontext.md-Files bauen ueber Jahre ein Wissens-Geflecht auf — perfekt fuer KMU ohne CRM-Tool.
 
 ## Hard rules
 

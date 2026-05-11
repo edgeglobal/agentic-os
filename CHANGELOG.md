@@ -5,6 +5,22 @@ Alle nennenswerten Änderungen an AI OS werden hier dokumentiert.
 Format folgt [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.3.1] — 2026-05-11
+
+### Changed
+
+- **Teams aus `07-` nach `02-` verschoben.** Direkt nach `01-Firma Home/` — Teams sind der Hauptarbeitsbereich, gehoeren nach Firma.
+- **Meetings aus `08-` nach `07-` verschoben.** Konsekutive Nummerierung nachdem `02-Vorlagen/` weggefallen ist.
+
+### Removed
+
+- **`02-Vorlagen/` Folder entfernt.** Vorlagen sind in der Praxis team-spezifisch — kein Bedarf fuer firmenweiten Vorlagen-Container. Team-spezifische Vorlagen leben in `02-Teams/<team>/vorlagen/`.
+- `meeting-protokoll.md` verschoben nach `07-Meetings/_protokoll-vorlage.md` (gehoert dorthin wo Meetings liegen).
+
+### Architecture Decision
+
+- **Keine zentralen Vorlagen.** Was firmenweit als Template gilt, ist entweder Brand-Voice-Regel (gehoert in `01-Firma Home/markenstimme.md`) oder team-spezifisch (gehoert in `02-Teams/<team>/vorlagen/`). Ein zentraler Vorlagen-Container war unklar und unbefuellt. Rationale: KISS, kein Folder ohne klaren Pflegeauftrag.
+
 ## [0.3.0] — 2026-05-11
 
 ### Changed
@@ -16,7 +32,7 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
   - `05-Mitarbeiter/` → `06-Mitarbeiter/`
   - `06-Teams/` → `07-Teams/`
   - `07-Meetings/` → `08-Meetings/`
-- `02-Vorlagen/` enthaelt nur noch **firmenweite** Templates (meeting-protokoll). Team-spezifische Vorlagen wandern in die Team-Folder.
+- `02-Vorlagen/` enthaelt nur noch firmenweite Templates (meeting-protokoll). Team-spezifische Vorlagen wandern in die Team-Folder.
 
 ### Added
 
@@ -31,7 +47,7 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - **Externe Firmen + Personen als zentrale Wissens-Schicht.** Statt CRM-Tool zu fordern: AI OS modelliert Unternehmen und Personen als eigene Folder. Meetings verlinken via Wikilinks. Ueber Jahre baut sich Kunden-/Kontakt-Wissen auf, das in jedem Cloud-Sync-Editor zugaenglich ist. Rationale: viele KMU haben kein CRM, AI OS soll die Luecke fuellen.
 - **Team = Mini-Firma.** Jedes Team hat strukturell dieselbe Tiefe wie die Firma (Identitaet, Vorlagen, Projekte, Referenzen, Skills). Vorlagen leben dort wo sie genutzt werden, nicht zentral. Rationale: team-spezifische Outputs sind die Mehrheit; zentrale Vorlagen sind nur das wirklich firmenweit Universelle.
-- **Meetings zentral mit internal/external-Split.** Statt verstreuter Meeting-Notes in Kunden-/Projekt-Foldern: zentrale Heimat in `08-Meetings/`. Wikilinks erzeugen die Verteilung. Rationale: Cross-Team-Suche, Wissens-Aufbau, klare Heimat fuer Transkripte.
+- **Meetings zentral mit internal/external-Split.** Statt verstreuter Meeting-Notes in Kunden-/Projekt-Foldern: zentrale Heimat in `07-Meetings/`. Wikilinks erzeugen die Verteilung. Rationale: Cross-Team-Suche, Wissens-Aufbau, klare Heimat fuer Transkripte.
 
 ## [0.2.0] — 2026-05-11
 
@@ -40,14 +56,14 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 - Brand-Name: "Agentic OS" → "AI OS — Agentic Operating System für KMUs"
 - GitHub-Repo-Description white-label-konform (keine Quellen-Attribution mehr)
 - `05-Team/` umbenannt zu `06-Mitarbeiter/` (klarere Semantik: Menschen, nicht AI-Specialists)
-- `06-Meetings/` umbenannt zu `08-Meetings/` (macht Platz für `07-Teams/`)
+- `06-Meetings/` umbenannt zu `07-Meetings/` (macht Platz für `06-Teams/`)
 - README.md, INSTALL.md, AGENTS.md auf neue Struktur aktualisiert
 
 ### Added
 
-- `07-Teams/` neuer Top-Level-Folder für Funktions-Teams
+- `06-Teams/` neuer Top-Level-Folder für Funktions-Teams
 - 3 Default-Teams vorbefüllt: `marketing-vertrieb/`, `fulfillment/`, `finance-hr-admin/` (jeweils mit `kontext.md` + `.claude/skills/`)
-- `07-Teams/_neues-team/` als Vorlage zum Duplizieren für weitere Teams
+- `06-Teams/_neues-team/` als Vorlage zum Duplizieren für weitere Teams
 - `01-Firma Home/strategie.md` (Ziele, Prioritäten, Metriken)
 - `01-Firma Home/stakeholder.md` (externe Partner, Schlüsselpersonen)
 - README erklärt das Drei-Schichten-Modell (Firma / Team / Mitarbeiter) explizit

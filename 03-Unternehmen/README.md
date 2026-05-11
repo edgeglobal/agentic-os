@@ -56,12 +56,12 @@ Kebab-case, ohne Rechtsform-Suffix, kein Umlaut:
 
 - Einmal-Kontakte ohne Vertrag
 - Massen-Kunden (gehoeren ins ERP/CRM-System)
-- Lead-Stage Kontakte vor Vertrag (gehoeren ins CRM oder als Eintrag in `08-Meetings/external/`)
+- Lead-Stage Kontakte vor Vertrag (gehoeren ins CRM oder als Eintrag in `07-Meetings/external/`)
 
 ## Verknuepfung mit Personen und Meetings
 
 - **Personen** beim Unternehmen: Sektion "Schluesselpersonen" in `kontext.md` mit Wikilinks zu `[[04-Personen/<name>]]`
-- **Meetings** mit dem Unternehmen: zentral in `08-Meetings/external/YYYY/MM/`. Backlinks erscheinen in `kontext.md` (KI pflegt automatisch).
+- **Meetings** mit dem Unternehmen: zentral in `07-Meetings/external/YYYY/MM/`. Backlinks erscheinen in `kontext.md` (KI pflegt automatisch).
 
 ## Wer darf was schreiben
 
