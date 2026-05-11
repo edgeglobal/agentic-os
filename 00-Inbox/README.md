@@ -16,9 +16,9 @@ Jeder im Team kann hier Dateien, Notizen, Screenshots, Voice-Memos oder Brain-Du
 
 ## Was hier NICHT rein soll
 
-- Fertige Dokumente (gehören in `01-Firma/` oder `02-Vorlagen/`)
-- Kunden-spezifisches Material (gehört in `03-Kunden/<kunde>/`)
-- Personalbezogene Daten (gehört in `05-Mitarbeiter/`)
+- Fertige Dokumente (gehören in `01-Firma Home/` oder `02-Vorlagen/`)
+- Kunden-spezifisches Material (gehört in `03-Unternehmen/<kunde>/`)
+- Personalbezogene Daten (gehört in `06-Mitarbeiter/`)
 
 ## Wie die KI verarbeitet
 

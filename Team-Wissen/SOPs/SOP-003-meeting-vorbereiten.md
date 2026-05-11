@@ -12,7 +12,7 @@
 ### 1. Meeting-Kontext klären
 
 Die KI fragt:
-- Mit wem? (Verweis auf [[03-Kunden/...]] oder neue Person)
+- Mit wem? (Verweis auf [[03-Unternehmen/...]] oder neue Person)
 - Worum geht's? (Verkauf? Review? Kick-off? Krisen-Gespräch?)
 - Welche Vorgeschichte? (frühere Meetings, frühere E-Mails)
 - Was ist das gewünschte Ergebnis?
@@ -20,8 +20,8 @@ Die KI fragt:
 ### 2. Bestehenden Kontext laden
 
 Die KI liest:
-- Wenn Kunde existiert: `03-Kunden/<kunde>/_hub.md` + alle bisherigen Meeting-Notizen
-- Wenn neue Person: existiert sie in `05-Team/` oder `03-Kunden/`?
+- Wenn Kunde existiert: `03-Unternehmen/<kunde>/_hub.md` + alle bisherigen Meeting-Notizen
+- Wenn neue Person: existiert sie in `05-Team/` oder `03-Unternehmen/`?
 - E-Mail-Verlauf (wenn User reinpaste)
 
 Zusammenfassung: "Aus dem Vault: [Kunde] ist [X], letzter Kontakt [Datum] mit [Inhalt]. Aktuelle Phase: [Y]."
@@ -95,7 +95,7 @@ Die KI führt sich an, ein sauberes Protokoll nach [[meeting-protokoll]] zu schr
 ## Output
 
 Vor dem Meeting:
-- `03-Kunden/<kunde>/meetings/YYYY-MM-DD-<thema>-vorbereitung.md` (oder `06-Meetings/...` wenn nicht kunden-bezogen)
+- `03-Unternehmen/<kunde>/meetings/YYYY-MM-DD-<thema>-vorbereitung.md` (oder `06-Meetings/...` wenn nicht kunden-bezogen)
 
 Nach dem Meeting:
 - Selbe Datei umbenannt (Vorbereitung + Protokoll im selben File ist ok), oder zusätzlich `YYYY-MM-DD-<thema>-protokoll.md`

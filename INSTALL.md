@@ -101,12 +101,12 @@ Die KI stellt 7 Fragen über Ihre Firma:
 
 Aus den Antworten füllt die KI automatisch:
 
-- `01-Firma/markenstimme.md` (eure Schreibweise)
-- `01-Firma/unsere-kunden.md` (ICP)
-- `01-Firma/unsere-leistungen.md` (Angebot)
-- `01-Firma/strategie.md` (Ziele, Prioritäten)
-- `01-Firma/stakeholder.md` (externe Partner, Schlüsselpersonen)
-- `05-Mitarbeiter/team-mitglieder.md` (wer ihr seid)
+- `01-Firma Home/markenstimme.md` (eure Schreibweise)
+- `01-Firma Home/unsere-kunden.md` (ICP)
+- `01-Firma Home/unsere-leistungen.md` (Angebot)
+- `01-Firma Home/strategie.md` (Ziele, Prioritäten)
+- `01-Firma Home/stakeholder.md` (externe Partner, Schlüsselpersonen)
+- `06-Mitarbeiter/team-mitglieder.md` (wer ihr seid)
 - `Team-Wissen/Session-Logs/2026/MM/2026-MM-DD-onboarding.md`
 
 ---
@@ -137,8 +137,8 @@ Für jeden neuen Mitarbeiter:
 3. Mitarbeiter öffnet den Sync-Ordner (`~/Dropbox/mein-business-os/`)
 4. Mitarbeiter sagt zur KI: **"Ich bin neu im Team. Onboarde mich."**
 5. Die KI fragt nach Namen, Rolle, Team
-6. Die KI trägt den Eintrag in `05-Mitarbeiter/team-mitglieder.md` ein
-7. Die KI ergänzt das Team-Mitglied in `06-Teams/<team>/kontext.md`
+6. Die KI trägt den Eintrag in `06-Mitarbeiter/team-mitglieder.md` ein
+7. Die KI ergänzt das Team-Mitglied in `07-Teams/<team>/kontext.md`
 8. Die KI fragt optional: "Gibt es etwas wie Claude mit dir reden soll (Tonfall, Anrede)?" — landet als Notiz in der Präferenz-Spalte des Rosters
 
 Kein separater Mitarbeiter-Folder. Persönliche Präferenzen leben im Roster, nicht in eigenen Files. Begründung: Brand-Voice ist firmenweit, persönliche Sub-Folder pro Person sind für KMU Overkill.
@@ -176,15 +176,15 @@ Beispiele was Mitarbeiter ab jetzt machen können:
 ### "Wo gehören persönliche Files vs. Firmen-Files hin?"
 
 → Drei einfache Regeln:
-- **Persönliches** (eigene Tone of Voice, Memory, About-me) → `05-Mitarbeiter/<dein-name>/`
-- **Team-Sachen** (Prozesse, Skills die alle im Team nutzen) → `06-Teams/<dein-team>/`
-- **Firma-weit** (Markenstimme, Wunschkunden, Strategie) → `01-Firma/`
+- **Persönliches** (eigene Tone of Voice, Memory, About-me) → `06-Mitarbeiter/<dein-name>/`
+- **Team-Sachen** (Prozesse, Skills die alle im Team nutzen) → `07-Teams/<dein-team>/`
+- **Firma-weit** (Markenstimme, Wunschkunden, Strategie) → `01-Firma Home/`
 
 Permissions setzen Sie pro Sub-Folder im Cloud-Provider — nicht durch separate Folder-Wurzeln.
 
 ### "Die KI kennt unser Geschäft nicht"
 
-→ Prüfen Sie: Wurde der Onboarding-Wizard durchlaufen? Sind `01-Firma/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md` ausgefüllt?
+→ Prüfen Sie: Wurde der Onboarding-Wizard durchlaufen? Sind `01-Firma Home/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md` ausgefüllt?
 
 ### "Wir brauchen einen Spezialisten, den es nicht gibt"
 

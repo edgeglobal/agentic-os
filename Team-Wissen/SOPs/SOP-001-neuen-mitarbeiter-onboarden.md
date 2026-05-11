@@ -98,7 +98,7 @@ Die KI legt einen 30-Tage-Plan in `05-Team/<vorname-nachname>/onboarding-plan.md
 Die KI entwirft eine kurze Willkommens-Nachricht in [[markenstimme]]-Stil, die der User dem neuen MA schicken kann. Mit:
 - Begrüßung
 - Erste Aufgaben für Tag 1
-- Wichtigste Wissens-Datei zum Start: [[01-Firma/markenstimme]]
+- Wichtigste Wissens-Datei zum Start: [[01-Firma Home/markenstimme]]
 - Wie er die KI nutzen kann
 
 ### 8. Confirmation an User

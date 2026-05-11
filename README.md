@@ -1,5 +1,5 @@
 <!--
-AI OS v0.2.0 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.3.0 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT License — see LICENSE
 -->
 
@@ -30,11 +30,12 @@ Genau das ist AI OS. Ein gemeinsamer Wissensordner + klare Regeln, wie Mensch un
 
 | Element | Beschreibung |
 |---|---|
-| **Klare Ordner-Struktur** | Inbox, Wissen, Vorlagen, Kunden, Projekte, Mitarbeiter, Teams, Meetings, Archiv |
-| **Drei Schichten in einem Folder** | Firma (alle lesen), Teams (Team-Mitglieder), Mitarbeiter (privat) — Permissions per Sub-Folder |
+| **Klare Ordner-Struktur** | Inbox, Firma Home, Vorlagen, Unternehmen, Personen, Projekte, Mitarbeiter, Teams, Meetings, Archiv |
+| **CRM-Light auf Markdown** | `03-Unternehmen/` und `04-Personen/` als zentrale Wissens-Schicht — perfekt für KMU ohne CRM |
+| **Team-Folder als Mini-Firma** | Jedes Team hat eigene kontext, vorlagen, projekte, referenzen, ablage, skills |
 | **Vorbefuellte Default-Teams** | Marketing & Vertrieb, Fulfillment, Finance/HR/Admin — anpassbar oder löschbar |
-| **Universelle Context-Files** | Markenstimme, Wunschkunden, Leistungen, Strategie, Stakeholder |
-| **Vorlagen-Bibliothek** | Angebot, Meeting-Protokoll, LinkedIn-Post, Kunden-Onboarding |
+| **Universelle Firma-Context-Files** | Markenstimme, Wunschkunden, Leistungen, unsere-tools, Strategie, Stakeholder |
+| **Meetings zentral mit Backlinks** | `08-Meetings/internal/` und `external/` — Wikilinks zu Unternehmen + Personen bauen Wissen über Jahre auf |
 | **SOPs & Workflows** | Wie Sie neue Mitarbeiter onboarden, Kunden anlegen, Meetings vorbereiten |
 | **5 Skills für Claude Code** | audit, onboard, level-up, neuer-kunde, session-abschluss |
 | **Tool-agnostisch** | `AGENTS.md` ist der Standard, den Claude Code, Codex, Cursor und Gemini nativ lesen |
@@ -100,13 +101,14 @@ Die KI liest `AGENTS.md`, stellt sich vor, fragt nach Ihrer Firma und füllt die
 │  zeigt auf den Sync-Ordner:                         │
 │                                                      │
 │   ~/Dropbox/Muster GmbH/  (oder GDrive, OneDrive)   │
-│   ├── 01-Firma/         ← firmenweite SoT          │
-│   ├── 02-Vorlagen/       ← Templates                │
-│   ├── 03-Kunden/         ← pro Kunde ein Ordner     │
-│   ├── 04-Projekte/       ← Cross-Team-Projekte      │
-│   ├── 05-Mitarbeiter/    ← pro Mensch ein Folder    │
-│   ├── 06-Teams/          ← pro Funktion ein Folder  │
-│   ├── 07-Meetings/       ← Meeting-Notizen          │
+│   ├── 01-Firma Home/     ← firmenweite SoT          │
+│   ├── 02-Vorlagen/       ← firmenweite Templates    │
+│   ├── 03-Unternehmen/    ← externe Firmen           │
+│   ├── 04-Personen/       ← externe Personen         │
+│   ├── 05-Projekte/       ← Cross-Team-Projekte      │
+│   ├── 06-Mitarbeiter/    ← Roster                   │
+│   ├── 07-Teams/          ← pro Funktion eine Mini-Firma │
+│   ├── 08-Meetings/       ← internal/ + external/    │
 │   ├── Team-Wissen/SOPs/  ← Standardabläufe          │
 │   ├── .claude/skills/    ← Firmenweite Skills       │
 │   └── ...                                            │
@@ -115,18 +117,30 @@ Die KI liest `AGENTS.md`, stellt sich vor, fragt nach Ihrer Firma und füllt die
 
 **Der Trick:** Skills werden über Anthropic verteilt (Schicht 1). Daten werden über Dropbox/GDrive synchronisiert (Schicht 2). Die zwei Schichten sind getrennt — das macht das System einfach und robust.
 
-## Die drei Schichten im selben Folder
+## Schichten in einer einzigen Folder-Hierarchie
 
-AI OS modelliert **drei Schichten in einer einzigen Ordner-Hierarchie**, nicht in drei separaten Folder-Wurzeln. Permissions kommen vom Cloud-Sync pro Sub-Folder:
+AI OS modelliert mehrere Schichten in **einem** Cloud-Folder, nicht in physisch getrennten Wurzeln. Permissions kommen vom Cloud-Sync pro Sub-Folder:
 
-| Schicht | Wo | Wer schreibt | Wer liest |
+| Bereich | Wo | Wer schreibt | Wer liest |
 |---|---|---|---|
-| **Firma-weit** | `01-Firma/`, `02-Vorlagen/`, `04-Projekte/`, `.claude/skills/` | Operator + Geschäftsführung | alle Mitarbeiter |
-| **Team** | `06-Teams/<team>/` | Team-Mitglieder | Rest liest meist mit |
-| **Mitarbeiter** | `05-Mitarbeiter/<name>/` | nur der jeweilige Mensch | gemäß Permissions |
-| **Kunde** (Sonderfall) | `03-Kunden/<kunde>/` | Teams die den Kunden betreuen | Externe (Steuerberater etc.) optional |
+| **Firma-weit** | `01-Firma Home/`, `02-Vorlagen/`, `05-Projekte/`, `.claude/skills/` | Operator + Geschäftsführung | alle Mitarbeiter |
+| **Team** (Mini-Firma) | `07-Teams/<team>/` (kontext, vorlagen, projekte, referenzen, ablage, skills) | Team-Mitglieder | Rest liest meist mit |
+| **Externe Unternehmen** | `03-Unternehmen/<firma>/` | Teams die den Kontakt pflegen | je nach Sensitivität |
+| **Externe Personen** | `04-Personen/<name>/` | Teams die den Kontakt pflegen | alle Mitarbeiter intern |
+| **Mitarbeiter-Roster** | `06-Mitarbeiter/team-mitglieder.md` | Operator | alle |
+| **Meetings** | `08-Meetings/internal/` und `external/` | Teilnehmer | je nach Vertraulichkeit |
 
 Das spart die Setup-Friktion von mehreren physisch getrennten Folder-Wurzeln. Permissions sind das was sie sein sollten: eine Eigenschaft des Ordners, nicht der Wurzel.
+
+## CRM-Light durch Wikilinks
+
+Ohne separates CRM-Tool entsteht das Kunden-/Kontakt-Wissen über Jahre durch konsequente Wikilink-Verknüpfung:
+
+- Meeting-Note `2026-05-11-acme-jahresgespraech.md` enthält `[[03-Unternehmen/acme-gmbh]]` und `[[04-Personen/hans-mueller]]`
+- In `03-Unternehmen/acme-gmbh/kontext.md` erscheint eine "Verknüpfte Meetings"-Sektion automatisch via Backlinks
+- In `04-Personen/hans-mueller/kontext.md` analog: alle Meetings + Verlauf bei welchen Firmen er war
+
+Das ist Obsidian-Style Knowledge-Vernetzung — funktioniert in Cowork, Code, Obsidian, Cursor.
 
 ---
 
@@ -136,7 +150,7 @@ Agentic OS folgt den **4 C's eines AI Operating Systems**:
 
 | Schicht | Was es bedeutet | Wo es im Repo lebt |
 |---|---|---|
-| **Context** | Die AI weiß, wer Sie sind, was Sie verkaufen, wie Sie sprechen | `01-Firma/`, `AGENTS.md` |
+| **Context** | Die AI weiß, wer Sie sind, was Sie verkaufen, wie Sie sprechen | `01-Firma Home/`, `AGENTS.md` |
 | **Connections** | Die AI kann auf Ihre Tools zugreifen (Calendar, CRM, Mail) | Org-Skills via Claude Team Plan |
 | **Capabilities** | Die AI weiß, wie Sie Dinge tun (SOPs, Workflows) | `Team-Wissen/SOPs/`, `.claude/skills/` |
 | **Cadence** | Die AI macht Dinge automatisch (Morgenbrief, Wochenreview) | Workflows + Scheduled Triggers |

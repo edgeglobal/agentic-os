@@ -9,12 +9,12 @@ Conducts the new-customer-onboarding flow defined in [[SOP-002-neuen-kunden-anle
 
 ## Inputs the skill reads
 
-- `01-Firma/markenstimme.md` — fuer den Stil der Kickoff-Mail
-- `01-Firma/unsere-leistungen.md` — fuer korrekte Leistungs-Bezeichnung
-- `01-Firma/unsere-kunden.md` — fuer Persona-Zuordnung
+- `01-Firma Home/markenstimme.md` — fuer den Stil der Kickoff-Mail
+- `01-Firma Home/unsere-leistungen.md` — fuer korrekte Leistungs-Bezeichnung
+- `01-Firma Home/unsere-kunden.md` — fuer Persona-Zuordnung
 - `02-Vorlagen/kunden-onboarding.md` — Briefing-Template
 - `Team-Wissen/Richtlinien/R-001-namenskonventionen.md` — fuer Filename-Regeln
-- `03-Kunden/` — pruefen dass kein Duplikat existiert
+- `03-Unternehmen/` — pruefen dass kein Duplikat existiert
 
 ## Execution
 
@@ -57,7 +57,7 @@ Filename-Regel: kebab-case, ohne Rechtsform-Suffix, keine Umlaute. Beispiele:
 
 Create:
 ```
-03-Kunden/<slug>/
+03-Unternehmen/<slug>/
 ├── _hub.md
 ├── briefing.md
 ├── meetings/
@@ -103,7 +103,7 @@ Bei Luecken (z.B. fehlende Liefermeilensteine, fehlender Kommunikations-Rhythmus
 Frage: "Soll ich gleich einen Kickoff-Mail-Entwurf machen?"
 
 Bei Ja:
-- Die KI liest `01-Firma/markenstimme.md`
+- Die KI liest `01-Firma Home/markenstimme.md`
 - Schreibt eine kurze E-Mail (3-5 Saetze) an den Hauptkontakt mit:
   - Begruessung in Markenstimme
   - Bestaetigung des Vertragsabschlusses
@@ -118,7 +118,7 @@ E-Mail-Entwurf in den Chat printen (nicht in Datei schreiben — User schickt se
 ```
 ✓ Kunde angelegt: <Firma>
 
-Pfad: 03-Kunden/<slug>/
+Pfad: 03-Unternehmen/<slug>/
 - _hub.md (gefuellt)
 - briefing.md (Stub mit X offenen Punkten)
 - meetings/ (leer, fuer Protokolle)
@@ -137,8 +137,8 @@ Naechster Schritt: Mail verschicken / Briefing-Luecken fuellen / Kickoff-Termin 
 
 ## Critical rules
 
-1. **Kein Duplikat anlegen.** Wenn der Slug bereits existiert in `03-Kunden/`, fragen ob es derselbe Kunde ist (dann an existing anhaengen) oder ein anderer (dann Slug schaerfen).
+1. **Kein Duplikat anlegen.** Wenn der Slug bereits existiert in `03-Unternehmen/`, fragen ob es derselbe Kunde ist (dann an existing anhaengen) oder ein anderer (dann Slug schaerfen).
 2. **Sensitive-Branchen-Flag.** Wenn Branche Anwalt/Arzt/Finanz/Behoerde, im `_hub.md` "**SENSITIV — keine Details aussserhalb dieses Ordners zitieren**" einfuegen.
 3. **Markenstimme strict.** Kickoff-Mail-Entwurf MUSS `markenstimme.md` befolgen — Tabu-Woerter checken.
-4. **Read-only auf `01-Firma/`.** Nur 03-Kunden/-Pfade neu anlegen.
+4. **Read-only auf `01-Firma Home/`.** Nur 03-Unternehmen/-Pfade neu anlegen.
 5. **Frontmatter komplett.** Kein leeres Pflichtfeld.

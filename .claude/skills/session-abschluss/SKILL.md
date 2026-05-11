@@ -25,7 +25,7 @@ Use Grep to find facts that appear in multiple files. Heuristics:
 - Gleiche Produkt-/Leistungs-Beschreibung in 2+ Dateien
 
 For each violation:
-- Pick canonical home (autoritativste Datei: `01-Firma/*` for business facts, `03-Kunden/<x>/_hub.md` for customer facts, `05-Team/<x>/_hub.md` for team facts)
+- Pick canonical home (autoritativste Datei: `01-Firma Home/*` for business facts, `03-Unternehmen/<x>/_hub.md` for customer facts, `05-Team/<x>/_hub.md` for team facts)
 - Replace duplicate with `[[wikilink]]`
 - Note the change in the upcoming session log
 
@@ -37,7 +37,7 @@ For each broken link:
 - If intent unclear: flag in session log for user to resolve
 
 **C. Verwaiste Dateien**
-Find files in `01-Firma/`, `Team-Wissen/`, `02-Vorlagen/` that have:
+Find files in `01-Firma Home/`, `Team-Wissen/`, `02-Vorlagen/` that have:
 - No incoming `[[wikilink]]` from anywhere
 - No entry in their section's `INDEX.md` (if applicable)
 

@@ -20,7 +20,7 @@ First run is the baseline. Re-run weekly to watch the score climb.
 
 | Schicht | Test |
 |---|---|
-| **Context** | Knows the business — `01-Firma/`, `markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`, `team-mitglieder.md` |
+| **Context** | Knows the business — `01-Firma Home/`, `markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`, `team-mitglieder.md` |
 | **Connections** | Reaches the user's stuff — Org-Skills installed, MCPs configured, external tool integrations |
 | **Capabilities** | Knows how to do work — Spezialisten in `Team/`, SOPs in `Team-Wissen/SOPs/`, Workflows |
 | **Cadence** | Runs without being asked — Session-Logs being written, scheduled triggers, recurring rituals |
@@ -32,14 +32,14 @@ First run is the baseline. Re-run weekly to watch the score climb.
 The audit looks for **patterns and intent**, not exact paths. Use Glob and Read to check:
 
 **Operating manual:** `AGENTS.md` (root), `CLAUDE.md` if exists.
-**Knowledge files:** `01-Firma/markenstimme.md`, `01-Firma/unsere-kunden.md`, `01-Firma/unsere-leistungen.md`, `05-Team/team-mitglieder.md`.
+**Knowledge files:** `01-Firma Home/markenstimme.md`, `01-Firma Home/unsere-kunden.md`, `01-Firma Home/unsere-leistungen.md`, `05-Team/team-mitglieder.md`.
 **Specialists:** `Team/<Name>/AGENTS.md` — count.
 **SOPs:** `Team-Wissen/SOPs/SOP-*.md` — count.
 **Workflows:** `Team-Wissen/Workflows/WF-*.md` — count.
 **Richtlinien:** `Team-Wissen/Richtlinien/R-*.md` — count.
 **Session-Logs:** `Team-Wissen/Session-Logs/YYYY/MM/*.md` — count + most recent date.
-**Customer folders:** `03-Kunden/<name>/_hub.md` — count.
-**Project folders:** `04-Projekte/<name>/_hub.md` — count.
+**Customer folders:** `03-Unternehmen/<name>/_hub.md` — count.
+**Project folders:** `05-Projekte/<name>/_hub.md` — count.
 **Skills:** `.claude/skills/*/SKILL.md` — count + names.
 **Connection mechanisms:**
 - MCPs: `.mcp.json`, `.claude/settings.json`
@@ -71,7 +71,7 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 
 | Criterion | Points | How to detect |
 |---|---|---|
-| 3 Standard-Teams existieren (marketing-vertrieb, fulfillment, finance-hr-admin) | 10 | Count `06-Teams/*/kontext.md` ≥ 3 |
+| 3 Standard-Teams existieren (marketing-vertrieb, fulfillment, finance-hr-admin) | 10 | Count `07-Teams/*/kontext.md` ≥ 3 |
 | ≥1 zusätzlicher Spezialist gehired | 5 | Count `Team/*/AGENTS.md` > 4 |
 | ≥3 SOPs definiert | 5 | Count `Team-Wissen/SOPs/SOP-*.md` ≥ 3 |
 | ≥1 Workflow definiert | 5 | Count `Team-Wissen/Workflows/WF-*.md` ≥ 1 |
@@ -82,8 +82,8 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 |---|---|---|
 | Session-Logs werden geschrieben (≥1 in letzten 7 Tagen) | 10 | Check `Team-Wissen/Session-Logs/YYYY/MM/` for recent files |
 | Session-Logs gehen ≥4 Wochen zurück | 5 | Count distinct months in Session-Logs |
-| ≥1 Kunde ist angelegt mit Hub | 5 | Count `03-Kunden/*/_hub.md` ≥ 1 |
-| ≥1 aktives Projekt mit Hub | 5 | Count `04-Projekte/*/_hub.md` ≥ 1 |
+| ≥1 Kunde ist angelegt mit Hub | 5 | Count `03-Unternehmen/*/_hub.md` ≥ 1 |
+| ≥1 aktives Projekt mit Hub | 5 | Count `05-Projekte/*/_hub.md` ≥ 1 |
 
 ### Step 3: Identify top 3 gaps by leverage
 
