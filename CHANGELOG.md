@@ -5,6 +5,24 @@ Alle nennenswerten Änderungen an AI OS werden hier dokumentiert.
 Format folgt [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.5.0] — 2026-05-11
+
+### Changed
+
+- **Komplettes Cleanup aller User-facing Files:**
+  - Branding-Verweise entfernt (kein Skalierer, kein UmsatzAI)
+  - Tool-Pflicht-Verweise entfernt (kein Dropbox-Brand, kein Cowork, kein Anthropic, kein "Team Plan")
+  - Anrede durchgehend "du" statt "Sie"
+  - "KMU 2-15 Mitarbeiter" entfernt — generisch fuer Teams jeder Groesse
+  - Cloud-Sync als Voraussetzung entfernt — funktioniert lokal und im Cloud-Storage
+- **README.md komplett neu** — simpel, du-Anrede, keine Brand-/Tool-Spezifik
+- **INSTALL.md komplett neu** — minimal, drei Setup-Optionen (lokal / Cloud / Git)
+- **AGENTS.md** in Englisch generisch gehalten ohne Marken- oder Tool-Bias
+
+### Architecture Decision
+
+- **AI OS ist eine Folder-Struktur, kein Setup-Stack.** Sie funktioniert in jedem Markdown-faehigen Editor, mit jedem AI-Tool, lokal oder geteilt. Rationale: keine Tool-Bindung, keine Plan-Pflicht, kein Branding-Lock-in. Was bleibt: die Struktur und die Logik dahinter.
+
 ## [0.4.2] — 2026-05-11
 
 ### Changed

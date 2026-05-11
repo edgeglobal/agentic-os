@@ -62,4 +62,4 @@ Verantwortlich: [Name + Mail]
 
 **Standard: kein Lese-Zugriff fuer Rest der Firma.** Dieser Team-Folder ist staerker abgeschottet. Nur Operator und Geschaeftsfuehrung haben Lese-Zugriff.
 
-In Google Drive / OneDrive / Dropbox: Folder-Berechtigung restriktiv setzen.
+In Cloud-Storage: Folder-Berechtigung restriktiv setzen.

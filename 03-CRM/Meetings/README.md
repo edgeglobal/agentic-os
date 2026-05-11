@@ -1,6 +1,6 @@
 <!--
 AI OS — Agentic Operating System für KMUs
-© 2026 Gerald Eder · UmsatzAI · MIT License
+© 2026 Gerald Eder · MIT License
 -->
 
 # 03-CRM/Meetings/

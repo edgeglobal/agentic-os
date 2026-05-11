@@ -1,183 +1,149 @@
 <!--
-AI OS v0.4.2 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.5.0 — © 2026 Gerald Eder
 Licensed under MIT License — see LICENSE
 -->
 
 # AI OS
 
-**Agentic Operating System für KMUs.**
+**Agentic Operating System.** Eine Ordner-Struktur in Markdown, die deiner KI sofort den vollen Firmen-Kontext gibt.
 
-Eine sofort einsatzbereite Ordnerstruktur für KMU (2–15 Mitarbeiter), die mit Claude (Cowork Desktop oder Claude Code), Codex, Gemini oder Cursor zusammenarbeitet. Markdown-only. Tool-agnostisch. Keine Datenbank. Funktioniert in jedem Texteditor — und in jedem AI-Tool.
-
-> Gebaut von [Gerald Eder](https://geraldeder.com) bei [UmsatzAI](https://umsatzai.com) — AI-Beratung für Mittelstand und Solopreneure im DACH-Raum.
+Klone das Repo, öffne es in deinem AI-Tool, starte den `/onboard` Skill — und deine KI kennt deine Firma, dein Team, deine Kunden, deine Strategie.
 
 ---
 
-## Was das ist
+## Was AI OS ist
 
-Stellen Sie sich vor, Ihr Unternehmen hätte einen Assistenten, der:
+Ein Folder mit klarer Struktur. Drinnen liegen Markdown-Files, die die KI bei jeder Session liest:
 
-- die Markenstimme kennt
-- jeden Kunden im Detail versteht
-- alle SOPs befolgen kann
-- Meeting-Protokolle schreibt
-- die Inbox sortiert
-- nie etwas vergisst
+- **Wer ihr seid** als Firma (Brand, Wunschkunden, Leistungen, Strategie)
+- **Wie ihr euch aufteilt** in Teams (Marketing, Fulfillment, etc.)
+- **Wen ihr kennt** — externe Unternehmen, externe Personen
+- **Was ihr besprochen habt** — Meeting-Notes mit Wikilinks zum Wissen
 
-Genau das ist AI OS. Ein gemeinsamer Wissensordner + klare Regeln, wie Mensch und KI zusammenarbeiten.
+Die KI nutzt diesen Kontext, um in eurer Sprache zu schreiben, eure Kunden zu kennen, und Vorgaenge sauber zu pflegen.
 
-## Was Sie bekommen
+---
+
+## Was du bekommst
 
 | Element | Beschreibung |
 |---|---|
-| **Klare Ordner-Struktur** | Inbox, Firma Home, Teams, CRM (Unternehmen+Personen+Meetings), Projekte, Mitarbeiter, Archiv |
-| **CRM-Light auf Markdown** | `03-CRM/Unternehmen/` und `03-CRM/Personen/` als zentrale Wissens-Schicht — perfekt für KMU ohne CRM |
-| **Team-Folder als Mini-Firma** | Jedes Team hat eigene kontext, vorlagen, projekte, referenzen, ablage, skills |
-| **Vorbefuellte Default-Teams** | Marketing & Vertrieb, Fulfillment, Finance/HR/Admin — anpassbar oder löschbar |
-| **Universelle Firma-Context-Files** | organization, brand, wunschkunde-icp, strategy, tools, stakeholder |
-| **Meetings zentral mit Backlinks** | `03-CRM/Meetings/internal/` und `external/` — Wikilinks zu Unternehmen + Personen bauen Wissen über Jahre auf |
-| **SOPs & Workflows** | Wie Sie neue Mitarbeiter onboarden, Kunden anlegen, Meetings vorbereiten |
-| **5 Skills für Claude Code** | audit, onboard, level-up, neuer-kunde, session-abschluss |
-| **Tool-agnostisch** | `AGENTS.md` ist der Standard, den Claude Code, Codex, Cursor und Gemini nativ lesen |
-
-## Für wen ist das
-
-- Solopreneure, die mit ein paar VAs arbeiten
-- KMU mit 2–15 Mitarbeitern
-- Beratungen, Agenturen, Coaches, Steuerberater, Anwälte, Handwerker
-- Alle, die strukturiertes Wissen mit AI verbinden wollen
-
-## Was Sie NICHT brauchen
-
-- ❌ Programmierkenntnisse
-- ❌ Server, Hosting, Datenbanken
-- ❌ Einen DevOps-Mitarbeiter
-- ❌ GitHub für die tägliche Nutzung (nur einmal zum Download)
-
-## Was Sie brauchen
-
-- ✅ **Claude Team Plan** ($25/Mitarbeiter/Monat) — für Org-Skills
-- ✅ **Claude Cowork Desktop App** — für nicht-technische Mitarbeiter
-- ✅ **Ein Sync-Tool** — Dropbox, Google Drive oder OneDrive (was Sie schon haben)
-- ✅ **30 Minuten Zeit** für die Erstinstallation
+| **Klare Ordner-Struktur** | Inbox, Firma Home, Teams, CRM (Unternehmen + Personen + Meetings), Mitarbeiter, Archiv |
+| **CRM-Light in Markdown** | Unternehmen + Personen + Meetings via Wikilinks vernetzt — kein externes CRM noetig |
+| **Team-Folder als Mini-Firma** | Jedes Team hat eigene kontext, vorlagen, projekte, referenzen, meetings, ablage, skills |
+| **Default-Teams** | Marketing & Vertrieb, Fulfillment, Finance/HR/Admin — anpassbar oder loeschbar |
+| **Universelle Context-Files** | organization, brand, wunschkunde-icp, strategy, tools, stakeholder |
+| **5 Skills** | audit, onboard, level-up, neuer-kunde, session-abschluss |
+| **Tool-agnostisch** | `AGENTS.md` lesen Claude, Codex, Cursor, Gemini nativ |
 
 ---
 
-## Schnellstart in 5 Minuten
+## Fuer wen ist das
 
-Lesen Sie die [INSTALL.md](INSTALL.md) für die ausführliche Anleitung. Hier die Kurzfassung:
+Fuer jedes Team das mit KI arbeiten will und Wert auf strukturiertes Wissen legt. Solo-Operatoren mit Assistenten, Teams in Beratungen, Agenturen, Handwerks-Betrieben, Coaches, Anwaelten, Steuerberatern, Aerzten.
+
+Egal ob ihr im Cloud-Storage syncht oder lokal arbeitet — die Folder-Struktur funktioniert in beidem.
+
+---
+
+## Schnellstart
 
 ```bash
-# 1. Repo klonen oder als ZIP herunterladen
-git clone https://github.com/edgeglobal/agentic-os.git mein-business-os
-
-# 2. In Sync-Ordner verschieben (Dropbox/GDrive/OneDrive)
-mv mein-business-os ~/Dropbox/
-
-# 3. In Claude Cowork oder Claude Code öffnen
-# Cowork: "Open Folder" → ~/Dropbox/mein-business-os
-# Code:   cd ~/Dropbox/mein-business-os && claude
-
-# 4. Initialisieren
-# Sagen Sie zur AI: "Initialisiere dich in diesem Ordner"
+git clone https://github.com/edgeglobal/agentic-os.git mein-ai-os
+cd mein-ai-os
 ```
 
-Die KI liest `AGENTS.md`, stellt sich vor, fragt nach Ihrer Firma und füllt die Vorlagen aus.
+Oeffne den Folder in deinem AI-Tool (Claude Code, Codex CLI, Cursor, Gemini CLI, oder ein anderes Tool das `AGENTS.md` versteht).
+
+Sag zur KI:
+
+> **Initialisiere dich in diesem Ordner.**
+
+Die KI liest `AGENTS.md` und stellt sich vor. Dann:
+
+> **Nutze den Onboarding-Skill im Modus Firma.**
+
+Der Skill interviewt dich in 7 Sektionen und fuellt automatisch alle Context-Files in `01-Firma Home/`.
+
+Fertig. Deine KI hat jetzt vollen Firmen-Kontext.
 
 ---
 
-## Wie es funktioniert
+## Folder-Struktur
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  Anthropic Cloud — Claude Team Plan                 │
-│  ├── Skills (vom Owner verwaltet, automatisch       │
-│  │   verteilt an alle Team-Mitglieder)              │
-│  └── 200k Context, jährliche Allocation             │
-└─────────────────────────────────────────────────────┘
-                          ↓
-┌─────────────────────────────────────────────────────┐
-│  Claude Cowork (Desktop) oder Code (VS Code)        │
-│  zeigt auf den Sync-Ordner:                         │
-│                                                      │
-│   ~/Dropbox/Muster GmbH/  (oder GDrive, OneDrive)   │
-│   ├── 01-Firma Home/     ← firmenweite SoT          │
-│   ├── 02-Teams/          ← pro Funktion eine Mini-Firma │
-│   ├── 03-CRM/            ← Unternehmen + Personen + Meetings │
-│   ├── 01-Firma Home/projekte/       ← Cross-Team-Projekte      │
-│   ├── 04-Mitarbeiter/    ← Roster                   │
-│   ├── Team-Wissen/SOPs/  ← Standardabläufe          │
-│   ├── .claude/skills/    ← Firmenweite Skills       │
-│   └── ...                                            │
-└─────────────────────────────────────────────────────┘
+mein-ai-os/
+├── 00-Inbox/                  rohe Inputs (Brain-Dumps, Forwarded Mails, Voice-Memos)
+├── 01-Firma Home/             firmenweite Single-Source-of-Truth
+│   ├── organization.md        was ihr macht, Branche, Operations
+│   ├── brand.md               Voice, Tonalitaet, Beispiele
+│   ├── wunschkunde-icp.md     Ideal Customer Profile
+│   ├── strategy.md            Ziele, Prioritaeten, Metriken
+│   ├── tools.md               Tech-Stack
+│   ├── stakeholder.md         Schluesselpersonen intern + extern
+│   └── projekte/              firmenweite oder Cross-Team-Projekte
+├── 02-Teams/                  Mini-Firmen pro Funktion
+│   ├── marketing-vertrieb/
+│   ├── fulfillment/
+│   ├── finance-hr-admin/
+│   └── _neues-team/           Vorlage zum Duplizieren
+├── 03-CRM/                    Customer Relationship Management
+│   ├── Unternehmen/           externe Firmen (Kunden, Lieferanten, Partner)
+│   ├── Personen/              externe Personen (Ansprechpartner, Beirat)
+│   └── Meetings/              nur externe Meetings, mit Wikilinks zum CRM
+├── 04-Mitarbeiter/            Roster aller Menschen
+├── 99-Archiv/                 Erledigtes
+├── Team-Wissen/               SOPs, Workflows, Richtlinien, Session-Logs
+└── .claude/skills/            firmenweite Skills
 ```
 
-**Der Trick:** Skills werden über Anthropic verteilt (Schicht 1). Daten werden über Dropbox/GDrive synchronisiert (Schicht 2). Die zwei Schichten sind getrennt — das macht das System einfach und robust.
+---
 
-## Schichten in einer einzigen Folder-Hierarchie
+## Wie das funktioniert
 
-AI OS modelliert mehrere Schichten in **einem** Cloud-Folder, nicht in physisch getrennten Wurzeln. Permissions kommen vom Cloud-Sync pro Sub-Folder:
+**Schichten in einer Folder-Hierarchie**, nicht in getrennten Wurzeln:
 
-| Bereich | Wo | Wer schreibt | Wer liest |
-|---|---|---|---|
-| **Firma-weit** | `01-Firma Home/`, `01-Firma Home/projekte/`, `.claude/skills/` | Operator + Geschäftsführung | alle Mitarbeiter |
-| **Team** (Mini-Firma) | `02-Teams/<team>/` (kontext, vorlagen, projekte, referenzen, ablage, skills) | Team-Mitglieder | Rest liest meist mit |
-| **Externe Unternehmen** | `03-CRM/Unternehmen/<firma>/` | Teams die den Kontakt pflegen | je nach Sensitivität |
-| **Externe Personen** | `03-CRM/Personen/<name>/` | Teams die den Kontakt pflegen | alle Mitarbeiter intern |
-| **Mitarbeiter-Roster** | `04-Mitarbeiter/team-mitglieder.md` | Operator | alle |
-| **Meetings** | `03-CRM/Meetings/internal/` und `external/` | Teilnehmer | je nach Vertraulichkeit |
+| Bereich | Wo | Wer schreibt |
+|---|---|---|
+| **Firma-weit** | `01-Firma Home/` | Operator + Geschaeftsfuehrung |
+| **Team** (Mini-Firma) | `02-Teams/<team>/` | Team-Mitglieder |
+| **Externe Unternehmen** | `03-CRM/Unternehmen/<firma>/` | Teams die den Kontakt pflegen |
+| **Externe Personen** | `03-CRM/Personen/<name>/` | Teams die den Kontakt pflegen |
+| **Mitarbeiter-Roster** | `04-Mitarbeiter/` | Operator |
+| **Meetings** | `03-CRM/Meetings/` (extern) + `02-Teams/<team>/meetings/` (intern) | Teilnehmer |
 
-Das spart die Setup-Friktion von mehreren physisch getrennten Folder-Wurzeln. Permissions sind das was sie sein sollten: eine Eigenschaft des Ordners, nicht der Wurzel.
+Permissions kommen vom Folder, nicht von der Wurzel. Wenn ihr im Cloud-Storage arbeitet: pro Sub-Folder einstellen wer rein darf.
+
+---
 
 ## CRM-Light durch Wikilinks
 
-Ohne separates CRM-Tool entsteht das Kunden-/Kontakt-Wissen über Jahre durch konsequente Wikilink-Verknüpfung:
+Externe Firmen und Personen leben als eigene Folder mit `kontext.md`. Meeting-Notes verlinken via Wikilinks zu Unternehmen + Personen:
 
-- Meeting-Note `2026-05-11-acme-jahresgespraech.md` enthält `[[03-CRM/Unternehmen/acme-gmbh]]` und `[[03-CRM/Personen/hans-mueller]]`
-- In `03-CRM/Unternehmen/acme-gmbh/kontext.md` erscheint eine "Verknüpfte Meetings"-Sektion automatisch via Backlinks
-- In `03-CRM/Personen/hans-mueller/kontext.md` analog: alle Meetings + Verlauf bei welchen Firmen er war
+```markdown
+# Jahresgespraech mit [[03-CRM/Unternehmen/acme-gmbh]] — 2026-05-11
 
-Das ist Obsidian-Style Knowledge-Vernetzung — funktioniert in Cowork, Code, Obsidian, Cursor.
+Teilnehmer extern: [[03-CRM/Personen/hans-mueller]]
+Bezug: [[01-Firma Home/projekte/webrelaunch-acme]]
 
----
+## Was besprochen wurde
+- ...
+```
 
-## Die 4 C's
-
-Agentic OS folgt den **4 C's eines AI Operating Systems**:
-
-| Schicht | Was es bedeutet | Wo es im Repo lebt |
-|---|---|---|
-| **Context** | Die AI weiß, wer Sie sind, was Sie verkaufen, wie Sie sprechen | `01-Firma Home/`, `AGENTS.md` |
-| **Connections** | Die AI kann auf Ihre Tools zugreifen (Calendar, CRM, Mail) | Org-Skills via Claude Team Plan |
-| **Capabilities** | Die AI weiß, wie Sie Dinge tun (SOPs, Workflows) | `Team-Wissen/SOPs/`, `.claude/skills/` |
-| **Cadence** | Die AI macht Dinge automatisch (Morgenbrief, Wochenreview) | Workflows + Scheduled Triggers |
-
-Mit dem `/audit` Skill können Sie jederzeit prüfen, wo Sie stehen.
+Backlinks in den jeweiligen `kontext.md`-Files erscheinen automatisch. Ueber Jahre baut sich ein Wissens-Geflecht auf — ohne separates CRM-Tool.
 
 ---
 
-## Wie Sie mit der KI arbeiten
+## Die 5 Skills
 
-Sie sprechen direkt mit der KI. Sie liest beim Session-Start `AGENTS.md`, kennt die Folder-Struktur, die Regeln, und die fünf firmenweiten Skills (`audit`, `onboard`, `level-up`, `neuer-kunde`, `session-abschluss`).
-
-**Was die KI kann (Default):**
-
-- Posteingang-Items klassifizieren und routen
-- Meeting-Protokolle, LinkedIn-Posts, Angebote in Ihrer Markenstimme entwerfen
-- Kunden-Briefings aus Stammdaten + Gesprächs-Protokollen zusammenstellen
-- Session-Logs schreiben am Ende jedes Arbeitstags
-- Audit Ihres Setups (was fehlt im Wissen, in den Tools, in den Workflows)
-
-**Wenn etwas fehlt:** sagen Sie was Sie brauchen. Die KI schlägt einen passenden Workflow oder einen neuen Skill vor — den Sie als Markdown-File in `.claude/skills/` ablegen können.
+- **`/audit`** — pruefen wo ihr steht (Score nach 4 C's: Context, Connections, Capabilities, Cadence)
+- **`/onboard`** — 4 Modi: neue Firma einrichten, neues Team anlegen, neues Unternehmen anlegen, neue Person anlegen
+- **`/level-up`** — woechentliches Verbesserungs-Ritual
+- **`/neuer-kunde`** — schneller Workflow fuer neuen Kunden-Folder
+- **`/session-abschluss`** — Session-Log am Tagesende schreiben
 
 ---
 
-## Lizenz & Beitragen
+## Lizenz
 
-MIT-Lizenz — frei nutzbar, auch kommerziell. Forks willkommen. Pull Requests werden geprüft.
-
-Wenn Sie Hilfe bei der Einrichtung brauchen oder Custom Skills für Ihr Unternehmen wollen: [umsatzai.com](https://umsatzai.com) bietet Setup, Training und laufende Pflege als Service.
-
----
-
-**Built with care by Gerald Eder · [UmsatzAI](https://umsatzai.com) · 2026**
+MIT — frei nutzbar, auch kommerziell. Forks willkommen.

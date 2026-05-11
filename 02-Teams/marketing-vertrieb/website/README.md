@@ -12,7 +12,7 @@ Alles was die Firmen-Webseite betrifft. Pflege durch Marketing & Vertrieb.
 
 ## Was nicht
 
-- Bilder/Logos die nur einmal genutzt werden → CMS oder Dropbox direkt
+- Bilder/Logos die nur einmal genutzt werden → CMS oder Cloud-Storage direkt
 - Code (HTML/CSS/JS) → in Repository der Webseite, nicht hier
 - Newsletter-Texte → eigener Sub-Folder (z.B. `newsletter/`) wenn relevant
 - LinkedIn-Posts → eigener Sub-Folder (z.B. `linkedin/`) wenn relevant

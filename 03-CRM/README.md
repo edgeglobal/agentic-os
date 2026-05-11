@@ -1,6 +1,6 @@
 <!--
 AI OS — Agentic Operating System für KMUs
-© 2026 Gerald Eder · UmsatzAI · MIT License
+© 2026 Gerald Eder · MIT License
 -->
 
 # 03-CRM/
@@ -16,7 +16,7 @@ Customer Relationship Management — alles was mit externen Kontakten zu tun hat
 
 ## Warum diese drei zusammen
 
-Sie sind das Wissens-Geflecht der Geschaeftsbeziehungen:
+Du bist das Wissens-Geflecht der Geschaeftsbeziehungen:
 
 - **Unternehmen** = mit wem
 - **Personen** = mit wem konkret

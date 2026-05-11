@@ -1,204 +1,111 @@
 <!--
-AI OS v0.2.0 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.5.0 — © 2026 Gerald Eder
 Licensed under MIT — see LICENSE
 -->
 
-# Installation — 5-Minuten-Setup
+# Installation
 
-Diese Anleitung führt Sie durch die Erstinstallation von AI OS für Ihr Team.
-
-## Voraussetzungen
-
-| Was | Wofür | Wo bekommen |
-|---|---|---|
-| Claude Team Plan ($25/Mitarbeiter/Monat) | Org-Skills, geteilte Konfiguration | [claude.com/pricing](https://claude.com/pricing) |
-| Claude Cowork Desktop App | Für nicht-technische Mitarbeiter | [anthropic.com/product/claude-cowork](https://www.anthropic.com/product/claude-cowork) |
-| Cloud-Sync (Dropbox/GDrive/OneDrive) | Ordner zwischen Mitarbeitern teilen | Was Ihre Firma schon nutzt |
-| Optional: Claude Code in VS Code | Für Founder/Devs | [Claude Code](https://claude.com/code) |
-
----
+In 5 Minuten startklar.
 
 ## Schritt 1 — Repo herunterladen
 
-### Option A: Als ZIP (für Nicht-Techniker)
+```bash
+git clone https://github.com/edgeglobal/agentic-os.git mein-ai-os
+cd mein-ai-os
+```
 
-1. Gehen Sie auf https://github.com/edgeglobal/agentic-os
-2. Klicken Sie **Code** → **Download ZIP**
-3. Entpacken Sie die ZIP-Datei
-4. Benennen Sie den Ordner um nach Ihrem Firmennamen, z.B. `acme-os` oder `mein-business-os`
+Oder als ZIP: gehe auf `https://github.com/edgeglobal/agentic-os`, klicke **Code** → **Download ZIP**, entpacke und benenne den Folder um.
 
-### Option B: Mit git (für Techniker)
+Wenn du keinen eigenen git-Workflow brauchst:
 
 ```bash
-git clone https://github.com/edgeglobal/agentic-os.git mein-business-os
-cd mein-business-os
-rm -rf .git  # Wenn Sie keinen eigenen git-Workflow wollen
+rm -rf .git
 ```
 
----
+## Schritt 2 — Folder dorthin legen wo er gebraucht wird
 
-## Schritt 2 — In Sync-Ordner verschieben
+Drei typische Optionen:
 
-Verschieben Sie den Ordner in Ihren Cloud-Sync:
+- **Lokal** auf deinem Rechner (nur du arbeitest damit)
+- **Im Cloud-Storage** (du teilst mit dem Team — Permissions per Sub-Folder)
+- **In einem Git-Repo** (fuer technische Teams)
 
-**Dropbox:**
-```
-~/Dropbox/mein-business-os/
-```
+AI OS funktioniert in allen drei Varianten. Die Folder-Struktur ist die gleiche.
 
-**Google Drive (Shared Drive):**
-```
-~/Library/CloudStorage/GoogleDrive-<account>/Geteilte Ablagen/MeinBusiness/mein-business-os/
-```
+## Schritt 3 — In deinem AI-Tool oeffnen
 
-**OneDrive:**
-```
-~/OneDrive/MeinBusiness/mein-business-os/
-```
+Oeffne den Folder in einem Tool das `AGENTS.md` versteht — Claude Code, Codex CLI, Cursor, Gemini CLI, oder ein anderes.
 
-**Wichtig:** Alle Mitarbeiter, die Zugriff haben sollen, müssen den Cloud-Ordner abonniert haben. In Dropbox: rechtsklicken → "Mit Personen teilen". In GDrive: Shared Drive einrichten und Mitarbeiter einladen.
-
----
-
-## Schritt 3 — Claude Cowork installieren
-
-1. Laden Sie Cowork herunter von [anthropic.com/product/claude-cowork](https://www.anthropic.com/product/claude-cowork)
-2. Installieren Sie auf Mac oder Windows
-3. Loggen Sie sich mit Ihrem Team-Plan-Account ein
-4. Klicken Sie **Open Folder** → wählen Sie Ihren `mein-business-os` Ordner
-
-Cowork zeigt jetzt auf den Ordner. Alle Inhalte sind sichtbar und durchsuchbar.
-
----
-
-## Schritt 4 — AI initialisieren
-
-In Cowork (oder Claude Code) geben Sie ein:
+Sag zur KI:
 
 > **Initialisiere dich in diesem Ordner.**
 
-Die AI liest `AGENTS.md` und meldet sich:
+Die KI liest `AGENTS.md` und stellt sich kurz vor.
 
-> "Ich bin die KI in deinem Agentic OS. Bereit für deine Anweisung."
+## Schritt 4 — Onboarding-Wizard starten
 
----
+Sag zur KI:
 
-## Schritt 5 — Onboarding-Wizard starten
+> **Nutze den Onboarding-Skill im Modus Firma.**
 
-Sagen Sie zur KI:
+Du bekommst ein Interview in 7 Sektionen:
 
-> **Lass uns Agentic OS einrichten.**
+1. **Eure Firma** — was ihr macht, Branche, Mitbewerber
+2. **Eure Kunden** — wer kauft bei euch, welche Probleme loest ihr
+3. **Eure Positionierung** — wie ihr euch unterscheidet
+4. **Eure Markenstimme** — Tonalitaet, Beispiel-Texte (Originale einfuegen!)
+5. **Eure Strategie** — Quartals-Prioritaeten, 12-Monate-Ziel, Metriken
+6. **Operations & Tools** — welche Software ihr nutzt
+7. **Stakeholder** — interne + externe Schluesselpersonen
 
-Die KI stellt 7 Fragen über Ihre Firma:
+Aus den Antworten fuellt die KI alle Files in `01-Firma Home/` automatisch. Plus den Mitarbeiter-Roster in `04-Mitarbeiter/`.
 
-1. Wer seid ihr, was verkauft ihr, an wen?
-2. Was sind eure 2-3 wichtigsten Prioritäten für die nächsten 90 Tage?
-3. Wo läuft Umsatz tatsächlich rein?
-4. Wo redet ihr mit Kunden/Team?
-5. Wo leben Meetings, Notizen, Dokumente?
-6. Was ist der eine Task, der eure Woche frisst?
-7. Bitte fügt 1-2 Beispiele eurer Schreibweise ein (E-Mail, LinkedIn-Post)
+Dauer: 20-30 Minuten.
 
-Aus den Antworten füllt die KI automatisch:
+## Schritt 5 — Neue Mitarbeiter, Teams, Kunden, Kontakte
 
-- `01-Firma Home/brand.md` (eure Schreibweise)
-- `01-Firma Home/wunschkunde-icp.md` (ICP)
-- `01-Firma Home/organization.md` (Angebot)
-- `01-Firma Home/strategy.md` (Ziele, Prioritäten)
-- `01-Firma Home/stakeholder.md` (externe Partner, Schlüsselpersonen)
-- `04-Mitarbeiter/team-mitglieder.md` (wer ihr seid)
-- `Team-Wissen/Session-Logs/2026/MM/2026-MM-DD-onboarding.md`
+Der gleiche `/onboard` Skill hat drei weitere Modi:
 
----
+- **Team** — neuen Team-Folder anlegen mit Kontext-Interview
+- **Unternehmen** — neuer Kunden- oder Lieferanten-Folder
+- **Person** — neuer externer Ansprechpartner
 
-## Schritt 6 — Org-Skills hochladen (für Owner)
+Sag einfach:
 
-Wenn Sie auf Claude Team Plan sind, können Sie Skills für alle Team-Mitglieder zentral verteilen:
+> **Wir haben einen neuen Kunden: Acme GmbH**
+> **Wir haben einen neuen Mitarbeiter: Max Mustermann**
+> **Leg ein neues Team an: Produktion**
 
-1. Loggen Sie sich auf [claude.com](https://claude.com) ein
-2. Gehen Sie zu **Settings** → **Skills**
-3. Laden Sie die Skills aus `.claude/skills/` als ZIP hoch:
-   - `audit` — 4 C's Audit
-   - `onboard` — KMU-Onboarding-Wizard
-   - `level-up` — Wöchentliches Verbesserungs-Ritual
-   - `neuer-kunde` — Neuen Kunden anlegen
-   - `session-abschluss` — Session-Log schreiben
+Die KI erkennt was du willst und startet den richtigen Modus.
 
-Alle Team-Mitglieder sehen die Skills automatisch in Cowork und Code.
+## Schritt 6 — Taegliche Nutzung
 
----
+Beispiele was du mit der KI machen kannst:
 
-## Schritt 7 — Mitarbeiter onboarden
-
-Für jeden neuen Mitarbeiter:
-
-1. Mitarbeiter zum Claude Team Plan einladen (über Settings → Members)
-2. Mitarbeiter installiert Cowork Desktop und loggt sich ein
-3. Mitarbeiter öffnet den Sync-Ordner (`~/Dropbox/mein-business-os/`)
-4. Mitarbeiter sagt zur KI: **"Ich bin neu im Team. Onboarde mich."**
-5. Die KI fragt nach Namen, Rolle, Team
-6. Die KI trägt den Eintrag in `04-Mitarbeiter/team-mitglieder.md` ein
-7. Die KI ergänzt das Team-Mitglied in `02-Teams/<team>/kontext.md`
-8. Die KI fragt optional: "Gibt es etwas wie Claude mit dir reden soll (Tonfall, Anrede)?" — landet als Notiz in der Präferenz-Spalte des Rosters
-
-Kein separater Mitarbeiter-Folder. Persönliche Präferenzen leben im Roster, nicht in eigenen Files. Begründung: Brand-Voice ist firmenweit, persönliche Sub-Folder pro Person sind für KMU Overkill.
-
-Voller SOP: [[SOP-001-neuen-mitarbeiter-onboarden]]
-
----
-
-## Schritt 8 — Tägliche Nutzung
-
-Beispiele was Mitarbeiter ab jetzt machen können:
-
-| Aufgabe | An die KI sagen |
+| Aufgabe | Sag zur KI |
 |---|---|
-| Meeting-Protokoll schreiben | "Ich hatte gerade ein Meeting mit [Kunde]. Hier die Stichpunkte: ..." |
-| Neuen Kunden anlegen | "Wir haben einen neuen Kunden gewonnen: Acme GmbH" |
-| Angebot vorbereiten | "Erstelle ein Angebot für [Kunde] basierend auf unserem Standardangebot" |
+| Meeting-Protokoll schreiben | "Ich hatte gerade ein Meeting mit Acme. Hier die Stichpunkte: ..." |
+| Angebot vorbereiten | "Erstelle ein Angebot fuer Acme basierend auf unserem Standardangebot" |
 | LinkedIn-Post entwerfen | "Schreib einen LinkedIn-Post zum Thema X in unserem Stil" |
-| Wochen-Review | "Mach mir einen Review der letzten Woche" |
+| Inbox verarbeiten | "Verarbeite die Inbox" |
+| Audit | "Lauf /audit und zeig mir wo wir stehen" |
+| Tag abschliessen | "Schliess die Session ab" |
 
----
+Die KI nutzt jeden Kontext aus deinen Files — Markenstimme, Wunschkunden, Kunden-Historie, laufende Projekte.
 
-## Häufige Probleme
+## Schritt 7 — Updates
 
-### "Cowork findet die Skills nicht"
+Wenn du eine neue Version von AI OS holen willst:
 
-→ Prüfen Sie: Sind Sie auf Claude Team Plan (nicht Pro)? Hat der Owner die Skills in der Admin-Konsole hochgeladen?
+```bash
+git pull
+```
 
-### "Sync-Konflikte in Dropbox"
+Oder neue ZIP herunterladen. Deine Inhalte in `01-Firma Home/`, `02-Teams/`, `03-CRM/`, `04-Mitarbeiter/` bleiben — nur die Struktur-Files (`AGENTS.md`, `README.md`, Skills) werden aktualisiert.
 
-→ Wenn zwei Mitarbeiter gleichzeitig dieselbe Datei editieren, kann es Konflikt-Files geben. Best Practice:
-- Editieren Sie nicht parallel dieselbe Datei
-- Nutzen Sie `git`-Workflow wenn das Team größer wird (≥10 MA)
+## Hilfe
 
-### "Wo gehören persönliche Files vs. Firmen-Files hin?"
-
-→ Drei einfache Regeln:
-- **Persönliches** (eigene Tone of Voice, Memory, About-me) → `04-Mitarbeiter/<dein-name>/`
-- **Team-Sachen** (Prozesse, Skills die alle im Team nutzen) → `02-Teams/<dein-team>/`
-- **Firma-weit** (Markenstimme, Wunschkunden, Strategie) → `01-Firma Home/`
-
-Permissions setzen Sie pro Sub-Folder im Cloud-Provider — nicht durch separate Folder-Wurzeln.
-
-### "Die KI kennt unser Geschäft nicht"
-
-→ Prüfen Sie: Wurde der Onboarding-Wizard durchlaufen? Sind `01-Firma Home/brand.md`, `wunschkunde-icp.md`, `organization.md` ausgefüllt?
-
-### "Wir brauchen einen Spezialisten, den es nicht gibt"
-
-→ Sagen Sie zur KI: "Wir brauchen einen [Rolle]. Hire ihn." Die KI fragt nach was genau gebraucht wird und schlaegt einen passenden Workflow vor.
-
----
-
-## Hilfe & Support
-
-- **Dokumentation:** Alle SOPs leben in `Team-Wissen/SOPs/`
-- **Custom Setup für Ihr Team:** [umsatzai.com](https://umsatzai.com) — Setup, Training, Pflege
-- **Issues melden:** [GitHub Issues](https://github.com/edgeglobal/agentic-os/issues)
-- **Updates:** `git pull` (wenn mit git geklont) oder neues ZIP herunterladen
-
----
-
-**Built with care by Gerald Eder · [UmsatzAI](https://umsatzai.com) · 2026**
+- **Alle Konzepte:** lies `AGENTS.md` und die `README.md` in jedem Folder
+- **SOPs fuer wiederkehrende Workflows:** `Team-Wissen/SOPs/`
+- **Naming-Regeln:** `Team-Wissen/Richtlinien/R-001-namenskonventionen.md`
+- **Issues:** [GitHub Issues](https://github.com/edgeglobal/agentic-os/issues)

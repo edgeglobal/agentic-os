@@ -23,9 +23,9 @@ Die KI fragt:
 
 Die KI checkt mit User welche Zugänge nötig sind:
 
-- [ ] Claude Team Plan (Einladung über Settings → Members)
-- [ ] Cowork Desktop installiert
-- [ ] Cloud-Sync Zugang (Dropbox/GDrive/OneDrive)
+- [ ] dein AI-Tool
+- [ ] AI-Tool Desktop installiert
+- [ ] Cloud-Sync Zugang (Cloud-Storage)
 - [ ] E-Mail-Account
 - [ ] Slack/Teams Account
 - [ ] CRM-Zugang

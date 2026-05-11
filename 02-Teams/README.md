@@ -1,6 +1,6 @@
 <!--
 AI OS — Agentic Operating System für KMUs
-© 2026 Gerald Eder · UmsatzAI · MIT License
+© 2026 Gerald Eder · MIT License
 -->
 
 # 02-Teams/
@@ -46,7 +46,7 @@ Jeder Team-Folder enthaelt:
 | `<team>/.claude/skills/` | Team-Verantwortlicher nach Review |
 | `<team>/README.md` | Team-Verantwortlicher |
 
-In Google Drive / OneDrive / Dropbox einstellen ueber Datei-Freigabe pro Sub-Folder.
+In Cloud-Storage einstellen ueber Datei-Freigabe pro Sub-Folder.
 
 ## Verhaeltnis zu 04-Mitarbeiter/
 

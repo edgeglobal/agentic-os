@@ -61,8 +61,8 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 
 | Criterion | Points | How to detect |
 |---|---|---|
-| Sync-layer is set up (folder is in Dropbox/GDrive/OneDrive) | 5 | Check working directory path |
-| Org-Skills installed (Team Plan active) | 5 | Ask user — not detectable from filesystem |
+| Sync-layer is set up (folder is in Cloud-Storage) | 5 | Check working directory path |
+| Org-Skills oder shared Skills configured | 5 | Ask user — not detectable from filesystem |
 | MCP-Server configured (≥1) | 5 | Check `.mcp.json` or settings |
 | External service integrations (Notion, Calendar, Gmail) referenced | 5 | Grep AGENTS.md and CLAUDE.md for service mentions |
 | Documented connections (any file describing what's connected) | 5 | Look for `verbindungen.md` or similar |

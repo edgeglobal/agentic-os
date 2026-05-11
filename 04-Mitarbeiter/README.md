@@ -1,6 +1,6 @@
 <!--
 AI OS — Agentic Operating System für KMUs
-© 2026 Gerald Eder · UmsatzAI · MIT License
+© 2026 Gerald Eder · MIT License
 -->
 
 # 04-Mitarbeiter/
@@ -17,7 +17,7 @@ Roster aller Menschen in der Firma. Eine zentrale Liste, kein Sub-Folder pro Per
 └── team-mitglieder.md       ← Liste aller Mitarbeiter mit Rolle, Team, Praeferenzen
 ```
 
-**Bewusst nur ein File.** Frueher gab es hier Sub-Folder pro Person mit eigenem `ueber-mich.md`, `meine-stimme.md`, `memory.md`. Das hat sich als Overkill herausgestellt — fuer KMU mit 5-15 Mitarbeitern bringt das mehr Pflegeaufwand als Wert.
+**Bewusst nur ein File.** Frueher gab es hier Sub-Folder pro Person mit eigenem `ueber-mich.md`, `meine-stimme.md`, `memory.md`. Das hat sich als Overkill herausgestellt — fuer kleine Teams bringt das mehr Pflegeaufwand als Wert.
 
 ## Was hier liegt
 

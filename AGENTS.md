@@ -1,5 +1,5 @@
 <!--
-AI OS v0.4.2 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.5.0 — © 2026 Gerald Eder
 Licensed under MIT — see LICENSE
 -->
 
@@ -11,9 +11,9 @@ This is the entry point for any LLM working inside this folder. Read this file f
 
 ## What this folder is
 
-A **markdown-only AI Operating System** for small businesses (KMU, 2–15 employees). Plain text files connected by Obsidian-style `[[wikilinks]]` and per-section `INDEX.md` hubs. No databases. The vault is human-readable, syncable via Dropbox/Google Drive/OneDrive, and works in any text editor or AI tool.
+A **markdown-only AI Operating System** for teams of any size. Plain text files connected by Obsidian-style `[[wikilinks]]` and per-section `INDEX.md` hubs. No databases. The vault is human-readable, optionally syncable, and works in any text editor or AI tool.
 
-You can open this folder in Claude Cowork (Desktop), Claude Code, Codex CLI, Gemini CLI, Cursor, Obsidian, or VS Code. The structure works the same way in all of them.
+You can open this folder in Claude Code, Codex CLI, Cursor, Gemini CLI, Obsidian, or VS Code. Works locally or in shared cloud storage — the folder structure is the same.
 
 ## Folder map
 
@@ -69,11 +69,11 @@ Es gibt **keinen Sub-Folder pro Mitarbeiter**. Persoenliche Praeferenzen (Tonfal
 
 
 
-Permissions per Sub-Folder ueber Cloud-Provider (Google Drive / OneDrive / Dropbox), nicht ueber separate Folder-Wurzeln.
+Wenn ihr im Cloud-Storage arbeitet: Permissions per Sub-Folder einstellen. Wenn lokal: Folder-Permissions des Betriebssystems.
 
 ## Wikilink-basiertes CRM-Light
 
-Externe Firmen und Personen werden als eigene Folder gepflegt. Meeting-Notes in `03-CRM/Meetings/external/` verlinken via Wikilinks zu `[[03-CRM/Unternehmen/...]]` und `[[03-CRM/Personen/...]]`. Backlinks in den jeweiligen kontext.md-Files bauen ueber Jahre ein Wissens-Geflecht auf — perfekt fuer KMU ohne CRM-Tool.
+Externe Firmen und Personen werden als eigene Folder gepflegt. Meeting-Notes in `03-CRM/Meetings/` verlinken via Wikilinks zu `[[03-CRM/Unternehmen/...]]` und `[[03-CRM/Personen/...]]`. Backlinks in den jeweiligen `kontext.md`-Files bauen ueber Jahre ein Wissens-Geflecht auf — kein separates CRM-Tool noetig.
 
 ## Hard rules
 
@@ -135,4 +135,4 @@ Sag "Session abschließen" oder nutze `/session-abschluss` (Claude Code).
 
 ---
 
-Built with care by [Gerald Eder](https://geraldeder.com) · [UmsatzAI](https://umsatzai.com) · MIT License
+MIT License — © 2026 Gerald Eder
