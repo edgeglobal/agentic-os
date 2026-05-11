@@ -5,6 +5,20 @@ Alle nennenswerten Änderungen an AI OS werden hier dokumentiert.
 Format folgt [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.4.0] — 2026-05-11
+
+### Changed
+
+- **Onboard-Skill auf 4 Modi aufgebohrt:**
+  - **Firma** (Erst-Setup): 7-Sektionen-Interview befuellt alle 6 Files in `01-Firma Home/` plus Mitarbeiter-Roster. Akzeptiert hochgeladene Dokumente (Brand-Brief, Pitch-Deck, ICP-Doc) zur Anreicherung.
+  - **Team** (neuer Team-Folder): 4 Sektionen — Wer-wir-sind, Tools, Regeln, Glossar. Schreibt `02-Teams/<team>/kontext.md` + Skill-Vorschlaege.
+  - **Unternehmen** (neuer externer Firmen-Folder): 5 Sektionen — Stammdaten, Beziehung, Schluesselpersonen, Was-wir-machen, Tonalitaet. Schreibt `03-CRM/Unternehmen/<slug>/kontext.md`.
+  - **Person** (neuer externer Personen-Folder): 4 Sektionen — Basis, Verlauf, Persoenliches, Strategische Relevanz. Schreibt `03-CRM/Personen/<slug>/kontext.md` plus Backlink im Unternehmen.
+
+### Architecture Decision
+
+- **Onboard ist das EINE Setup-Tool fuer alle vier Bereiche.** Statt vier separate Skills (`onboard`, `neuer-kunde`, `neue-person`, `neues-team`) ein zentraler Skill mit Modus-Auswahl. Rationale: konsistente UX, ein Trigger-Verb, eine Wartungsstelle. Voice-Sample-Paste-Rule bleibt erhalten (kein Wispr-Flow-Verweis — Tool-Empfehlungen gehoeren nicht in den Skill).
+
 ## [0.3.3] — 2026-05-11
 
 ### Changed
