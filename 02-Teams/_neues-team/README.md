@@ -30,12 +30,13 @@ Ein Team-Folder ist eine **Mini-Firma** mit eigener Identitaet, eigenen Prozesse
 
 - **Pflicht:** `kontext.md` + `.claude/skills/` — jedes Team braucht das
 - **Standard:** `vorlagen/`, `projekte/`, `referenzen/`, `ablage/` — vorbefuellt, kann angepasst oder bei Nichtbedarf geloescht werden
+- **Team-spezifische Sub-Container:** jedes Team kann eigene Sub-Folder anlegen wenn sinnvoll. Beispiele: Marketing hat `website/`, Fulfillment koennte `lager/` haben, Finance koennte `buchhaltung/` haben. Frei waehlbar.
 
 ## Was wo lebt
 
 **`kontext.md`:** Wer ist im Team, welche Tools, welche Regeln, Glossar. Die KI liest das bei jeder Team-bezogenen Anfrage.
 
-**`vorlagen/`:** Output-Templates die nur dieses Team nutzt. Vertriebs-Vorlage liegt **nicht** in `` (firmenweit), sondern hier.
+**`vorlagen/`:** Output-Templates die nur dieses Team nutzt. Z.B. `angebot.md` fuer Vertrieb, `rechnung.md` fuer Finance.
 
 **`projekte/`:** Team-Initiativen die ueber Wochen laufen. Pro Projekt ein Sub-Folder aus `_neues-projekt/` dupliziert.
 
@@ -50,7 +51,7 @@ Ein Team-Folder ist eine **Mini-Firma** mit eigener Identitaet, eigenen Prozesse
 - **Externe Firmen** → `03-Unternehmen/`, Team verweist per Wikilink
 - **Externe Personen** → `04-Personen/`
 - **Mitarbeiter-Roster** → `06-Mitarbeiter/team-mitglieder.md` (firmenweit)
-- **Firmenweite Vorlagen** (z.B. Meeting-Protokoll) → ``
+- **Firmenweite Vorlagen** (z.B. Meeting-Protokoll) → `07-Meetings/_protokoll-vorlage.md`
 - **Firmenweite Projekte mit mehreren Teams** → `05-Projekte/`
 - **Meetings** (intern und extern) → `07-Meetings/`
 
