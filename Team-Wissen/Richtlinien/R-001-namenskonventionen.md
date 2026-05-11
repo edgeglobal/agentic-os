@@ -4,7 +4,7 @@
 
 ## Grundregeln
 
-1. **Englisch oder Deutsch — konsequent pro Bereich.** Standardordner sind deutsch (`01-Firma Home/`, `03-Unternehmen/`). System-Bereiche sind englisch (`Team/`, `.claude/`).
+1. **Englisch oder Deutsch — konsequent pro Bereich.** Standardordner sind deutsch (`01-Firma Home/`, `03-CRM/Unternehmen/`). System-Bereiche sind englisch (`Team/`, `.claude/`).
 2. **Kebab-Case bei Filenames.** `neuer-kunde.md`, nicht `Neuer Kunde.md` oder `neuer_kunde.md`.
 3. **Keine Umlaute in Filenames.** `markenstimme.md`, nicht `markenstimmë.md`. Inhalt darf Umlaute haben.
 4. **Keine Sonderzeichen außer `-` und `_`.** Vermeide Slashes, Klammern, Doppelpunkte in Filenames.
@@ -15,13 +15,13 @@
 - **Hauptordner:** Nummer-Prefix für Reihenfolge. `00-Inbox`, `01-Firma`, etc.
 - **Team-Ordner:** kebab-case Funktions-Name. Beispiel: `marketing-vertrieb/`, `fulfillment/`.
 - **Kunden:** kebab-case ohne Rechtsform-Suffix. `acme/` statt `acme-gmbh/`. Status im Frontmatter, nicht im Foldername.
-- **Mitarbeiter:** Eintrag im `06-Mitarbeiter/team-mitglieder.md`-Roster, kein eigener Sub-Folder.
+- **Mitarbeiter:** Eintrag im `05-Mitarbeiter/team-mitglieder.md`-Roster, kein eigener Sub-Folder.
 
 ## Dateien nach Typ
 
 | Typ | Format | Beispiel |
 |---|---|---|
-| Hub-Datei | `_hub.md` | `03-Unternehmen/acme/_hub.md` |
+| Hub-Datei | `_hub.md` | `03-CRM/Unternehmen/acme/_hub.md` |
 | INDEX | `INDEX.md` | `Team-Wissen/SOPs/INDEX.md` |
 | README | `README.md` | `00-Inbox/README.md` |
 | AGENTS-Vertrag | `AGENTS.md` | `AGENTS.md` (Root) |
@@ -30,8 +30,8 @@
 | Richtlinie | `R-NNN-<titel>.md` | `R-001-namenskonventionen.md` |
 | Session-Log | `YYYY-MM-DD-<slug>.md` | `2026-05-09-onboarding.md` |
 | Meeting | `YYYY-MM-DD-<thema>.md` | `2026-05-09-kickoff-acme.md` |
-| Briefing | `briefing.md` (im Kunden-Ordner) | `03-Unternehmen/acme/briefing.md` |
-| Notizen | `notizen.md` (im Kunden-Ordner) | `03-Unternehmen/acme/notizen.md` |
+| Briefing | `briefing.md` (im Kunden-Ordner) | `03-CRM/Unternehmen/acme/briefing.md` |
+| Notizen | `notizen.md` (im Kunden-Ordner) | `03-CRM/Unternehmen/acme/notizen.md` |
 
 ## Slugs
 

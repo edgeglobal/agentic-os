@@ -14,8 +14,8 @@ Team-spezifisches Wissen das **nicht firmenweit relevant** ist. Firmenweite Stan
 
 ## Was nicht
 
-- **Externe Firmen mit Beziehung** → in `03-Unternehmen/<firma>/`
-- **Externe Personen** → in `04-Personen/<name>/`
+- **Externe Firmen mit Beziehung** → in `03-CRM/Unternehmen/<firma>/`
+- **Externe Personen** → in `03-CRM/Personen/<name>/`
 - **Firmenweite Richtlinien** → in `Team-Wissen/Richtlinien/`
 - **Firmenweite SOPs** → in `Team-Wissen/SOPs/`
 

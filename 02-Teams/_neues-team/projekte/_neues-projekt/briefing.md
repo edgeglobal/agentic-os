@@ -20,11 +20,11 @@ verantwortlich: [Name]
 
 - **Projektleitung:** [Name]
 - **Intern:** [Namen]
-- **Extern:** [[04-Personen/...]] / [[03-Unternehmen/...]] (falls relevant)
+- **Extern:** [[03-CRM/Personen/...]] / [[03-CRM/Unternehmen/...]] (falls relevant)
 
 ## Bezug
 
-- Verknuepfte Firma: [[03-Unternehmen/...]] (falls Kunde / Lieferant)
+- Verknuepfte Firma: [[03-CRM/Unternehmen/...]] (falls Kunde / Lieferant)
 - Verknuepfte Strategie: siehe [[01-Firma Home/strategie]]
 
 ## Was im Scope ist

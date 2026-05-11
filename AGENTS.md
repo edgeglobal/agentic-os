@@ -1,5 +1,5 @@
 <!--
-AI OS v0.3.1 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.3.3 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT — see LICENSE
 -->
 
@@ -23,23 +23,24 @@ agentic-os/
 ├── 01-Firma Home/           ← Firmenweite SoT: markenstimme, unsere-kunden,
 │                              unsere-leistungen, unsere-tools, strategie, stakeholder
 ├── 02-Teams/                ← Pro Team-Funktion eine Mini-Firma
-│   ├── marketing-vertrieb/  ← Default-Team
+│   ├── marketing-vertrieb/  ← Default-Team (mit website/ als team-spezifischer Sub-Container)
 │   ├── fulfillment/         ← Default-Team
 │   ├── finance-hr-admin/    ← Default-Team
-│   └── _neues-team/         ← Vorlage (kontext, vorlagen, projekte, referenzen, ablage, skills)
-├── 03-Unternehmen/          ← Externe Firmen (Kunden, Lieferanten, Partner, Berater)
-│   ├── _neues-unternehmen/  ← Vorlage zum Duplizieren
-│   └── acme-gmbh/           ← Beispiel-Folder: kontext, gespraeche, ablage
-├── 04-Personen/             ← Externe Personen (Ansprechpartner, Beirat, Investoren)
-│   ├── _neue-person/        ← Vorlage zum Duplizieren
-│   └── hans-mueller/        ← Beispiel: kontext mit Verlauf, Vorlieben
-├── 05-Projekte/             ← Aktive firmenweite oder Cross-Team-Projekte
-├── 06-Mitarbeiter/          ← Roster aller Menschen in der Firma
+│   └── _neues-team/         ← Vorlage (kontext, vorlagen, projekte, referenzen, meetings, ablage, skills)
+├── 03-CRM/                  ← Customer Relationship: Unternehmen, Personen, Meetings
+│   ├── Unternehmen/         ← externe Firmen (Kunden, Lieferanten, Partner, Berater)
+│   │   ├── _neues-unternehmen/
+│   │   └── acme-gmbh/       ← Beispiel: kontext, gespraeche, ablage
+│   ├── Personen/            ← externe Personen (Ansprechpartner, Beirat, Investoren)
+│   │   ├── _neue-person/
+│   │   └── hans-mueller/    ← Beispiel: kontext mit Verlauf, Vorlieben
+│   └── Meetings/            ← **externe** Meetings mit Unternehmen + Personen
+│       └── _protokoll-vorlage.md ← Standard-Meeting-Format
+
+(Interne Meetings — Standups, Team-Reviews — liegen in `02-Teams/<team>/meetings/`.)
+├── 04-Projekte/             ← Aktive firmenweite oder Cross-Team-Projekte
+├── 05-Mitarbeiter/          ← Roster aller Menschen in der Firma
 │   └── team-mitglieder.md   ← Liste mit Name, Rolle, Team, optionale Praeferenzen
-├── 07-Meetings/             ← Meeting-Notes mit Wikilinks
-│   ├── internal/            ← interne Meetings (Standups, GF-Runden, Strategie)
-│   ├── external/            ← Meetings mit Unternehmen + Personen
-│   └── _protokoll-vorlage.md ← Standard-Meeting-Format
 ├── 99-Archiv/               ← Erledigtes
 │
 ├── Team-Wissen/             ← Operating know-how
@@ -54,10 +55,10 @@ agentic-os/
 
 ## Schichten (lebt im selben Folder, Permissions per Sub-Folder)
 
-- **Firma-weit** (`01-Firma Home/`, `05-Projekte/`, `06-Mitarbeiter/`, `.claude/skills/`) — alle Mitarbeiter lesen, Operator + Geschaeftsfuehrung schreiben
+- **Firma-weit** (`01-Firma Home/`, `04-Projekte/`, `05-Mitarbeiter/`, `.claude/skills/`) — alle Mitarbeiter lesen, Operator + Geschaeftsfuehrung schreiben
 - **Team** als Mini-Firma (`02-Teams/<team>/`) — eigene `kontext`, `vorlagen`, `projekte`, `referenzen`, `ablage`, `.claude/skills`. Team-Mitglieder schreiben, Rest liest.
-- **Externe Unternehmen** (`03-Unternehmen/<firma>/`) — gezielte Freigaben pro Firma, auch fuer Externe (Steuerberater etc.) moeglich
-- **Externe Personen** (`04-Personen/<name>/`) — Ansprechpartner, Beirat, Investoren, Berater. Pflege durch Teams die Kontakt haben.
+- **Externe Unternehmen** (`03-CRM/Unternehmen/<firma>/`) — gezielte Freigaben pro Firma, auch fuer Externe (Steuerberater etc.) moeglich
+- **Externe Personen** (`03-CRM/Personen/<name>/`) — Ansprechpartner, Beirat, Investoren, Berater. Pflege durch Teams die Kontakt haben.
 
 Es gibt **keinen Sub-Folder pro Mitarbeiter**. Persoenliche Praeferenzen (Tonfall, Anrede) leben als Spalte im Roster. Brand-Voice ist firmenweit in `01-Firma Home/markenstimme.md`, nicht pro Person.
 
@@ -65,7 +66,7 @@ Permissions per Sub-Folder ueber Cloud-Provider (Google Drive / OneDrive / Dropb
 
 ## Wikilink-basiertes CRM-Light
 
-Externe Firmen und Personen werden als eigene Folder gepflegt. Meeting-Notes in `07-Meetings/external/` verlinken via Wikilinks zu `[[03-Unternehmen/...]]` und `[[04-Personen/...]]`. Backlinks in den jeweiligen kontext.md-Files bauen ueber Jahre ein Wissens-Geflecht auf — perfekt fuer KMU ohne CRM-Tool.
+Externe Firmen und Personen werden als eigene Folder gepflegt. Meeting-Notes in `03-CRM/Meetings/external/` verlinken via Wikilinks zu `[[03-CRM/Unternehmen/...]]` und `[[03-CRM/Personen/...]]`. Backlinks in den jeweiligen kontext.md-Files bauen ueber Jahre ein Wissens-Geflecht auf — perfekt fuer KMU ohne CRM-Tool.
 
 ## Hard rules
 
@@ -108,7 +109,7 @@ Keine SQLite. Keine Datenbank. Session-Logs sind Markdown. Cross-Session-Lerneff
 ### 7. Nicht-Bemächtigung
 
 Du änderst niemals:
-- User-Content in `01-Firma Home/`, `03-Unternehmen/` ohne explizite Aufgabe
+- User-Content in `01-Firma Home/`, `03-CRM/Unternehmen/` ohne explizite Aufgabe
 - Diese Root-`AGENTS.md`
 
 ## Where to start

@@ -106,7 +106,7 @@ Aus den Antworten füllt die KI automatisch:
 - `01-Firma Home/unsere-leistungen.md` (Angebot)
 - `01-Firma Home/strategie.md` (Ziele, Prioritäten)
 - `01-Firma Home/stakeholder.md` (externe Partner, Schlüsselpersonen)
-- `06-Mitarbeiter/team-mitglieder.md` (wer ihr seid)
+- `05-Mitarbeiter/team-mitglieder.md` (wer ihr seid)
 - `Team-Wissen/Session-Logs/2026/MM/2026-MM-DD-onboarding.md`
 
 ---
@@ -137,7 +137,7 @@ Für jeden neuen Mitarbeiter:
 3. Mitarbeiter öffnet den Sync-Ordner (`~/Dropbox/mein-business-os/`)
 4. Mitarbeiter sagt zur KI: **"Ich bin neu im Team. Onboarde mich."**
 5. Die KI fragt nach Namen, Rolle, Team
-6. Die KI trägt den Eintrag in `06-Mitarbeiter/team-mitglieder.md` ein
+6. Die KI trägt den Eintrag in `05-Mitarbeiter/team-mitglieder.md` ein
 7. Die KI ergänzt das Team-Mitglied in `02-Teams/<team>/kontext.md`
 8. Die KI fragt optional: "Gibt es etwas wie Claude mit dir reden soll (Tonfall, Anrede)?" — landet als Notiz in der Präferenz-Spalte des Rosters
 
@@ -176,7 +176,7 @@ Beispiele was Mitarbeiter ab jetzt machen können:
 ### "Wo gehören persönliche Files vs. Firmen-Files hin?"
 
 → Drei einfache Regeln:
-- **Persönliches** (eigene Tone of Voice, Memory, About-me) → `06-Mitarbeiter/<dein-name>/`
+- **Persönliches** (eigene Tone of Voice, Memory, About-me) → `05-Mitarbeiter/<dein-name>/`
 - **Team-Sachen** (Prozesse, Skills die alle im Team nutzen) → `02-Teams/<dein-team>/`
 - **Firma-weit** (Markenstimme, Wunschkunden, Strategie) → `01-Firma Home/`
 

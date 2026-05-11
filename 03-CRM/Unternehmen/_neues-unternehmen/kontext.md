@@ -28,8 +28,8 @@ last-updated: 2026-05-11
 
 | Name | Funktion | Rolle in der Beziehung |
 |---|---|---|
-| [[04-Personen/hans-mueller]] | Geschaeftsfuehrer | Entscheider |
-| [[04-Personen/elena-koenig]] | Einkauf | operativ |
+| [[03-CRM/Personen/hans-mueller]] | Geschaeftsfuehrer | Entscheider |
+| [[03-CRM/Personen/elena-koenig]] | Einkauf | operativ |
 
 ## Was wir fuer sie machen
 
@@ -65,12 +65,12 @@ last-updated: 2026-05-11
 
 > Wird automatisch aus Backlinks gepflegt. Manuell ergaenzen wenn KI nicht aktualisiert.
 
-- [[07-Meetings/external/2026-MM-DD-thema]]
+- [[03-CRM/Meetings/external/2026-MM-DD-thema]]
 - [...]
 
 ## Verknuepfte Projekte
 
-- [[05-Projekte/projekt-slug]]
+- [[04-Projekte/projekt-slug]]
 - [...]
 
 ## Notizen

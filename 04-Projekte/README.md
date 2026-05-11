@@ -11,14 +11,14 @@ Hier landen Projekte, die nicht direkt einem Kunden zuzuordnen sind:
 
 ## Was hier NICHT rein soll
 
-- Kunden-Projekte → `03-Unternehmen/<kunde>/`
+- Kunden-Projekte → `03-CRM/Unternehmen/<kunde>/`
 - Tagesgeschäft → einzelne Aufgaben sind keine Projekte
 - Wissens-Aufbau → `01-Firma Home/`
 
 ## Struktur pro Projekt
 
 ```
-05-Projekte/
+04-Projekte/
 └── q3-pricing-reform/
     ├── _hub.md
     ├── recherche/

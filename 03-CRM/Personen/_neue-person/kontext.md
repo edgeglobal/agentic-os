@@ -10,7 +10,7 @@ last-updated: 2026-05-11
 ## Basis
 
 - **Funktion:** [aktuelle Rolle, z.B. Geschaeftsfuehrer]
-- **Aktuelle Firma:** [[03-Unternehmen/firma-slug]]
+- **Aktuelle Firma:** [[03-CRM/Unternehmen/firma-slug]]
 - **Mail:** [mail-adresse]
 - **Telefon:** [optional]
 - **LinkedIn:** [optional URL]
@@ -57,7 +57,7 @@ last-updated: 2026-05-11
 
 > Wird von der KI automatisch gepflegt aus Backlinks der Meeting-Notes.
 
-- [[07-Meetings/external/2026-MM-DD-thema]]
+- [[03-CRM/Meetings/external/2026-MM-DD-thema]]
 - [...]
 
 ## Notizen

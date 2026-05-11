@@ -3,11 +3,11 @@ AI OS — Agentic Operating System für KMUs
 © 2026 Gerald Eder · UmsatzAI · MIT License
 -->
 
-# 04-Personen/
+# 03-CRM/Personen/
 
 Alle **externen** Personen mit denen ihr regelmaessig zu tun habt: Ansprechpartner bei Kunden, Lieferanten-Kontakte, Beirat, Investoren, Steuerberater, Anwalt, ehemalige Mitarbeiter die jetzt bei Kunden sind.
 
-> Nicht zu verwechseln mit `06-Mitarbeiter/` — das sind eure **eigenen** Mitarbeiter.
+> Nicht zu verwechseln mit `05-Mitarbeiter/` — das sind eure **eigenen** Mitarbeiter.
 
 ## Wann jemand hier rein gehoert
 
@@ -26,7 +26,7 @@ Alle **externen** Personen mit denen ihr regelmaessig zu tun habt: Ansprechpartn
 ## Aufbau
 
 ```
-04-Personen/
+03-CRM/Personen/
 ├── README.md                 ← diese Datei
 ├── _neue-person/             ← Vorlage zum Duplizieren
 │   └── kontext.md
@@ -50,11 +50,11 @@ Bei Namensgleichheit: Anhang Firma oder Initial — `hans-mueller-acme/`, `hans-
 
 Im `kontext.md` einer Person:
 
-- Wikilink zur aktuellen Firma: `Aktuelle Firma: [[03-Unternehmen/acme-gmbh]]`
+- Wikilink zur aktuellen Firma: `Aktuelle Firma: [[03-CRM/Unternehmen/acme-gmbh]]`
 - Verlauf bei vorherigen Firmen
 - Backlinks zu Meeting-Notes (KI pflegt das automatisch)
 
-In `03-Unternehmen/<firma>/kontext.md` gibt's eine Sektion "Schluesselpersonen" mit Wikilinks zu den entsprechenden Personen-Files.
+In `03-CRM/Unternehmen/<firma>/kontext.md` gibt's eine Sektion "Schluesselpersonen" mit Wikilinks zu den entsprechenden Personen-Files.
 
 ## Wer darf was schreiben
 

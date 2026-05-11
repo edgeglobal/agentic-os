@@ -11,7 +11,7 @@ status: template
 
 ## Interne Schluesselpersonen
 
-> Die Personen die ueber das normale Mitarbeiter-Team hinaus relevant sind. Mitarbeiter selbst sind in `06-Mitarbeiter/team-mitglieder.md`.
+> Die Personen die ueber das normale Mitarbeiter-Team hinaus relevant sind. Mitarbeiter selbst sind in `05-Mitarbeiter/team-mitglieder.md`.
 
 | Name | Rolle | Wann relevant |
 |---|---|---|
@@ -39,11 +39,11 @@ status: template
 
 ## Schluessel-Kunden
 
-> Kunden mit denen eine besondere Beziehung besteht. Detail-Kontext liegt in `03-Unternehmen/<kunde>/`.
+> Kunden mit denen eine besondere Beziehung besteht. Detail-Kontext liegt in `03-CRM/Unternehmen/<kunde>/`.
 
 | Kunde | Bedeutung | Mitarbeiter-Kontakt | Mehr |
 |---|---|---|---|
-| [Name] | [z.B. groesster Umsatz / strategisch / Referenz] | [Wer betreut] | [03-Unternehmen/<kunde>/] |
+| [Name] | [z.B. groesster Umsatz / strategisch / Referenz] | [Wer betreut] | [03-CRM/Unternehmen/<kunde>/] |
 
 ## Externe Institutionen / Verbaende
 

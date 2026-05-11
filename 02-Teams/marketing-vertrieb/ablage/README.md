@@ -14,7 +14,7 @@ Fertige Outputs des Teams die **andere Teams oder die Geschaeftsfuehrung** einse
 
 - **Drafts in Bearbeitung** → in Projekt-Folder unter `projekte/<projekt>/outputs/`
 - **Team-internes Wissen** → in `referenzen/`
-- **Kundenspezifische Outputs** → in `03-Unternehmen/<firma>/ablage/`
+- **Kundenspezifische Outputs** → in `03-CRM/Unternehmen/<firma>/ablage/`
 
 ## Organisation
 

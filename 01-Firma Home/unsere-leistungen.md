@@ -83,7 +83,7 @@ Warum kaufen Kunden bei euch und nicht beim Mitbewerber?
 
 ### "Habt ihr Referenzen?"
 
-[Wo Referenzen liegen — Verweis auf `03-Unternehmen/`]
+[Wo Referenzen liegen — Verweis auf `03-CRM/Unternehmen/`]
 
 ## Garantien & Rückerstattung
 

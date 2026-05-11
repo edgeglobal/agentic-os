@@ -47,7 +47,7 @@ last-updated: 2026-05-09
 - [ ] Keine Buzzwords? (innovativ, synergetisch, ganzheitlich, etc.)
 - [ ] Konkrete Beispiele/Zahlen drin?
 - [ ] Visual prepared? (wenn Karussell/Bild/Video)
-- [ ] Cross-Link zu [[03-Unternehmen/...]] oder [[05-Projekte/...]] wenn passend?
+- [ ] Cross-Link zu [[03-CRM/Unternehmen/...]] oder [[04-Projekte/...]] wenn passend?
 
 ## Post-Performance (nach 7 Tagen ausfüllen)
 

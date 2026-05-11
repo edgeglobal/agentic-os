@@ -38,8 +38,8 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 **Workflows:** `Team-Wissen/Workflows/WF-*.md` — count.
 **Richtlinien:** `Team-Wissen/Richtlinien/R-*.md` — count.
 **Session-Logs:** `Team-Wissen/Session-Logs/YYYY/MM/*.md` — count + most recent date.
-**Customer folders:** `03-Unternehmen/<name>/_hub.md` — count.
-**Project folders:** `05-Projekte/<name>/_hub.md` — count.
+**Customer folders:** `03-CRM/Unternehmen/<name>/_hub.md` — count.
+**Project folders:** `04-Projekte/<name>/_hub.md` — count.
 **Skills:** `.claude/skills/*/SKILL.md` — count + names.
 **Connection mechanisms:**
 - MCPs: `.mcp.json`, `.claude/settings.json`
@@ -82,8 +82,8 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 |---|---|---|
 | Session-Logs werden geschrieben (≥1 in letzten 7 Tagen) | 10 | Check `Team-Wissen/Session-Logs/YYYY/MM/` for recent files |
 | Session-Logs gehen ≥4 Wochen zurück | 5 | Count distinct months in Session-Logs |
-| ≥1 Kunde ist angelegt mit Hub | 5 | Count `03-Unternehmen/*/_hub.md` ≥ 1 |
-| ≥1 aktives Projekt mit Hub | 5 | Count `05-Projekte/*/_hub.md` ≥ 1 |
+| ≥1 Kunde ist angelegt mit Hub | 5 | Count `03-CRM/Unternehmen/*/_hub.md` ≥ 1 |
+| ≥1 aktives Projekt mit Hub | 5 | Count `04-Projekte/*/_hub.md` ≥ 1 |
 
 ### Step 3: Identify top 3 gaps by leverage
 

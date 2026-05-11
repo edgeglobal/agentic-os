@@ -20,6 +20,8 @@ Ein Team-Folder ist eine **Mini-Firma** mit eigener Identitaet, eigenen Prozesse
 │   └── (z.B. webrelaunch-acme/, lieferanten-audit-q2/)
 ├── referenzen/                ← Standard: team-spezifisches Wissen
 │   └── (z.B. wettbewerber-analyse.md, prozess-doku.md)
+├── meetings/                  ← Standard: team-interne Meetings (Standups, Reviews)
+│   └── YYYY/MM/YYYY-MM-DD-<thema>.md
 ├── ablage/                    ← Standard: fertige Team-Outputs
 │   └── (z.B. quartalsberichte/, praesentationen/)
 └── .claude/skills/            ← Pflicht: team-spezifische Skills
@@ -29,7 +31,7 @@ Ein Team-Folder ist eine **Mini-Firma** mit eigener Identitaet, eigenen Prozesse
 ## Pflicht / Standard / Optional
 
 - **Pflicht:** `kontext.md` + `.claude/skills/` — jedes Team braucht das
-- **Standard:** `vorlagen/`, `projekte/`, `referenzen/`, `ablage/` — vorbefuellt, kann angepasst oder bei Nichtbedarf geloescht werden
+- **Standard:** `vorlagen/`, `projekte/`, `referenzen/`, `meetings/`, `ablage/` — vorbefuellt, kann angepasst oder bei Nichtbedarf geloescht werden
 - **Team-spezifische Sub-Container:** jedes Team kann eigene Sub-Folder anlegen wenn sinnvoll. Beispiele: Marketing hat `website/`, Fulfillment koennte `lager/` haben, Finance koennte `buchhaltung/` haben. Frei waehlbar.
 
 ## Was wo lebt
@@ -48,12 +50,13 @@ Ein Team-Folder ist eine **Mini-Firma** mit eigener Identitaet, eigenen Prozesse
 
 ## Was nicht ins Team-Folder gehoert
 
-- **Externe Firmen** → `03-Unternehmen/`, Team verweist per Wikilink
-- **Externe Personen** → `04-Personen/`
-- **Mitarbeiter-Roster** → `06-Mitarbeiter/team-mitglieder.md` (firmenweit)
-- **Firmenweite Vorlagen** (z.B. Meeting-Protokoll) → `07-Meetings/_protokoll-vorlage.md`
-- **Firmenweite Projekte mit mehreren Teams** → `05-Projekte/`
-- **Meetings** (intern und extern) → `07-Meetings/`
+- **Externe Firmen** → `03-CRM/Unternehmen/`, Team verweist per Wikilink
+- **Externe Personen** → `03-CRM/Personen/`
+- **Mitarbeiter-Roster** → `05-Mitarbeiter/team-mitglieder.md` (firmenweit)
+- **Firmenweite Vorlagen** (z.B. Meeting-Protokoll) → `03-CRM/Meetings/_protokoll-vorlage.md`
+- **Firmenweite Projekte mit mehreren Teams** → `04-Projekte/`
+- **Externe Meetings** (mit Unternehmen oder Personen) → `03-CRM/Meetings/`
+- **Interne Meetings** des Teams (Standups, Reviews) → `meetings/` hier im Team-Folder
 
 ## Neues Team anlegen
 

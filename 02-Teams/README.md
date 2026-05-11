@@ -48,8 +48,8 @@ Jeder Team-Folder enthaelt:
 
 In Google Drive / OneDrive / Dropbox einstellen ueber Datei-Freigabe pro Sub-Folder.
 
-## Verhaeltnis zu 06-Mitarbeiter/
+## Verhaeltnis zu 05-Mitarbeiter/
 
-- **06-Mitarbeiter/** = WER. Pro Person ein Folder.
+- **05-Mitarbeiter/** = WER. Pro Person ein Folder.
 - **02-Teams/** = WAS macht eine Funktion. Pro Funktion ein Folder.
 - Verknuepfung ueber `team-mitglieder.md` und Eintraegen in `kontext.md` der Teams (Liste der Mitglieder).

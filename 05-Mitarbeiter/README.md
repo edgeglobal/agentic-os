@@ -3,7 +3,7 @@ AI OS — Agentic Operating System für KMUs
 © 2026 Gerald Eder · UmsatzAI · MIT License
 -->
 
-# 06-Mitarbeiter/
+# 05-Mitarbeiter/
 
 Roster aller Menschen in der Firma. Eine zentrale Liste, kein Sub-Folder pro Person.
 
@@ -12,7 +12,7 @@ Roster aller Menschen in der Firma. Eine zentrale Liste, kein Sub-Folder pro Per
 ## Aufbau
 
 ```
-06-Mitarbeiter/
+05-Mitarbeiter/
 ├── README.md                ← diese Datei
 └── team-mitglieder.md       ← Liste aller Mitarbeiter mit Rolle, Team, Praeferenzen
 ```
@@ -69,5 +69,5 @@ Persoenliche Daten (Gehalt, Krankschreibungen, Personalgespraechs-Notizen) **nic
 Die KI:
 
 1. Entfernt Max-Eintrag aus `team-mitglieder.md` und aus `02-Teams/<team>/kontext.md`
-2. Sucht in `03-Unternehmen/` und `05-Projekte/` nach Verweisen auf Max und markiert sie als "Nachfolger benoetigt"
+2. Sucht in `03-CRM/Unternehmen/` und `04-Projekte/` nach Verweisen auf Max und markiert sie als "Nachfolger benoetigt"
 3. Schreibt Session-Log mit Datum

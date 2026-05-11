@@ -2,7 +2,7 @@
 
 Initiativen die das Team treibt und die ueber **mehr als 2 Wochen** laufen.
 
-Firmenweite Cross-Team-Projekte liegen in `05-Projekte/` auf Repo-Ebene.
+Firmenweite Cross-Team-Projekte liegen in `04-Projekte/` auf Repo-Ebene.
 
 ## Wann ein Projekt hierhin gehoert
 
@@ -13,7 +13,7 @@ Firmenweite Cross-Team-Projekte liegen in `05-Projekte/` auf Repo-Ebene.
 
 ## Wenn keiner dieser Punkte zutrifft
 
-Dann ist es eher ein Tagesgeschaeft-Vorgang — in `ablage/` oder direkt in `03-Unternehmen/<firma>/` ablegen.
+Dann ist es eher ein Tagesgeschaeft-Vorgang — in `ablage/` oder direkt in `03-CRM/Unternehmen/<firma>/` ablegen.
 
 ## Aufbau pro Projekt
 
@@ -44,4 +44,4 @@ Kebab-case, kurz, beschreibend:
 1. `_neues-projekt/` duplizieren
 2. Mit Projektname umbenennen
 3. `briefing.md` ausfuellen (Ziele, Beteiligte, Zeitrahmen)
-4. Wenn Kunden-bezogen: Wikilink zu `[[03-Unternehmen/<firma>]]` im briefing
+4. Wenn Kunden-bezogen: Wikilink zu `[[03-CRM/Unternehmen/<firma>]]` im briefing

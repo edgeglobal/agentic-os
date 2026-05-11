@@ -25,7 +25,7 @@ Use Grep to find facts that appear in multiple files. Heuristics:
 - Gleiche Produkt-/Leistungs-Beschreibung in 2+ Dateien
 
 For each violation:
-- Pick canonical home (autoritativste Datei: `01-Firma Home/*` for business facts, `03-Unternehmen/<x>/_hub.md` for customer facts, `05-Team/<x>/_hub.md` for team facts)
+- Pick canonical home (autoritativste Datei: `01-Firma Home/*` for business facts, `03-CRM/Unternehmen/<x>/_hub.md` for customer facts, `05-Team/<x>/_hub.md` for team facts)
 - Replace duplicate with `[[wikilink]]`
 - Note the change in the upcoming session log
 

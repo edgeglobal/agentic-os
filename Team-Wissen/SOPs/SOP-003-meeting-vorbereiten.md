@@ -12,7 +12,7 @@
 ### 1. Meeting-Kontext klären
 
 Die KI fragt:
-- Mit wem? (Verweis auf [[03-Unternehmen/...]] oder neue Person)
+- Mit wem? (Verweis auf [[03-CRM/Unternehmen/...]] oder neue Person)
 - Worum geht's? (Verkauf? Review? Kick-off? Krisen-Gespräch?)
 - Welche Vorgeschichte? (frühere Meetings, frühere E-Mails)
 - Was ist das gewünschte Ergebnis?
@@ -20,8 +20,8 @@ Die KI fragt:
 ### 2. Bestehenden Kontext laden
 
 Die KI liest:
-- Wenn Kunde existiert: `03-Unternehmen/<kunde>/_hub.md` + alle bisherigen Meeting-Notizen
-- Wenn neue Person: existiert sie in `05-Team/` oder `03-Unternehmen/`?
+- Wenn Kunde existiert: `03-CRM/Unternehmen/<kunde>/_hub.md` + alle bisherigen Meeting-Notizen
+- Wenn neue Person: existiert sie in `05-Team/` oder `03-CRM/Unternehmen/`?
 - E-Mail-Verlauf (wenn User reinpaste)
 
 Zusammenfassung: "Aus dem Vault: [Kunde] ist [X], letzter Kontakt [Datum] mit [Inhalt]. Aktuelle Phase: [Y]."
@@ -88,19 +88,19 @@ Die KI gibt User ein 1-Page-Briefing mit:
 
 User sagt: "Meeting fertig — hier meine Notizen: [...]"
 
-Die KI führt sich an, ein sauberes Protokoll nach [[07-Meetings/_protokoll-vorlage]] zu schreiben und im richtigen Ordner abzulegen (Kunde / Projekt / 06-Meetings).
+Die KI führt sich an, ein sauberes Protokoll nach [[03-CRM/Meetings/_protokoll-vorlage]] zu schreiben und im richtigen Ordner abzulegen (Kunde / Projekt / 06-Meetings).
 
 ---
 
 ## Output
 
 Vor dem Meeting:
-- `03-Unternehmen/<kunde>/meetings/YYYY-MM-DD-<thema>-vorbereitung.md` (oder `06-Meetings/...` wenn nicht kunden-bezogen)
+- `03-CRM/Unternehmen/<kunde>/meetings/YYYY-MM-DD-<thema>-vorbereitung.md` (oder `06-Meetings/...` wenn nicht kunden-bezogen)
 
 Nach dem Meeting:
 - Selbe Datei umbenannt (Vorbereitung + Protokoll im selben File ist ok), oder zusätzlich `YYYY-MM-DD-<thema>-protokoll.md`
 
 ## Referenzen
 
-- [[07-Meetings/_protokoll-vorlage]] (Vorlage)
+- [[03-CRM/Meetings/_protokoll-vorlage]] (Vorlage)
 - [[markenstimme]]

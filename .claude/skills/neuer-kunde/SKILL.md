@@ -14,7 +14,7 @@ Conducts the new-customer-onboarding flow defined in [[SOP-002-neuen-kunden-anle
 - `01-Firma Home/unsere-kunden.md` — fuer Persona-Zuordnung
 - `kunden-onboarding.md` — Briefing-Template
 - `Team-Wissen/Richtlinien/R-001-namenskonventionen.md` — fuer Filename-Regeln
-- `03-Unternehmen/` — pruefen dass kein Duplikat existiert
+- `03-CRM/Unternehmen/` — pruefen dass kein Duplikat existiert
 
 ## Execution
 
@@ -57,7 +57,7 @@ Filename-Regel: kebab-case, ohne Rechtsform-Suffix, keine Umlaute. Beispiele:
 
 Create:
 ```
-03-Unternehmen/<slug>/
+03-CRM/Unternehmen/<slug>/
 ├── _hub.md
 ├── briefing.md
 ├── meetings/
@@ -118,7 +118,7 @@ E-Mail-Entwurf in den Chat printen (nicht in Datei schreiben — User schickt se
 ```
 ✓ Kunde angelegt: <Firma>
 
-Pfad: 03-Unternehmen/<slug>/
+Pfad: 03-CRM/Unternehmen/<slug>/
 - _hub.md (gefuellt)
 - briefing.md (Stub mit X offenen Punkten)
 - meetings/ (leer, fuer Protokolle)
@@ -137,8 +137,8 @@ Naechster Schritt: Mail verschicken / Briefing-Luecken fuellen / Kickoff-Termin 
 
 ## Critical rules
 
-1. **Kein Duplikat anlegen.** Wenn der Slug bereits existiert in `03-Unternehmen/`, fragen ob es derselbe Kunde ist (dann an existing anhaengen) oder ein anderer (dann Slug schaerfen).
+1. **Kein Duplikat anlegen.** Wenn der Slug bereits existiert in `03-CRM/Unternehmen/`, fragen ob es derselbe Kunde ist (dann an existing anhaengen) oder ein anderer (dann Slug schaerfen).
 2. **Sensitive-Branchen-Flag.** Wenn Branche Anwalt/Arzt/Finanz/Behoerde, im `_hub.md` "**SENSITIV — keine Details aussserhalb dieses Ordners zitieren**" einfuegen.
 3. **Markenstimme strict.** Kickoff-Mail-Entwurf MUSS `markenstimme.md` befolgen — Tabu-Woerter checken.
-4. **Read-only auf `01-Firma Home/`.** Nur 03-Unternehmen/-Pfade neu anlegen.
+4. **Read-only auf `01-Firma Home/`.** Nur 03-CRM/Unternehmen/-Pfade neu anlegen.
 5. **Frontmatter komplett.** Kein leeres Pflichtfeld.

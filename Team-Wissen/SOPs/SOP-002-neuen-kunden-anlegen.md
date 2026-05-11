@@ -24,7 +24,7 @@ Die KI fragt:
 ### 2. Ordner anlegen
 
 ```
-03-Unternehmen/
+03-CRM/Unternehmen/
 └── <firma-kebab-case>/
     ├── _hub.md
     ├── briefing.md
@@ -105,18 +105,18 @@ Die KI prüft:
 
 ### 7. Confirmation
 
-> "Kunde angelegt. Ordner in `03-Unternehmen/<firma>/`, Hub gefüllt, Briefing-Dokument in `briefing.md`. Kickoff-Mail Entwurf ist im Chat — bereit zum Verschicken."
+> "Kunde angelegt. Ordner in `03-CRM/Unternehmen/<firma>/`, Hub gefüllt, Briefing-Dokument in `briefing.md`. Kickoff-Mail Entwurf ist im Chat — bereit zum Verschicken."
 
 ---
 
 ## Output
 
 Angelegt:
-- `03-Unternehmen/<firma>/_hub.md`
-- `03-Unternehmen/<firma>/briefing.md`
-- `03-Unternehmen/<firma>/meetings/` (leerer Ordner)
-- `03-Unternehmen/<firma>/lieferungen/` (leerer Ordner)
-- `03-Unternehmen/<firma>/notizen.md` (Stub)
+- `03-CRM/Unternehmen/<firma>/_hub.md`
+- `03-CRM/Unternehmen/<firma>/briefing.md`
+- `03-CRM/Unternehmen/<firma>/meetings/` (leerer Ordner)
+- `03-CRM/Unternehmen/<firma>/lieferungen/` (leerer Ordner)
+- `03-CRM/Unternehmen/<firma>/notizen.md` (Stub)
 
 ## Referenzen
 
