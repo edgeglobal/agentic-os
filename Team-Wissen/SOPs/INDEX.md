@@ -12,10 +12,10 @@
 
 ## SOP anlegen
 
-Sagt Larry:
+Sag zur KI:
 > "Erstelle eine SOP für [X]"
 
-Larry fragt nach den Schritten und legt eine neue SOP nach Schema an.
+Die KI fragt nach den Schritten und legt eine neue SOP nach Schema an.
 
 ## Format pro SOP
 

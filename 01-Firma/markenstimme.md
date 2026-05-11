@@ -7,7 +7,7 @@ status: template
 
 # Markenstimme
 
-> **Anleitung:** Diese Datei beschreibt, wie euer Unternehmen schreibt und spricht. Larry nutzt sie als Referenz für E-Mails, LinkedIn-Posts, Angebote und alle externen Texte. Je präziser, desto besser. Idealerweise füllt der `/onboard` Skill das automatisch aus euren Beispiel-Texten aus.
+> **Anleitung:** Diese Datei beschreibt, wie euer Unternehmen schreibt und spricht. Die KI nutzt sie als Referenz für E-Mails, LinkedIn-Posts, Angebote und alle externen Texte. Je präziser, desto besser. Idealerweise füllt der `/onboard` Skill das automatisch aus euren Beispiel-Texten aus.
 
 ## Wer wir sind
 
@@ -38,7 +38,7 @@ status: template
 
 ## Beispiel-Texte (PFLICHT)
 
-> Hier sollten echte Texte aus eurer Firma stehen — nicht erfundene. Larry lernt von Originalen.
+> Hier sollten echte Texte aus eurer Firma stehen — nicht erfundene. Die KI lernt von Originalen.
 
 ### Beispiel 1: LinkedIn-Post
 

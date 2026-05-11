@@ -2,7 +2,7 @@
 
 **Templates für wiederkehrende Aufgaben.**
 
-Wann immer ihr etwas mehr als zweimal schreibt, gehört es als Vorlage hier rein. Larry nutzt diese Vorlagen automatisch wenn ihr ihn fragt.
+Wann immer ihr etwas mehr als zweimal schreibt, gehört es als Vorlage hier rein. Die KI nutzt diese Vorlagen automatisch wenn ihr ihn fragt.
 
 ## Standardvorlagen
 
@@ -15,11 +15,11 @@ Wann immer ihr etwas mehr als zweimal schreibt, gehört es als Vorlage hier rein
 
 ## Eigene Vorlagen anlegen
 
-Sagt einfach Larry:
+Sag einfach zur KI:
 
 > "Erstelle eine Vorlage für [X]"
 
-Larry fragt nach der Struktur und legt eine neue Datei in diesem Ordner an.
+Die KI fragt nach der Struktur und legt eine neue Datei in diesem Ordner an.
 
 ## Regel
 

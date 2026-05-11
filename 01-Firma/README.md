@@ -1,8 +1,8 @@
-# 01-Wissen
+# 01-Firma
 
-**Was Larry und das Team über euer Geschäft wissen müssen.**
+**Was Die KI über euer Geschäft wissen müssen.**
 
-Dies ist die **Single Source of Truth** für alles, was euer Unternehmen ausmacht. Larry liest diese Dateien automatisch und nutzt sie als Kontext für jede Antwort.
+Dies ist die **Single Source of Truth** für alles, was euer Unternehmen ausmacht. Die KI liest diese Dateien automatisch und nutzt sie als Kontext für jede Antwort.
 
 ## Pflicht-Dateien
 
@@ -26,10 +26,10 @@ Je nach Geschäftsmodell könnt ihr ergänzen:
 
 **SSOT (Single Source of Truth):** Jeder Fakt lebt in genau einer Datei. Wenn ihr "wir haben 3 Kundengruppen" in einer Datei schreibt, dann nicht woanders nochmal — sondern dort verlinken via `[[unsere-kunden]]`.
 
-Larry erzwingt diese Regel am Session-Ende.
+Die KI erzwingt diese Regel am Session-Ende.
 
 ## Wie befüllen
 
-Beim ersten Setup nutzt der `/onboard` Skill (Claude Code) oder bittet Larry: "Lass uns Agentic OS einrichten." Der 7-Fragen-Wizard füllt diese Dateien automatisch aus euren Antworten.
+Beim ersten Setup nutzt der `/onboard` Skill (Claude Code) oder sag zur KI: "Lass uns Agentic OS einrichten." Der 7-Fragen-Wizard füllt diese Dateien automatisch aus euren Antworten.
 
-Später ergänzt ihr direkt — Larry erkennt Änderungen und passt seine Antworten an.
+Später ergänzt ihr direkt — Die KI erkennt Änderungen und passt seine Antworten an.

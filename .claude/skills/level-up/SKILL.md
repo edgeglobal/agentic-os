@@ -21,7 +21,7 @@ Walks the user through a 3-phase interview each week to surface and ship one new
 
 ## Inputs the skill reads
 
-- `01-Wissen/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`
+- `01-Firma/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`
 - `05-Team/team-mitglieder.md`
 - `Team/agent-index.md` — wer kann was
 - `Team-Wissen/Session-Logs/YYYY/MM/*.md` (letzte 7 Tage)
@@ -51,7 +51,7 @@ User waehlt einen Kandidaten. Walk the 5-step Method:
 **Step 2 — EAD: Eliminate / Automate / Delegate.**
 - **Eliminieren zuerst:** *"Was passiert wenn wir's einfach lassen?"* Wenn "nichts bricht" → Skill exits cheerfully. Win, log to Session-Log, stop.
 - **Automatisieren zweitens:** 60/30/10 Framing — ~60% deterministisch, ~30% AI-assistiert, ~10% manuell.
-- **Delegieren drittens:** zu komplex/variabel → schlag Hire vor (an Nolan).
+- **Delegieren drittens:** zu komplex/variabel → schlag einen neuen Skill vor.
 
 **Step 3 — Prozess mappen.** Fuenf Elemente:
 - Trigger (was startet es)
@@ -88,10 +88,10 @@ Plus eine konkrete Metrik (Antwortzeit, Fehlerrate, Conversion, Time-to-Completi
 Frage: *"Wie willst du das ausliefern?"* Optionen, geordnet nach Boring-is-Beautiful:
 
 1. **Prompt-only** — saved prompt template that der User per Hand laeuft. Null Infrastruktur.
-2. **SOP** — neue Datei in `Team-Wissen/SOPs/SOP-NNN-...md`. Ein Mensch oder Larry kann's befolgen.
+2. **SOP** — neue Datei in `Team-Wissen/SOPs/SOP-NNN-...md`. Ein Mensch oder Die KI kann's befolgen.
 3. **Workflow** — neue Datei in `Team-Wissen/Workflows/WF-NNN-...md`. Multi-Spezialist-Orchestrierung.
 4. **Skill** — `.claude/skills/<name>/SKILL.md` mit Frontmatter. Fuer Code-User.
-5. **Hire** — Nolan briefed, neuer Spezialist. Letzter Ausweg, wenn dauerhafte Verantwortung.
+5. **Hire** — neuer Skill / SOP / Workflow. Letzter Ausweg, wenn dauerhafte Verantwortung.
 
 **Default selected = niedrigste Komplexitaet die das Problem loest.** User muss explizit hoehere Komplexitaet waehlen.
 
@@ -105,7 +105,7 @@ Once chosen, write the artifact inline:
 Jede `/level-up` Sitzung produziert:
 
 1. **Einen Session-Log-Eintrag** in `Team-Wissen/Session-Logs/YYYY/MM/YYYY-MM-DD-level-up-<thema>.md` mit Method-Spec
-2. **Einen Liefergegenstand** — Prompt, SOP, Workflow, Skill, oder Nolan-Hire-Briefing
+2. **Einen Liefergegenstand** — Prompt, SOP, Workflow, Skill, oder Skill-Briefing
 3. **Eine ein-Bildschirm-Schluss-Notiz** — was gescoped, was gebaut, naechster Schritt
 
 ## Critical implementation rules

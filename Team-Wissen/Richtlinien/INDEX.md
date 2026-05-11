@@ -17,5 +17,5 @@ Wenn ihr eine wiederkehrende Frage habt ("wie machen wir X immer?"), gehört das
 - Wann ist etwas "fertig"?
 - Welche Tools nutzen wir wofür?
 
-Sagt Larry:
+Sag zur KI:
 > "Erstelle eine Richtlinie für [X]"

@@ -1,11 +1,11 @@
 ---
 name: session-abschluss
-description: Use when the user says "schliess die session ab", "session abschluss", "wickle ab", "wir machen schluss", "save session", "close session", or signals end-of-day. Larry writes a session log, runs the librarian pass (SSOT, broken links, orphans, missing index entries), and prints a one-screen summary.
+description: Use when the user says "schliess die session ab", "session abschluss", "wickle ab", "wir machen schluss", "save session", "close session", or signals end-of-day. Writes a session log, runs the librarian pass (SSOT, broken links, orphans, missing index entries), and prints a one-screen summary.
 ---
 
 ## What this skill does
 
-Performs Larry's two end-of-session duties:
+Performs the two end-of-session duties:
 
 1. **Bibliothekar-Pass** — scan vault for structural drift, fix what can be fixed, flag what can't.
 2. **Session-Log Author** — write `Team-Wissen/Session-Logs/YYYY/MM/YYYY-MM-DD-<slug>.md` capturing decisions, realignments, deltas, and cross-links to prior logs.
@@ -16,7 +16,7 @@ Append-only memory layer. Replaces unreliable AI auto-memory.
 
 ### Step 1: Bibliothekar-Pass
 
-Scan the vault (read-only, except for fixes Larry knows are safe):
+Scan the vault (read-only, except for safe fixes):
 
 **A. SSOT-Verletzungen (Duplikate)**
 Use Grep to find facts that appear in multiple files. Heuristics:
@@ -25,7 +25,7 @@ Use Grep to find facts that appear in multiple files. Heuristics:
 - Gleiche Produkt-/Leistungs-Beschreibung in 2+ Dateien
 
 For each violation:
-- Pick canonical home (autoritativste Datei: `01-Wissen/*` for business facts, `03-Kunden/<x>/_hub.md` for customer facts, `05-Team/<x>/_hub.md` for team facts)
+- Pick canonical home (autoritativste Datei: `01-Firma/*` for business facts, `03-Kunden/<x>/_hub.md` for customer facts, `05-Team/<x>/_hub.md` for team facts)
 - Replace duplicate with `[[wikilink]]`
 - Note the change in the upcoming session log
 
@@ -37,7 +37,7 @@ For each broken link:
 - If intent unclear: flag in session log for user to resolve
 
 **C. Verwaiste Dateien**
-Find files in `01-Wissen/`, `Team-Wissen/`, `02-Vorlagen/` that have:
+Find files in `01-Firma/`, `Team-Wissen/`, `02-Vorlagen/` that have:
 - No incoming `[[wikilink]]` from anywhere
 - No entry in their section's `INDEX.md` (if applicable)
 

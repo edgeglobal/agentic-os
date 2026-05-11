@@ -9,9 +9,9 @@ Conducts the new-customer-onboarding flow defined in [[SOP-002-neuen-kunden-anle
 
 ## Inputs the skill reads
 
-- `01-Wissen/markenstimme.md` — fuer den Stil der Kickoff-Mail
-- `01-Wissen/unsere-leistungen.md` — fuer korrekte Leistungs-Bezeichnung
-- `01-Wissen/unsere-kunden.md` — fuer Persona-Zuordnung
+- `01-Firma/markenstimme.md` — fuer den Stil der Kickoff-Mail
+- `01-Firma/unsere-leistungen.md` — fuer korrekte Leistungs-Bezeichnung
+- `01-Firma/unsere-kunden.md` — fuer Persona-Zuordnung
 - `02-Vorlagen/kunden-onboarding.md` — Briefing-Template
 - `Team-Wissen/Richtlinien/R-001-namenskonventionen.md` — fuer Filename-Regeln
 - `03-Kunden/` — pruefen dass kein Duplikat existiert
@@ -103,7 +103,7 @@ Bei Luecken (z.B. fehlende Liefermeilensteine, fehlender Kommunikations-Rhythmus
 Frage: "Soll ich gleich einen Kickoff-Mail-Entwurf machen?"
 
 Bei Ja:
-- Larry liest `01-Wissen/markenstimme.md`
+- Die KI liest `01-Firma/markenstimme.md`
 - Schreibt eine kurze E-Mail (3-5 Saetze) an den Hauptkontakt mit:
   - Begruessung in Markenstimme
   - Bestaetigung des Vertragsabschlusses
@@ -140,5 +140,5 @@ Naechster Schritt: Mail verschicken / Briefing-Luecken fuellen / Kickoff-Termin 
 1. **Kein Duplikat anlegen.** Wenn der Slug bereits existiert in `03-Kunden/`, fragen ob es derselbe Kunde ist (dann an existing anhaengen) oder ein anderer (dann Slug schaerfen).
 2. **Sensitive-Branchen-Flag.** Wenn Branche Anwalt/Arzt/Finanz/Behoerde, im `_hub.md` "**SENSITIV — keine Details aussserhalb dieses Ordners zitieren**" einfuegen.
 3. **Markenstimme strict.** Kickoff-Mail-Entwurf MUSS `markenstimme.md` befolgen — Tabu-Woerter checken.
-4. **Read-only auf `01-Wissen/`.** Nur 03-Kunden/-Pfade neu anlegen.
+4. **Read-only auf `01-Firma/`.** Nur 03-Kunden/-Pfade neu anlegen.
 5. **Frontmatter komplett.** Kein leeres Pflichtfeld.

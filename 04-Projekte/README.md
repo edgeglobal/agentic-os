@@ -13,7 +13,7 @@ Hier landen Projekte, die nicht direkt einem Kunden zuzuordnen sind:
 
 - Kunden-Projekte → `03-Kunden/<kunde>/`
 - Tagesgeschäft → einzelne Aufgaben sind keine Projekte
-- Wissens-Aufbau → `01-Wissen/`
+- Wissens-Aufbau → `01-Firma/`
 
 ## Struktur pro Projekt
 
@@ -41,6 +41,6 @@ Jedes Projekt hat eine `_hub.md`:
 
 Wenn ein Projekt fertig ist:
 
-> "Larry, schließ das Projekt q3-pricing-reform ab"
+> "Schließ das Projekt q3-pricing-reform ab"
 
-Larry verschiebt den Ordner nach `99-Archiv/projekte/YYYY/MM/` und schreibt eine kurze Lessons-Learned in `Team-Wissen/`.
+Die KI verschiebt den Ordner nach `99-Archiv/projekte/YYYY/MM/` und schreibt eine kurze Lessons-Learned in `Team-Wissen/`.

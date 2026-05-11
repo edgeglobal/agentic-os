@@ -1,11 +1,11 @@
 <!--
-Agentic OS v0.1 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.2.0 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT — see LICENSE
 -->
 
 # Installation — 5-Minuten-Setup
 
-Diese Anleitung führt Sie durch die Erstinstallation von Agentic OS für Ihr Team.
+Diese Anleitung führt Sie durch die Erstinstallation von AI OS für Ihr Team.
 
 ## Voraussetzungen
 
@@ -77,19 +77,19 @@ In Cowork (oder Claude Code) geben Sie ein:
 
 > **Initialisiere dich in diesem Ordner.**
 
-Die AI liest `AGENTS.md`, übernimmt die Identität von **Larry** (dem Team-Orchestrator), und meldet sich:
+Die AI liest `AGENTS.md` und meldet sich:
 
-> "Ich bin Larry, dein Team-Orchestrator bei Agentic OS. Mein Team: Penn für Schreiben, Pax für Recherche, Nolan für Personal. Bereit für deine Anweisung."
+> "Ich bin die KI in deinem Agentic OS. Bereit für deine Anweisung."
 
 ---
 
 ## Schritt 5 — Onboarding-Wizard starten
 
-Sagen Sie Larry:
+Sagen Sie zur KI:
 
 > **Lass uns Agentic OS einrichten.**
 
-Larry stellt 7 Fragen über Ihre Firma:
+Die KI stellt 7 Fragen über Ihre Firma:
 
 1. Wer seid ihr, was verkauft ihr, an wen?
 2. Was sind eure 2-3 wichtigsten Prioritäten für die nächsten 90 Tage?
@@ -99,12 +99,14 @@ Larry stellt 7 Fragen über Ihre Firma:
 6. Was ist der eine Task, der eure Woche frisst?
 7. Bitte fügt 1-2 Beispiele eurer Schreibweise ein (E-Mail, LinkedIn-Post)
 
-Aus den Antworten füllt Larry automatisch:
+Aus den Antworten füllt die KI automatisch:
 
-- `01-Wissen/markenstimme.md` (eure Schreibweise)
-- `01-Wissen/unsere-kunden.md` (ICP)
-- `01-Wissen/unsere-leistungen.md` (Angebot)
-- `05-Team/team-mitglieder.md` (wer ihr seid)
+- `01-Firma/markenstimme.md` (eure Schreibweise)
+- `01-Firma/unsere-kunden.md` (ICP)
+- `01-Firma/unsere-leistungen.md` (Angebot)
+- `01-Firma/strategie.md` (Ziele, Prioritäten)
+- `01-Firma/stakeholder.md` (externe Partner, Schlüsselpersonen)
+- `05-Mitarbeiter/team-mitglieder.md` (wer ihr seid)
 - `Team-Wissen/Session-Logs/2026/MM/2026-MM-DD-onboarding.md`
 
 ---
@@ -133,8 +135,15 @@ Für jeden neuen Mitarbeiter:
 1. Mitarbeiter zum Claude Team Plan einladen (über Settings → Members)
 2. Mitarbeiter installiert Cowork Desktop und loggt sich ein
 3. Mitarbeiter öffnet den Sync-Ordner (`~/Dropbox/mein-business-os/`)
-4. Mitarbeiter sagt zu Larry: **"Ich bin neu im Team. Onboarde mich."**
-5. Larry führt sie durch [[SOP-001-neuen-mitarbeiter-onboarden]]
+4. Mitarbeiter sagt zur KI: **"Ich bin neu im Team. Onboarde mich."**
+5. Die KI fragt nach Namen, Rolle, Team
+6. Die KI trägt den Eintrag in `05-Mitarbeiter/team-mitglieder.md` ein
+7. Die KI ergänzt das Team-Mitglied in `06-Teams/<team>/kontext.md`
+8. Die KI fragt optional: "Gibt es etwas wie Claude mit dir reden soll (Tonfall, Anrede)?" — landet als Notiz in der Präferenz-Spalte des Rosters
+
+Kein separater Mitarbeiter-Folder. Persönliche Präferenzen leben im Roster, nicht in eigenen Files. Begründung: Brand-Voice ist firmenweit, persönliche Sub-Folder pro Person sind für KMU Overkill.
+
+Voller SOP: [[SOP-001-neuen-mitarbeiter-onboarden]]
 
 ---
 
@@ -142,7 +151,7 @@ Für jeden neuen Mitarbeiter:
 
 Beispiele was Mitarbeiter ab jetzt machen können:
 
-| Aufgabe | An Larry sagen |
+| Aufgabe | An die KI sagen |
 |---|---|
 | Meeting-Protokoll schreiben | "Ich hatte gerade ein Meeting mit [Kunde]. Hier die Stichpunkte: ..." |
 | Neuen Kunden anlegen | "Wir haben einen neuen Kunden gewonnen: Acme GmbH" |
@@ -164,13 +173,22 @@ Beispiele was Mitarbeiter ab jetzt machen können:
 - Editieren Sie nicht parallel dieselbe Datei
 - Nutzen Sie `git`-Workflow wenn das Team größer wird (≥10 MA)
 
-### "Larry kennt unser Geschäft nicht"
+### "Wo gehören persönliche Files vs. Firmen-Files hin?"
 
-→ Prüfen Sie: Wurde der Onboarding-Wizard durchlaufen? Sind `01-Wissen/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md` ausgefüllt?
+→ Drei einfache Regeln:
+- **Persönliches** (eigene Tone of Voice, Memory, About-me) → `05-Mitarbeiter/<dein-name>/`
+- **Team-Sachen** (Prozesse, Skills die alle im Team nutzen) → `06-Teams/<dein-team>/`
+- **Firma-weit** (Markenstimme, Wunschkunden, Strategie) → `01-Firma/`
+
+Permissions setzen Sie pro Sub-Folder im Cloud-Provider — nicht durch separate Folder-Wurzeln.
+
+### "Die KI kennt unser Geschäft nicht"
+
+→ Prüfen Sie: Wurde der Onboarding-Wizard durchlaufen? Sind `01-Firma/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md` ausgefüllt?
 
 ### "Wir brauchen einen Spezialisten, den es nicht gibt"
 
-→ Sagen Sie Larry: "Wir brauchen einen [Rolle]. Hire ihn." Larry briefed Nolan, der den neuen Spezialisten anlegt.
+→ Sagen Sie zur KI: "Wir brauchen einen [Rolle]. Hire ihn." Die KI fragt nach was genau gebraucht wird und schlaegt einen passenden Workflow vor.
 
 ---
 

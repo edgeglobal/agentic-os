@@ -2,7 +2,7 @@
 
 **Wofür:** Wenn ein neuer Kunde gewonnen wurde (Vertrag unterschrieben).
 **Auslöser:** User sagt "wir haben einen neuen Kunden gewonnen: [Firma]"
-**Verantwortlich:** Larry (mit Penn für Kunden-Briefing)
+**Verantwortlich:** Die KI
 **Dauer:** ~10-15 Minuten interaktiv
 
 ---
@@ -11,7 +11,7 @@
 
 ### 1. Stammdaten erfassen
 
-Larry fragt:
+Die KI fragt:
 - Firmenname (offiziell)?
 - Hauptkontakt: Name, Position, E-Mail?
 - Branche?
@@ -85,21 +85,21 @@ Phase 1: Setup (bis [Datum])
 
 ### 4. Briefing-Dokument
 
-Larry brief Penn: "Erstelle ein Onboarding-Briefing für Acme nach [[kunden-onboarding]] Vorlage."
+Die KI schreibt: "Erstelle ein Onboarding-Briefing für Acme nach [[kunden-onboarding]] Vorlage."
 
-Penn füllt die Vorlage aus den Stammdaten und fragt User nach Lücken (Wer auf Kunden-Seite welche Rolle? Erwartete Risiken? Spezielle Anforderungen?).
+Die KI füllt die Vorlage aus den Stammdaten und fragt User nach Lücken (Wer auf Kunden-Seite welche Rolle? Erwartete Risiken? Spezielle Anforderungen?).
 
 ### 5. Erstes Meeting planen
 
-Larry fragt: "Soll ich gleich einen Kickoff-Meeting-Termin vorschlagen?"
+Die KI fragt: "Soll ich gleich einen Kickoff-Meeting-Termin vorschlagen?"
 
 Bei Ja:
-- Penn schreibt einen Vorschlag für die Kickoff-Agenda
-- Larry entwirft eine E-Mail an den Hauptkontakt zur Terminfindung (in [[markenstimme]])
+- Es wird geschrieben einen Vorschlag für die Kickoff-Agenda
+- Die KI entwirft eine E-Mail an den Hauptkontakt zur Terminfindung (in [[markenstimme]])
 
 ### 6. Cross-Linking
 
-Larry prüft:
+Die KI prüft:
 - Passt der Kunde in eine bestehende ICP-Persona aus [[unsere-kunden]]? Wenn ja: Verweis hinzufügen.
 - Gibt es ähnliche Kunden bereits im Vault, von denen dieser Kunde lernen kann?
 

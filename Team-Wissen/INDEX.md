@@ -27,7 +27,7 @@
 
 ## Cross-Session-Lerneffekte
 
-> Hier landen wiederkehrende Erkenntnisse aus Session-Logs. Larry pflegt das.
+> Hier landen wiederkehrende Erkenntnisse aus Session-Logs. Die KI pflegt das.
 
 (Noch leer — wird mit der Zeit gefüllt)
 
@@ -40,4 +40,4 @@ Wenn ihr neue SOPs/Workflows/Richtlinien anlegt:
 3. **Hier in INDEX.md eintragen** (sonst fehlt die Auffindbarkeit)
 4. In passenden anderen Dateien per `[[wikilink]]` verweisen
 
-Larry erzwingt das am Session-Ende als Bibliothekar.
+Die KI erzwingt das am Session-Ende .

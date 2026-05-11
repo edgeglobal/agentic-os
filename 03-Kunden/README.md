@@ -22,7 +22,7 @@ Hier lebt alles was zu einem konkreten Kunden gehört: Verträge, Briefings, Lie
 
 ## Hub-Datei `_hub.md`
 
-Jeder Kunde hat eine Hub-Datei. Larry liest sie zuerst wenn ihr nach dem Kunden fragt. Sie sollte enthalten:
+Jeder Kunde hat eine Hub-Datei. Die KI liest sie zuerst wenn ihr nach dem Kunden fragt. Sie sollte enthalten:
 
 - Status (aktiv / pausiert / abgeschlossen)
 - Vertragsumfang (Verweis auf [[Angebot vom YYYY-MM-DD]])
@@ -33,14 +33,14 @@ Jeder Kunde hat eine Hub-Datei. Larry liest sie zuerst wenn ihr nach dem Kunden 
 
 ## Neuen Kunden anlegen
 
-Sagt Larry:
+Sag zur KI:
 
 > "Wir haben einen neuen Kunden gewonnen: [Acme GmbH]"
 
-Larry läuft [[SOP-002-neuen-kunden-anlegen]] und legt den ganzen Ordner an, inklusive Hub-Datei und Verlinkung mit [[unsere-kunden]].
+Die KI läuft [[SOP-002-neuen-kunden-anlegen]] und legt den ganzen Ordner an, inklusive Hub-Datei und Verlinkung mit [[unsere-kunden]].
 
 ## Privacy
 
 Falls ein Kunde sensitiver Branche (Anwälte, Ärzte, Finanzen):
 - Klar im Hub vermerken: "**SENSITIV — keine Details außerhalb dieses Ordners zitieren**"
-- Larry respektiert das und vermeidet Querverweise in anderen Dokumenten
+- Die KI respektiert das und vermeidet Querverweise in anderen Dokumenten

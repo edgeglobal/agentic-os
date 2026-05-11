@@ -1,11 +1,11 @@
 <!--
-Agentic OS v0.1 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.2.0 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT License — see LICENSE
 -->
 
-# Agentic OS
+# AI OS
 
-**Das AI Operating System für Teams.**
+**Agentic Operating System für KMUs.**
 
 Eine sofort einsatzbereite Ordnerstruktur für KMU (2–15 Mitarbeiter), die mit Claude (Cowork Desktop oder Claude Code), Codex, Gemini oder Cursor zusammenarbeitet. Markdown-only. Tool-agnostisch. Keine Datenbank. Funktioniert in jedem Texteditor — und in jedem AI-Tool.
 
@@ -21,18 +21,20 @@ Stellen Sie sich vor, Ihr Unternehmen hätte einen Assistenten, der:
 - jeden Kunden im Detail versteht
 - alle SOPs befolgen kann
 - Meeting-Protokolle schreibt
-- den Posteingang sortiert
+- die Inbox sortiert
 - nie etwas vergisst
 
-Genau das ist Agentic OS. Ein gemeinsamer Wissensordner + ein Team aus AI-Spezialisten + klare Regeln, wie Mensch und KI zusammenarbeiten.
+Genau das ist AI OS. Ein gemeinsamer Wissensordner + klare Regeln, wie Mensch und KI zusammenarbeiten.
 
 ## Was Sie bekommen
 
 | Element | Beschreibung |
 |---|---|
-| **9 Hauptordner** | Posteingang, Wissen, Vorlagen, Kunden, Projekte, Team, Meetings, Archiv |
-| **AI-Team mit 4 Spezialisten** | Larry (Orchestrator), Penn (Schreiber), Pax (Recherche), Nolan (Personal) |
-| **Vorlagen-Bibliothek** | Markenstimme, Kunden-Profil, Angebot, Meeting-Protokoll, LinkedIn-Post |
+| **Klare Ordner-Struktur** | Inbox, Wissen, Vorlagen, Kunden, Projekte, Mitarbeiter, Teams, Meetings, Archiv |
+| **Drei Schichten in einem Folder** | Firma (alle lesen), Teams (Team-Mitglieder), Mitarbeiter (privat) — Permissions per Sub-Folder |
+| **Vorbefuellte Default-Teams** | Marketing & Vertrieb, Fulfillment, Finance/HR/Admin — anpassbar oder löschbar |
+| **Universelle Context-Files** | Markenstimme, Wunschkunden, Leistungen, Strategie, Stakeholder |
+| **Vorlagen-Bibliothek** | Angebot, Meeting-Protokoll, LinkedIn-Post, Kunden-Onboarding |
 | **SOPs & Workflows** | Wie Sie neue Mitarbeiter onboarden, Kunden anlegen, Meetings vorbereiten |
 | **5 Skills für Claude Code** | audit, onboard, level-up, neuer-kunde, session-abschluss |
 | **Tool-agnostisch** | `AGENTS.md` ist der Standard, den Claude Code, Codex, Cursor und Gemini nativ lesen |
@@ -79,7 +81,7 @@ mv mein-business-os ~/Dropbox/
 # Sagen Sie zur AI: "Initialisiere dich in diesem Ordner"
 ```
 
-Die AI liest `AGENTS.md` und wird zu **Larry**, dem Team-Orchestrator. Larry stellt sich vor, fragt nach Ihrer Firma und füllt die Vorlagen aus.
+Die KI liest `AGENTS.md`, stellt sich vor, fragt nach Ihrer Firma und füllt die Vorlagen aus.
 
 ---
 
@@ -97,17 +99,34 @@ Die AI liest `AGENTS.md` und wird zu **Larry**, dem Team-Orchestrator. Larry ste
 │  Claude Cowork (Desktop) oder Code (VS Code)        │
 │  zeigt auf den Sync-Ordner:                         │
 │                                                      │
-│   ~/Dropbox/AcmeCo/  (oder GDrive, OneDrive)        │
-│   ├── 01-Wissen/         ← was Claude wissen muss   │
+│   ~/Dropbox/Muster GmbH/  (oder GDrive, OneDrive)   │
+│   ├── 01-Firma/         ← firmenweite SoT          │
 │   ├── 02-Vorlagen/       ← Templates                │
 │   ├── 03-Kunden/         ← pro Kunde ein Ordner     │
-│   ├── Team/              ← AI-Spezialisten          │
+│   ├── 04-Projekte/       ← Cross-Team-Projekte      │
+│   ├── 05-Mitarbeiter/    ← pro Mensch ein Folder    │
+│   ├── 06-Teams/          ← pro Funktion ein Folder  │
+│   ├── 07-Meetings/       ← Meeting-Notizen          │
 │   ├── Team-Wissen/SOPs/  ← Standardabläufe          │
+│   ├── .claude/skills/    ← Firmenweite Skills       │
 │   └── ...                                            │
 └─────────────────────────────────────────────────────┘
 ```
 
 **Der Trick:** Skills werden über Anthropic verteilt (Schicht 1). Daten werden über Dropbox/GDrive synchronisiert (Schicht 2). Die zwei Schichten sind getrennt — das macht das System einfach und robust.
+
+## Die drei Schichten im selben Folder
+
+AI OS modelliert **drei Schichten in einer einzigen Ordner-Hierarchie**, nicht in drei separaten Folder-Wurzeln. Permissions kommen vom Cloud-Sync pro Sub-Folder:
+
+| Schicht | Wo | Wer schreibt | Wer liest |
+|---|---|---|---|
+| **Firma-weit** | `01-Firma/`, `02-Vorlagen/`, `04-Projekte/`, `.claude/skills/` | Operator + Geschäftsführung | alle Mitarbeiter |
+| **Team** | `06-Teams/<team>/` | Team-Mitglieder | Rest liest meist mit |
+| **Mitarbeiter** | `05-Mitarbeiter/<name>/` | nur der jeweilige Mensch | gemäß Permissions |
+| **Kunde** (Sonderfall) | `03-Kunden/<kunde>/` | Teams die den Kunden betreuen | Externe (Steuerberater etc.) optional |
+
+Das spart die Setup-Friktion von mehreren physisch getrennten Folder-Wurzeln. Permissions sind das was sie sein sollten: eine Eigenschaft des Ordners, nicht der Wurzel.
 
 ---
 
@@ -117,7 +136,7 @@ Agentic OS folgt den **4 C's eines AI Operating Systems**:
 
 | Schicht | Was es bedeutet | Wo es im Repo lebt |
 |---|---|---|
-| **Context** | Die AI weiß, wer Sie sind, was Sie verkaufen, wie Sie sprechen | `01-Wissen/`, `AGENTS.md` |
+| **Context** | Die AI weiß, wer Sie sind, was Sie verkaufen, wie Sie sprechen | `01-Firma/`, `AGENTS.md` |
 | **Connections** | Die AI kann auf Ihre Tools zugreifen (Calendar, CRM, Mail) | Org-Skills via Claude Team Plan |
 | **Capabilities** | Die AI weiß, wie Sie Dinge tun (SOPs, Workflows) | `Team-Wissen/SOPs/`, `.claude/skills/` |
 | **Cadence** | Die AI macht Dinge automatisch (Morgenbrief, Wochenreview) | Workflows + Scheduled Triggers |
@@ -126,16 +145,19 @@ Mit dem `/audit` Skill können Sie jederzeit prüfen, wo Sie stehen.
 
 ---
 
-## Die 4 Spezialisten
+## Wie Sie mit der KI arbeiten
 
-Sie sprechen immer mit **Larry**. Larry delegiert intern:
+Sie sprechen direkt mit der KI. Sie liest beim Session-Start `AGENTS.md`, kennt die Folder-Struktur, die Regeln, und die fünf firmenweiten Skills (`audit`, `onboard`, `level-up`, `neuer-kunde`, `session-abschluss`).
 
-- **Larry** — Orchestrator. Nimmt jede Anfrage entgegen und routet sie. Schreibt Session-Logs am Ende.
-- **Penn** — Schreiber. Journal-Einträge, Notizen, kurze Dokumentation.
-- **Pax** — Researcher. Tiefe Recherche mit Quellenangaben.
-- **Nolan** — Personal. Hireshhttps neue Spezialisten wenn Sie was Neues brauchen (z.B. einen Frontend-Developer für ein Projekt).
+**Was die KI kann (Default):**
 
-**Die wichtigste Regel:** Wenn Sie etwas brauchen wofür kein Spezialist da ist, sagt Larry **nicht** "kann ich nicht". Larry briefed Nolan, der den passenden neuen Spezialisten "anstellt". Das Team wächst mit Ihnen.
+- Posteingang-Items klassifizieren und routen
+- Meeting-Protokolle, LinkedIn-Posts, Angebote in Ihrer Markenstimme entwerfen
+- Kunden-Briefings aus Stammdaten + Gesprächs-Protokollen zusammenstellen
+- Session-Logs schreiben am Ende jedes Arbeitstags
+- Audit Ihres Setups (was fehlt im Wissen, in den Tools, in den Workflows)
+
+**Wenn etwas fehlt:** sagen Sie was Sie brauchen. Die KI schlägt einen passenden Workflow oder einen neuen Skill vor — den Sie als Markdown-File in `.claude/skills/` ablegen können.
 
 ---
 

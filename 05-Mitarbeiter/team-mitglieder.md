@@ -7,15 +7,17 @@ status: template
 
 # Team-Mitglieder
 
-> **Anleitung:** Hier alle aktuellen Mitarbeiter eintragen. Larry nutzt das, um Aufgaben zuzuordnen, Meeting-Teilnehmer zu erkennen und bei Erwähnungen die richtige Person zu meinen.
+> **Anleitung:** Hier alle aktuellen Mitarbeiter eintragen. Die KI nutzt das, um Aufgaben zuzuordnen, Meeting-Teilnehmer zu erkennen und bei Erwähnungen die richtige Person zu meinen.
 
 ## Aktuelle Mitarbeiter
 
-| Name | Rolle | Bereich | Anwesend | Kontakt |
-|---|---|---|---|---|
-| [Max Mustermann] | [CEO/Founder] | [Strategie, Sales] | [Mo–Fr] | [max@firma.de] |
-| [Anna Beispiel] | [Marketing Manager] | [Content, Social, Ads] | [Mo–Do] | [anna@firma.de] |
-| [...] | [...] | [...] | [...] | [...] |
+| Name | Rolle | Team | Anwesend | Kontakt | Präferenzen für Claude |
+|---|---|---|---|---|---|
+| [Max Mustermann] | [CEO/Founder] | [marketing-vertrieb] | [Mo–Fr] | [max@firma.de] | [z.B. knappe Mails, Du-Anrede, keine Smileys] |
+| [Anna Beispiel] | [Marketing Manager] | [marketing-vertrieb] | [Mo–Do] | [anna@firma.de] | [z.B. ausführlich, mit Beispielen] |
+| [...] | [...] | [...] | [...] | [...] | [...] |
+
+> **Präferenzen-Spalte:** Optionale Notizen wie der Mitarbeiter mit Claude arbeiten will (Tonfall, Format, Anrede). Wenn leer: Claude nutzt die Firmen-Defaults aus [[markenstimme]].
 
 ## Externe Partner
 
@@ -50,7 +52,7 @@ status: template
 
 ## Geburtstage & wichtige Termine
 
-> Optional, aber Larry kann hier alarmieren wenn jemand Geburtstag hat oder ein Mitarbeiter-Jubiläum ansteht.
+> Optional, aber Die KI kann hier alarmieren wenn jemand Geburtstag hat oder ein Mitarbeiter-Jubiläum ansteht.
 
 | Name | Datum | Anlass |
 |---|---|---|

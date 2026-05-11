@@ -30,16 +30,16 @@ Was abgeschlossen ist, kommt hier rein. So bleibt die aktive Struktur sauber, oh
 
 ## Wer archiviert
 
-Larry. Sagt einfach:
+Sag zur KI einfach:
 
 > "Archiviere das Projekt q3-pricing-reform"
 > "Archiviere den Kunden Mustermann GmbH (Vertrag beendet)"
 
-Larry verschiebt, prüft Wikilinks, und schreibt einen Archiv-Vermerk.
+Die KI verschiebt, prüft Wikilinks, und schreibt einen Archiv-Vermerk.
 
 ## Datenschutz
 
 Wenn personenbezogene Daten archiviert werden (z.B. ehemalige Mitarbeiter):
 - Sensible Daten **vor Archivierung** entfernen (Gehälter, persönliche Notizen, Krankheiten)
 - Nur professionellen Kontext behalten (Rolle, Projekte, formales Feedback)
-- DSGVO-Löschfristen beachten — Larry kann nach Aufforderung eine "DSGVO-Löschung" durchführen
+- DSGVO-Löschfristen beachten — Die KI kann nach Aufforderung eine "DSGVO-Löschung" durchführen

@@ -26,15 +26,15 @@ Datum-basierte Ordner. Filename-Format: `YYYY-MM-DD-<thema-kebab-case>.md`
 
 ## Vorlage nutzen
 
-Alle Meeting-Notizen folgen [[meeting-protokoll]] (in `02-Vorlagen/`). Sagt Larry:
+Alle Meeting-Notizen folgen [[meeting-protokoll]] (in `02-Vorlagen/`). Sag zur KI:
 
 > "Schreib ein Meeting-Protokoll: [Stichpunkte]"
 
-Larry nutzt automatisch die Vorlage und legt es im richtigen Datums-Ordner ab.
+Die KI nutzt automatisch die Vorlage und legt es im richtigen Datums-Ordner ab.
 
 ## Granola/Fireflies-Sync
 
 Wenn ihr ein Meeting-Tool mit Auto-Transcription nutzt:
 - Granola/Fireflies-Transkripte können hier rein
-- Larry kann Meeting-Aufnahmen verarbeiten und ein sauberes Protokoll daraus erstellen
+- Die KI kann Meeting-Aufnahmen verarbeiten und ein sauberes Protokoll daraus erstellen
 - Dafür sagt: "Hier ist das Granola-Transkript von heute, mach mir ein sauberes Protokoll"

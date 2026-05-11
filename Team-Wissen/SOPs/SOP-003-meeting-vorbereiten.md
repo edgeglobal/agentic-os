@@ -2,7 +2,7 @@
 
 **Wofür:** Vor jedem wichtigen Meeting (Kunden-Meeting, Strategie-Session, Sales-Pitch).
 **Auslöser:** User sagt "Ich habe morgen Meeting mit [...]" oder "Bereite mich auf das Meeting [...] vor"
-**Verantwortlich:** Larry (mit Pax für Recherche, Penn für Briefing)
+**Verantwortlich:** Die KI
 **Dauer:** ~5-10 Minuten
 
 ---
@@ -11,7 +11,7 @@
 
 ### 1. Meeting-Kontext klären
 
-Larry fragt:
+Die KI fragt:
 - Mit wem? (Verweis auf [[03-Kunden/...]] oder neue Person)
 - Worum geht's? (Verkauf? Review? Kick-off? Krisen-Gespräch?)
 - Welche Vorgeschichte? (frühere Meetings, frühere E-Mails)
@@ -19,7 +19,7 @@ Larry fragt:
 
 ### 2. Bestehenden Kontext laden
 
-Larry liest:
+Die KI liest:
 - Wenn Kunde existiert: `03-Kunden/<kunde>/_hub.md` + alle bisherigen Meeting-Notizen
 - Wenn neue Person: existiert sie in `05-Team/` oder `03-Kunden/`?
 - E-Mail-Verlauf (wenn User reinpaste)
@@ -30,9 +30,9 @@ Zusammenfassung: "Aus dem Vault: [Kunde] ist [X], letzter Kontakt [Datum] mit [I
 
 Wenn das Meeting mit jemand Neuem ist oder strategisch wichtig:
 
-Larry brief Pax: "Recherchier kurz zu [Person/Firma] — was sollten wir wissen?"
+Die KI recherchiert: "Recherchier kurz zu [Person/Firma] — was sollten wir wissen?"
 
-Pax liefert ein 5-Minuten-Briefing:
+Die Recherche liefert ein 5-Minuten-Briefing:
 - Aktuelle Situation des Gegenübers
 - Letzter LinkedIn-Post / News
 - Branchen-Kontext
@@ -40,7 +40,7 @@ Pax liefert ein 5-Minuten-Briefing:
 
 ### 4. Ziel und Strategie
 
-Larry hilft strukturieren:
+Die KI hilft strukturieren:
 - **Bestes Ergebnis:** Was wäre das beste Outcome?
 - **Worst Case:** Was vermeiden wir?
 - **Position:** Wo stehen wir, wo der Gegenüber?
@@ -49,7 +49,7 @@ Larry hilft strukturieren:
 
 ### 5. Agenda entwerfen
 
-Penn schreibt einen Agenda-Vorschlag basierend auf User-Antworten:
+Es wird geschrieben einen Agenda-Vorschlag basierend auf User-Antworten:
 
 ```markdown
 # Meeting — [Thema] — [Datum]
@@ -76,7 +76,7 @@ Penn schreibt einen Agenda-Vorschlag basierend auf User-Antworten:
 
 ### 6. Cheat-Sheet ausgeben
 
-Larry gibt User ein 1-Page-Briefing mit:
+Die KI gibt User ein 1-Page-Briefing mit:
 - Wer kommt
 - Wichtigste 3 Fakten zur Person/Firma
 - Unsere Strategie (1 Satz)
@@ -88,7 +88,7 @@ Larry gibt User ein 1-Page-Briefing mit:
 
 User sagt: "Meeting fertig — hier meine Notizen: [...]"
 
-Larry führt Penn an, ein sauberes Protokoll nach [[meeting-protokoll]] zu schreiben und im richtigen Ordner abzulegen (Kunde / Projekt / 06-Meetings).
+Die KI führt sich an, ein sauberes Protokoll nach [[meeting-protokoll]] zu schreiben und im richtigen Ordner abzulegen (Kunde / Projekt / 06-Meetings).
 
 ---
 

@@ -7,7 +7,7 @@ status: template
 
 # Unsere Leistungen
 
-> **Anleitung:** Was verkauft ihr genau? Mit welchen Preisen, USPs, Garantien? Larry nutzt das für Angebote, Pitches und FAQ-Antworten.
+> **Anleitung:** Was verkauft ihr genau? Mit welchen Preisen, USPs, Garantien? Die KI nutzt das für Angebote, Pitches und FAQ-Antworten.
 
 ## Übersicht
 

@@ -20,7 +20,7 @@ First run is the baseline. Re-run weekly to watch the score climb.
 
 | Schicht | Test |
 |---|---|
-| **Context** | Knows the business — `01-Wissen/`, `markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`, `team-mitglieder.md` |
+| **Context** | Knows the business — `01-Firma/`, `markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`, `team-mitglieder.md` |
 | **Connections** | Reaches the user's stuff — Org-Skills installed, MCPs configured, external tool integrations |
 | **Capabilities** | Knows how to do work — Spezialisten in `Team/`, SOPs in `Team-Wissen/SOPs/`, Workflows |
 | **Cadence** | Runs without being asked — Session-Logs being written, scheduled triggers, recurring rituals |
@@ -32,7 +32,7 @@ First run is the baseline. Re-run weekly to watch the score climb.
 The audit looks for **patterns and intent**, not exact paths. Use Glob and Read to check:
 
 **Operating manual:** `AGENTS.md` (root), `CLAUDE.md` if exists.
-**Knowledge files:** `01-Wissen/markenstimme.md`, `01-Wissen/unsere-kunden.md`, `01-Wissen/unsere-leistungen.md`, `05-Team/team-mitglieder.md`.
+**Knowledge files:** `01-Firma/markenstimme.md`, `01-Firma/unsere-kunden.md`, `01-Firma/unsere-leistungen.md`, `05-Team/team-mitglieder.md`.
 **Specialists:** `Team/<Name>/AGENTS.md` — count.
 **SOPs:** `Team-Wissen/SOPs/SOP-*.md` — count.
 **Workflows:** `Team-Wissen/Workflows/WF-*.md` — count.
@@ -51,7 +51,7 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 
 | Criterion | Points | How to detect |
 |---|---|---|
-| AGENTS.md exists with Larry-Identity | 5 | Read AGENTS.md, check for "Larry" identity overlay |
+| AGENTS.md exists with proper structure | 5 | Read AGENTS.md, check for proper section structure |
 | markenstimme.md filled (>200 words, not just template) | 5 | Read file, count non-placeholder content |
 | unsere-kunden.md filled (>200 words) | 5 | Same |
 | unsere-leistungen.md filled (>200 words) | 5 | Same |
@@ -71,7 +71,7 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 
 | Criterion | Points | How to detect |
 |---|---|---|
-| 4 Standard-Spezialisten existieren (Larry, Penn, Pax, Nolan) | 10 | Count `Team/*/AGENTS.md` ≥ 4 |
+| 3 Standard-Teams existieren (marketing-vertrieb, fulfillment, finance-hr-admin) | 10 | Count `06-Teams/*/kontext.md` ≥ 3 |
 | ≥1 zusätzlicher Spezialist gehired | 5 | Count `Team/*/AGENTS.md` > 4 |
 | ≥3 SOPs definiert | 5 | Count `Team-Wissen/SOPs/SOP-*.md` ≥ 3 |
 | ≥1 Workflow definiert | 5 | Count `Team-Wissen/Workflows/WF-*.md` ≥ 1 |
@@ -90,7 +90,7 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 For each criterion that lost points: leverage = (points lost) × (impact multiplier).
 
 **Impact multipliers:**
-- 0 Wissens-Files gefüllt: **4x** (Larry kann nichts personalisieren)
+- 0 Wissens-Files gefüllt: **4x** (Die KI kann nichts personalisieren)
 - 0 Sync-Layer: **3x** (Team kann nicht zusammenarbeiten)
 - 0 Spezialisten gehired: **2x** (kein Wachstum, keine Differenzierung)
 - 0 SOPs: **2x** (Team-Mitglieder bekommen keine Anleitung)

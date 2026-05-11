@@ -2,7 +2,7 @@
 
 **Wofür:** Wenn ein neuer Mitarbeiter ins Team kommt.
 **Auslöser:** User sagt "wir haben einen neuen Mitarbeiter: [Name] als [Rolle]"
-**Verantwortlich:** Larry (führt selbst aus)
+**Verantwortlich:** Die KI
 **Dauer:** ~10 Minuten interaktiv mit dem User
 
 ---
@@ -11,7 +11,7 @@
 
 ### 1. Stammdaten erfassen
 
-Larry fragt:
+Die KI fragt:
 - Vollständiger Name?
 - Position/Rolle?
 - E-Mail im Unternehmen?
@@ -21,7 +21,7 @@ Larry fragt:
 
 ### 2. Zugang zu Tools
 
-Larry checkt mit User welche Zugänge nötig sind:
+Die KI checkt mit User welche Zugänge nötig sind:
 
 - [ ] Claude Team Plan (Einladung über Settings → Members)
 - [ ] Cowork Desktop installiert
@@ -31,7 +31,7 @@ Larry checkt mit User welche Zugänge nötig sind:
 - [ ] CRM-Zugang
 - [ ] Andere tool-spezifische Zugänge
 
-Larry erstellt eine Checklist als Action Items im Hub-File des MA.
+Die KI erstellt eine Checklist als Action Items im Hub-File des MA.
 
 ### 3. Ordner anlegen
 
@@ -86,20 +86,20 @@ Neue Zeile in der Tabelle in `05-Team/team-mitglieder.md`.
 
 ### 6. Onboarding-Plan für die ersten 30 Tage
 
-Larry fragt User:
+Die KI fragt User:
 - Welche Tasks soll der MA in Woche 1 erledigen?
 - Mit welchen Personen sollte er Kennenlern-Gespräche haben?
 - Welche Wissens-Dateien sollte er zuerst lesen?
 
-Larry legt einen 30-Tage-Plan in `05-Team/<vorname-nachname>/onboarding-plan.md` an.
+Die KI legt einen 30-Tage-Plan in `05-Team/<vorname-nachname>/onboarding-plan.md` an.
 
 ### 7. Welcome-Message für den MA
 
-Larry entwirft eine kurze Willkommens-Nachricht in [[markenstimme]]-Stil, die der User dem neuen MA schicken kann. Mit:
+Die KI entwirft eine kurze Willkommens-Nachricht in [[markenstimme]]-Stil, die der User dem neuen MA schicken kann. Mit:
 - Begrüßung
 - Erste Aufgaben für Tag 1
-- Wichtigste Wissens-Datei zum Start: [[01-Wissen/markenstimme]]
-- Wie er Larry/AI nutzen kann
+- Wichtigste Wissens-Datei zum Start: [[01-Firma/markenstimme]]
+- Wie er die KI nutzen kann
 
 ### 8. Confirmation an User
 

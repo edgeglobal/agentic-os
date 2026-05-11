@@ -5,9 +5,9 @@ description: Use on Day 1 of an Agentic OS install, when someone says "set me up
 
 ## What this skill does
 
-Single combined wizard for new Agentic OS installations. Conducts a 7-question interview about the user's business, then fills `01-Wissen/markenstimme.md`, `01-Wissen/unsere-kunden.md`, `01-Wissen/unsere-leistungen.md`, and `05-Team/team-mitglieder.md` from the answers.
+Single combined wizard for new Agentic OS installations. Conducts a 7-question interview about the user's business, then fills `01-Firma/markenstimme.md`, `01-Firma/unsere-kunden.md`, `01-Firma/unsere-leistungen.md`, and `05-Team/team-mitglieder.md` from the answers.
 
-**The wow moment:** at the end, suggest the closing prompt *"Sag mir: woran soll ich diese Woche arbeiten?"* The user runs it once. Larry uses the new knowledge files to give a personalized answer.
+**The wow moment:** at the end, suggest the closing prompt *"Sag mir: woran soll ich diese Woche arbeiten?"* The user runs it once. The AI uses the new knowledge files to give a personalized answer.
 
 ## When NOT to run this
 
@@ -19,9 +19,9 @@ Single combined wizard for new Agentic OS installations. Conducts a 7-question i
 ### Step 1: Check state
 
 Read these files:
-- `01-Wissen/markenstimme.md`
-- `01-Wissen/unsere-kunden.md`
-- `01-Wissen/unsere-leistungen.md`
+- `01-Firma/markenstimme.md`
+- `01-Firma/unsere-kunden.md`
+- `01-Firma/unsere-leistungen.md`
 - `05-Team/team-mitglieder.md`
 
 Check which sections are filled vs. still placeholder.
@@ -32,7 +32,7 @@ Check which sections are filled vs. still placeholder.
 
 ### Step 2: The interview (7 questions, hard cap)
 
-Ask one at a time. Write each answer to a temporary `00-Posteingang/onboarding-intake.md` as you go.
+Ask one at a time. Write each answer to a temporary `00-Inbox/onboarding-intake.md` as you go.
 
 **Q1 — Wer seid ihr, was verkauft ihr, an wen?**
 Identity, Angebot, Zielgruppe. Ein Absatz pro Teil.
@@ -69,11 +69,11 @@ Schreib alle in `05-Team/team-mitglieder.md` Tabelle.
 
 Once intake complete, generate these files (or update if re-running). Back up originals to `99-Archiv/intake-{YYYY-MM-DD-HHMM}/` if they exist.
 
-1. **`01-Wissen/markenstimme.md`** — from Q1 (Identitaet) + Q2 (Beispiele). Beispiele woertlich einfuegen mit Header "Beispiel-Texte". Tonalitaets-Adjektive aus den Beispielen ableiten und im Tonalitaets-Block als Vorschlag stellen. Tabu-Woerter / Lieblings-Woerter erstmal leer lassen.
+1. **`01-Firma/markenstimme.md`** — from Q1 (Identitaet) + Q2 (Beispiele). Beispiele woertlich einfuegen mit Header "Beispiel-Texte". Tonalitaets-Adjektive aus den Beispielen ableiten und im Tonalitaets-Block als Vorschlag stellen. Tabu-Woerter / Lieblings-Woerter erstmal leer lassen.
 
-2. **`01-Wissen/unsere-kunden.md`** — from Q1 (Zielgruppe). Eine Persona ausarbeiten basierend auf was der User gesagt hat. Pain Points / Wuensche / Anti-Persona als Stub mit "Bitte ergaenzen".
+2. **`01-Firma/unsere-kunden.md`** — from Q1 (Zielgruppe). Eine Persona ausarbeiten basierend auf was der User gesagt hat. Pain Points / Wuensche / Anti-Persona als Stub mit "Bitte ergaenzen".
 
-3. **`01-Wissen/unsere-leistungen.md`** — from Q1 (Angebot) + Q4 (Umsatzkanaele). Leistungs-Liste mit Platzhalter-Preisen wenn nicht genannt.
+3. **`01-Firma/unsere-leistungen.md`** — from Q1 (Angebot) + Q4 (Umsatzkanaele). Leistungs-Liste mit Platzhalter-Preisen wenn nicht genannt.
 
 4. **`05-Team/team-mitglieder.md`** — Tabelle mit allen genannten Personen.
 

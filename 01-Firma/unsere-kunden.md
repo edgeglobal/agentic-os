@@ -7,7 +7,7 @@ status: template
 
 # Unsere Kunden (ICP)
 
-> **Anleitung:** Wer sind eure idealen Kunden? Je konkreter ihr das beschreibt, desto besser kann Larry Angebote, E-Mails und LinkedIn-Posts auf sie zuschneiden.
+> **Anleitung:** Wer sind eure idealen Kunden? Je konkreter ihr das beschreibt, desto besser kann die KI Angebote, E-Mails und LinkedIn-Posts auf sie zuschneiden.
 
 ## Hauptzielgruppe
 

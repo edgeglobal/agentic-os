@@ -2,7 +2,7 @@
 
 **Append-only Sitzungs-Gedächtnis.**
 
-Jede Arbeits-Session mit dem AI-Team produziert einen Session-Log. Larry schreibt ihn am Session-Ende.
+Jede Arbeits-Session mit dem AI-Team produziert einen Session-Log. Die KI schreibt ihn am Session-Ende.
 
 ## Struktur
 
@@ -28,7 +28,7 @@ Jeder Log enthält:
 - **Was der User korrigiert hat** (Realignments — wertvollste Lerneffekte)
 - **Entscheidungen** (mit Begründung)
 - **Deltas vs vorheriger Plan** (was hat sich geändert seit letzter Session)
-- **SSOT/Strukturelle Fixes** (Larry's Bibliothekar-Pass)
+- **SSOT/Strukturelle Fixes** (Bibliothekar-Pass)
 - **Cross-Links** zu früheren Logs
 
 ## Warum das wichtig ist
@@ -41,19 +41,19 @@ Auto-Memory von AI ist unzuverlässig. Session-Logs sind:
 
 ## Wer liest Session-Logs?
 
-- **Larry am Anfang jeder neuen Session** — schaut letzten Log ein bis drei zurück, baut sich Kontext auf
+- **Die KI am Anfang jeder neuen Session** — schaut letzten Log ein bis drei zurück, baut sich Kontext auf
 - **Du** wenn du nachvollziehen willst, "was hatten wir letztes Mal entschieden?"
 - **Neue Mitarbeiter** beim Onboarding — sie lesen die letzten 4 Wochen, um zu verstehen wie das Team tickt
 
 ## Privacy
 
 Session-Logs können sensitiv sein (Strategie, Personalfragen, Krisen). Wenn Logs für VAs/externe MA freigegeben werden:
-- Vorab-Filter durch Larry: "Welche Logs darf [Person] sehen?"
+- Vorab-Filter durch die KI: "Welche Logs darf [Person] sehen?"
 - Sensitive Logs in `99-Archiv/team-internal/` umlagern, wenn nicht mehr aktiv
 
 ## Session-Log manuell auslösen
 
-Sagt Larry:
+Sag zur KI:
 > "Schließ die Session ab" / "Schreib einen Session-Log"
 
-Larry führt `/session-abschluss` Skill aus (Claude Code) oder läuft den Workflow manuell.
+Die KI führt `/session-abschluss` Skill aus (Claude Code) oder läuft den Workflow manuell.

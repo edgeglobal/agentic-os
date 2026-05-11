@@ -14,9 +14,9 @@ Workflows referenzieren SOPs und Richtlinien — sie duplizieren sie nicht. Wenn
 
 Workflows sind sinnvoll für wiederkehrende Multi-Schritte über mehrere Spezialisten. Beispiele:
 
-- Tägliches Standup (Larry zieht Granola, Penn schreibt Update, Pax checkt News)
-- Wöchentliches Reporting (verschiedene Spezialisten liefern Bausteine, Larry synthesiert)
-- Quartals-Review (Pax recherchiert Markt, Penn schreibt Reflection, Larry destilliert Insights)
+- Tägliches Standup (Die KI zieht Granola, Es wird geschrieben Update, Die KI checkt News)
+- Wöchentliches Reporting (verschiedene Spezialisten liefern Bausteine, Die KI synthesiert)
+- Quartals-Review (Die KI recherchiert Markt, Es wird geschrieben Reflection, Die KI destilliert Insights)
 
-Sagt Larry:
+Sag zur KI:
 > "Erstelle einen Workflow für [X]"
