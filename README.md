@@ -1,5 +1,5 @@
 <!--
-AI OS v0.4.1 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.4.2 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT License — see LICENSE
 -->
 
@@ -34,7 +34,7 @@ Genau das ist AI OS. Ein gemeinsamer Wissensordner + klare Regeln, wie Mensch un
 | **CRM-Light auf Markdown** | `03-CRM/Unternehmen/` und `03-CRM/Personen/` als zentrale Wissens-Schicht — perfekt für KMU ohne CRM |
 | **Team-Folder als Mini-Firma** | Jedes Team hat eigene kontext, vorlagen, projekte, referenzen, ablage, skills |
 | **Vorbefuellte Default-Teams** | Marketing & Vertrieb, Fulfillment, Finance/HR/Admin — anpassbar oder löschbar |
-| **Universelle Firma-Context-Files** | Markenstimme, Wunschkunden, Leistungen, unsere-tools, Strategie, Stakeholder |
+| **Universelle Firma-Context-Files** | organization, brand, wunschkunde-icp, strategy, tools, stakeholder |
 | **Meetings zentral mit Backlinks** | `03-CRM/Meetings/internal/` und `external/` — Wikilinks zu Unternehmen + Personen bauen Wissen über Jahre auf |
 | **SOPs & Workflows** | Wie Sie neue Mitarbeiter onboarden, Kunden anlegen, Meetings vorbereiten |
 | **5 Skills für Claude Code** | audit, onboard, level-up, neuer-kunde, session-abschluss |

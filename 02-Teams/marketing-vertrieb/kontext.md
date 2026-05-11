@@ -23,7 +23,7 @@ Verantwortlich: [Name + Mail]
 
 ## Externe Tools die das Team nutzt
 
-> Tools die NICHT firmenweit sind. Firmen-Tools-Stack in [[01-Firma Home/unsere-leistungen]] oder einer separaten tools.md.
+> Tools die NICHT firmenweit sind. Firmen-Tools-Stack in [[01-Firma Home/organization]] oder einer separaten tools.md.
 
 - **CRM:** [z.B. HubSpot / Pipedrive / lexoffice CRM] - Leads, Kontakte, Pipeline
 - **Newsletter-Tool:** [Mailchimp / Brevo / ActiveCampaign]
@@ -32,7 +32,7 @@ Verantwortlich: [Name + Mail]
 
 ## Team-spezifische Regeln
 
-- **Tonalitaet bei Kunden-Kommunikation:** Standard aus [[01-Firma Home/markenstimme]]. Abweichungen pro Kunde stehen in `03-CRM/Unternehmen/<kunde>/kontext.md`.
+- **Tonalitaet bei Kunden-Kommunikation:** Standard aus [[01-Firma Home/brand]]. Abweichungen pro Kunde stehen in `03-CRM/Unternehmen/<kunde>/kontext.md`.
 - **Vor jedem Kundentermin:** Kunden-Kontext-Datei lesen plus letzte 2 Gespraechs-Protokolle.
 - **Nach jedem Kundentermin:** Protokoll in `03-CRM/Unternehmen/<kunde>/gespraeche/` ablegen. Maximal 10 Bullet Points.
 - **Angebote:** Draft in der persoenlichen Inbox starten, final-Version in `03-CRM/Unternehmen/<kunde>/ablage/`.

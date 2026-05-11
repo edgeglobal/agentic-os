@@ -9,7 +9,7 @@ last-updated: 2026-05-09
 **Autor:** [Name]
 **Geplant für:** [Datum]
 **Format:** [Text / Karussell / Video / Bild]
-**Bezug auf [[markenstimme]]:** ja
+**Bezug auf [[brand]]:** ja
 
 ---
 
@@ -43,7 +43,7 @@ last-updated: 2026-05-09
 ## Checklist vor Posten
 
 - [ ] Erste Zeile zieht? (selbst prüfen: würde ich klicken?)
-- [ ] Markenstimme passt? (siehe [[markenstimme]] Tabu-Wörter)
+- [ ] Markenstimme passt? (siehe [[brand]] Tabu-Wörter)
 - [ ] Keine Buzzwords? (innovativ, synergetisch, ganzheitlich, etc.)
 - [ ] Konkrete Beispiele/Zahlen drin?
 - [ ] Visual prepared? (wenn Karussell/Bild/Video)

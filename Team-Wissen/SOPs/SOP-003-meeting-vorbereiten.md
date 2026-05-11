@@ -103,4 +103,4 @@ Nach dem Meeting:
 ## Referenzen
 
 - [[03-CRM/Meetings/_protokoll-vorlage]] (Vorlage)
-- [[markenstimme]]
+- [[brand]]

@@ -30,11 +30,11 @@ Bei "neues Team anlegen" / "neuer Kunde" / "neue Person" → klar abgeleitet.
 ### Phase 0: Lage-Check
 
 Lies diese Files:
-- `01-Firma Home/markenstimme.md`
-- `01-Firma Home/unsere-kunden.md`
-- `01-Firma Home/unsere-leistungen.md`
-- `01-Firma Home/strategie.md`
-- `01-Firma Home/unsere-tools.md`
+- `01-Firma Home/brand.md`
+- `01-Firma Home/wunschkunde-icp.md`
+- `01-Firma Home/organization.md`
+- `01-Firma Home/strategy.md`
+- `01-Firma Home/tools.md`
 - `01-Firma Home/stakeholder.md`
 - `04-Mitarbeiter/team-mitglieder.md`
 
@@ -63,7 +63,7 @@ Wenn Doks geliefert werden: parsen und Inhalte in die spaeteren Sektionen einbau
 
 Pro Sektion: kurz erklaeren wofuer es ist, dann Fragen einzeln stellen. Antworten in `00-Inbox/onboarding-intake.md` zwischenspeichern.
 
-#### Sektion 1: Eure Firma (→ `unsere-leistungen.md` + Teil von `markenstimme.md`)
+#### Sektion 1: Eure Firma (→ `organization.md` + Teil von `brand.md`)
 
 1. Was bietet eure Firma an? Erklaert es wie einem Freund der nichts von der Branche weiss.
 2. In welcher Branche / Nische seid ihr?
@@ -71,7 +71,7 @@ Pro Sektion: kurz erklaeren wofuer es ist, dann Fragen einzeln stellen. Antworte
 4. Was ist in den letzten 3-5 Jahren in eurer Branche passiert, das wirklich zaehlt?
 5. Was nervt in eurer Branche? Was ist kaputt?
 
-#### Sektion 2: Eure Kunden (→ `unsere-kunden.md`)
+#### Sektion 2: Eure Kunden (→ `wunschkunde-icp.md`)
 
 1. Wer kauft bei euch? Beschreibt ihren idealen Kunden (Rolle, Firmengroesse, Branche, Situation).
 2. Welche 1-3 Hauptprobleme loest ihr fuer sie?
@@ -79,14 +79,14 @@ Pro Sektion: kurz erklaeren wofuer es ist, dann Fragen einzeln stellen. Antworte
 4. Warum kaufen Kunden bei euch und nicht beim Mitbewerber?
 5. Wie lange braucht es typischerweise vom Erstkontakt bis zum Kauf?
 
-#### Sektion 3: Eure Positionierung (→ ergaenzt `unsere-leistungen.md` + `unsere-kunden.md`)
+#### Sektion 3: Eure Positionierung (→ ergaenzt `organization.md` + `wunschkunde-icp.md`)
 
 1. Wer oder was ist euer "Feind"? (Die alte Art Dinge zu tun, eine Mitbewerber-Kategorie, ein Mindset)
 2. Wie wollt ihr von Markt wahrgenommen werden?
 3. Was ist eure Kern-Value-Proposition in einem Absatz?
 4. Was sind 2-3 Kern-Botschaften die jede Kommunikation transportieren soll?
 
-#### Sektion 4: Eure Markenstimme (→ `markenstimme.md`)
+#### Sektion 4: Eure Markenstimme (→ `brand.md`)
 
 1. Wenn eure Firma eine Persoenlichkeit waere — 5 Adjektive.
 2. Welche Tonalitaet nutzt ihr in externer Kommunikation? (Formell, locker, mutig, technisch, direkt, verspielt)
@@ -94,7 +94,7 @@ Pro Sektion: kurz erklaeren wofuer es ist, dann Fragen einzeln stellen. Antworte
 4. Was wuerde eure Firma niemals sagen? Welche Themen meidet ihr publik?
 5. **Bitte 2-3 echte Beispiel-Texte einfuegen** (LinkedIn-Post, Mail, Webseiten-Text). **Wichtig: Original einfuegen, nicht im Chat tippen.** Falls getippt: ablehnen und auf Paste bestehen.
 
-#### Sektion 5: Strategie & Ziele (→ `strategie.md`)
+#### Sektion 5: Strategie & Ziele (→ `strategy.md`)
 
 1. Was sind eure 1-3 Top-Prioritaeten fuers naechste Quartal?
 2. Wo wollt ihr in 12 Monaten sein?
@@ -102,7 +102,7 @@ Pro Sektion: kurz erklaeren wofuer es ist, dann Fragen einzeln stellen. Antworte
 4. Was, wenn ihr es nailen wuerdet, wuerde alles aendern?
 5. Was habt ihr probiert was nicht funktioniert hat? Was wurde gelernt?
 
-#### Sektion 6: Operations & Tools (→ `unsere-tools.md`)
+#### Sektion 6: Operations & Tools (→ `tools.md`)
 
 7-Bucket-Walkthrough. Pro Bucket: welches Tool nutzt ihr?
 
@@ -137,11 +137,11 @@ Trag in `04-Mitarbeiter/team-mitglieder.md` ein.
 
 Schreibe in einem Rutsch (mit Backup nach `99-Archiv/intake-YYYY-MM-DD-HHMM/` falls Files schon existieren):
 
-1. `01-Firma Home/unsere-leistungen.md` — aus Sektion 1 + 3
-2. `01-Firma Home/unsere-kunden.md` — aus Sektion 2 + 3
-3. `01-Firma Home/markenstimme.md` — aus Sektion 4 (Beispiel-Texte woertlich)
-4. `01-Firma Home/strategie.md` — aus Sektion 5
-5. `01-Firma Home/unsere-tools.md` — aus Sektion 6 (7-Bucket-Tabelle)
+1. `01-Firma Home/organization.md` — aus Sektion 1 + 3
+2. `01-Firma Home/wunschkunde-icp.md` — aus Sektion 2 + 3
+3. `01-Firma Home/brand.md` — aus Sektion 4 (Beispiel-Texte woertlich)
+4. `01-Firma Home/strategy.md` — aus Sektion 5
+5. `01-Firma Home/tools.md` — aus Sektion 6 (7-Bucket-Tabelle)
 6. `01-Firma Home/stakeholder.md` — aus Sektion 7
 7. `04-Mitarbeiter/team-mitglieder.md` — Roster
 8. `Team-Wissen/Session-Logs/YYYY/MM/YYYY-MM-DD-onboarding-firma.md` — Session-Log mit allen Antworten

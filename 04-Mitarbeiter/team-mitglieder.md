@@ -17,7 +17,7 @@ status: template
 | [Anna Beispiel] | [Marketing Manager] | [marketing-vertrieb] | [Mo–Do] | [anna@firma.de] | [z.B. ausführlich, mit Beispielen] |
 | [...] | [...] | [...] | [...] | [...] | [...] |
 
-> **Präferenzen-Spalte:** Optionale Notizen wie der Mitarbeiter mit Claude arbeiten will (Tonfall, Format, Anrede). Wenn leer: Claude nutzt die Firmen-Defaults aus [[markenstimme]].
+> **Präferenzen-Spalte:** Optionale Notizen wie der Mitarbeiter mit Claude arbeiten will (Tonfall, Format, Anrede). Wenn leer: Claude nutzt die Firmen-Defaults aus [[brand]].
 
 ## Externe Partner
 

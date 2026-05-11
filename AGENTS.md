@@ -1,5 +1,5 @@
 <!--
-AI OS v0.4.1 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.4.2 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT — see LICENSE
 -->
 
@@ -21,12 +21,12 @@ You can open this folder in Claude Cowork (Desktop), Claude Code, Codex CLI, Gem
 agentic-os/
 ├── 00-Inbox/                ← Wo Mitarbeiter rohe Inputs reinwerfen
 ├── 01-Firma Home/           ← Firmenweite SoT
-│   ├── markenstimme.md
-│   ├── unsere-kunden.md
-│   ├── unsere-leistungen.md
-│   ├── unsere-tools.md
-│   ├── strategie.md
-│   ├── stakeholder.md
+│   ├── organization.md      ← Was wir machen, Branche, Operations
+│   ├── brand.md             ← Voice, Tonalitaet, Beispiele
+│   ├── wunschkunde-icp.md   ← Ideal Customer Profile
+│   ├── strategy.md          ← Ziele, Prioritaeten, Metriken
+│   ├── tools.md             ← Tech-Stack (7-Bucket-Tabelle)
+│   ├── stakeholder.md       ← interne + externe Schluesselpersonen
 │   └── projekte/            ← firmenweite oder Cross-Team-Projekte
 ├── 02-Teams/                ← Pro Team-Funktion eine Mini-Firma
 │   ├── marketing-vertrieb/  ← Default-Team (mit website/ als team-spezifischer Sub-Container)
@@ -65,7 +65,9 @@ agentic-os/
 - **Externe Unternehmen** (`03-CRM/Unternehmen/<firma>/`) — gezielte Freigaben pro Firma, auch fuer Externe (Steuerberater etc.) moeglich
 - **Externe Personen** (`03-CRM/Personen/<name>/`) — Ansprechpartner, Beirat, Investoren, Berater. Pflege durch Teams die Kontakt haben.
 
-Es gibt **keinen Sub-Folder pro Mitarbeiter**. Persoenliche Praeferenzen (Tonfall, Anrede) leben als Spalte im Roster. Brand-Voice ist firmenweit in `01-Firma Home/markenstimme.md`, nicht pro Person.
+Es gibt **keinen Sub-Folder pro Mitarbeiter**. Persoenliche Praeferenzen (Tonfall, Anrede) leben als Spalte im Roster. Brand-Voice ist firmenweit in `01-Firma Home/brand.md`, nicht pro Person.
+
+
 
 Permissions per Sub-Folder ueber Cloud-Provider (Google Drive / OneDrive / Dropbox), nicht ueber separate Folder-Wurzeln.
 

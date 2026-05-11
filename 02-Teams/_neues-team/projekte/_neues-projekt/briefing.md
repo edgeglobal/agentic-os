@@ -25,7 +25,7 @@ verantwortlich: [Name]
 ## Bezug
 
 - Verknuepfte Firma: [[03-CRM/Unternehmen/...]] (falls Kunde / Lieferant)
-- Verknuepfte Strategie: siehe [[01-Firma Home/strategie]]
+- Verknuepfte Strategie: siehe [[01-Firma Home/strategy]]
 
 ## Was im Scope ist
 

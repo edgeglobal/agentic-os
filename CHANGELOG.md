@@ -5,6 +5,23 @@ Alle nennenswerten Änderungen an AI OS werden hier dokumentiert.
 Format folgt [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.4.2] — 2026-05-11
+
+### Changed
+
+- **Files in `01-Firma Home/` umbenannt** auf pragmatischen Englisch/Deutsch-Mix (Ben-AI-Schema-Anlehnung):
+  - `unsere-leistungen.md` → `organization.md`
+  - `markenstimme.md` → `brand.md`
+  - `unsere-kunden.md` → `wunschkunde-icp.md`
+  - `strategie.md` → `strategy.md`
+  - `unsere-tools.md` → `tools.md`
+  - `stakeholder.md` bleibt (denglish, kurz)
+- Alle Verweise in AGENTS, README, INSTALL, Onboard-Skill, audit-Skill, Default-Team-kontext, R-001 aktualisiert.
+
+### Architecture Decision
+
+- **Pragmatischer Naming-Mix.** Deutsch + Englisch je nachdem was klarer und kuerzer ist. Rationale: Office-Worker in DACH verstehen beide Sprachen. Klarheit + Konsistenz mit Industrie-Standards (Ben AI Context-Files) schlaegt strikte Eindeutschung.
+
 ## [0.4.1] — 2026-05-11
 
 ### Changed
@@ -75,7 +92,7 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 ### Architecture Decision
 
-- **Keine zentralen Vorlagen.** Was firmenweit als Template gilt, ist entweder Brand-Voice-Regel (gehoert in `01-Firma Home/markenstimme.md`) oder team-spezifisch (gehoert in `02-Teams/<team>/vorlagen/`). Ein zentraler Vorlagen-Container war unklar und unbefuellt. Rationale: KISS, kein Folder ohne klaren Pflegeauftrag.
+- **Keine zentralen Vorlagen.** Was firmenweit als Template gilt, ist entweder Brand-Voice-Regel (gehoert in `01-Firma Home/brand.md`) oder team-spezifisch (gehoert in `02-Teams/<team>/vorlagen/`). Ein zentraler Vorlagen-Container war unklar und unbefuellt. Rationale: KISS, kein Folder ohne klaren Pflegeauftrag.
 
 ## [0.3.0] — 2026-05-11
 
@@ -120,7 +137,7 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 - `06-Teams/` neuer Top-Level-Folder für Funktions-Teams
 - 3 Default-Teams vorbefüllt: `marketing-vertrieb/`, `fulfillment/`, `finance-hr-admin/` (jeweils mit `kontext.md` + `.claude/skills/`)
 - `06-Teams/_neues-team/` als Vorlage zum Duplizieren für weitere Teams
-- `01-Firma Home/strategie.md` (Ziele, Prioritäten, Metriken)
+- `01-Firma Home/strategy.md` (Ziele, Prioritäten, Metriken)
 - `01-Firma Home/stakeholder.md` (externe Partner, Schlüsselpersonen)
 - README erklärt das Drei-Schichten-Modell (Firma / Team / Mitarbeiter) explizit
 - INSTALL hat einen "Wo gehören Files hin?"-Abschnitt
@@ -128,7 +145,7 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 ### Architecture Decisions
 
 - **Ein Cloud-Folder pro Firma, mehrere Schichten als Sub-Folder** statt physisch getrennter Folder-Wurzeln. Permissions kommen vom Cloud-Sync pro Sub-Folder. Rationale: weniger Setup-Friktion für Office-Worker, Pfade variieren nicht pro Mitarbeiter-Rechner.
-- **Kein Sub-Folder pro Mitarbeiter.** `04-Mitarbeiter/` enthält nur einen Roster (`team-mitglieder.md`) mit optionaler Präferenz-Spalte pro Person. Rationale: Brand-Voice ist firmenweit (`01-Firma Home/markenstimme.md`), persönliche Files pro Person bringen für KMU mehr Pflegeaufwand als Wert.
+- **Kein Sub-Folder pro Mitarbeiter.** `04-Mitarbeiter/` enthält nur einen Roster (`team-mitglieder.md`) mit optionaler Präferenz-Spalte pro Person. Rationale: Brand-Voice ist firmenweit (`01-Firma Home/brand.md`), persönliche Files pro Person bringen für KMU mehr Pflegeaufwand als Wert.
 
 ## [0.1.0] — 2026-05-09
 

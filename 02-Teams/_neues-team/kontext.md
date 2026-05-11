@@ -23,7 +23,7 @@ Verantwortlich: [Name + Mail]
 
 ## Externe Tools die das Team nutzt
 
-> Nur Tools die NICHT firmenweit sind. Firmen-Tools stehen in `01-Firma Home/unsere-leistungen.md` oder einer separaten tools.md.
+> Nur Tools die NICHT firmenweit sind. Firmen-Tools stehen in `01-Firma Home/organization.md` oder einer separaten tools.md.
 
 - **Tool 1:** [Wofuer]
 - **Tool 2:** [Wofuer]

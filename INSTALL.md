@@ -101,10 +101,10 @@ Die KI stellt 7 Fragen über Ihre Firma:
 
 Aus den Antworten füllt die KI automatisch:
 
-- `01-Firma Home/markenstimme.md` (eure Schreibweise)
-- `01-Firma Home/unsere-kunden.md` (ICP)
-- `01-Firma Home/unsere-leistungen.md` (Angebot)
-- `01-Firma Home/strategie.md` (Ziele, Prioritäten)
+- `01-Firma Home/brand.md` (eure Schreibweise)
+- `01-Firma Home/wunschkunde-icp.md` (ICP)
+- `01-Firma Home/organization.md` (Angebot)
+- `01-Firma Home/strategy.md` (Ziele, Prioritäten)
 - `01-Firma Home/stakeholder.md` (externe Partner, Schlüsselpersonen)
 - `04-Mitarbeiter/team-mitglieder.md` (wer ihr seid)
 - `Team-Wissen/Session-Logs/2026/MM/2026-MM-DD-onboarding.md`
@@ -184,7 +184,7 @@ Permissions setzen Sie pro Sub-Folder im Cloud-Provider — nicht durch separate
 
 ### "Die KI kennt unser Geschäft nicht"
 
-→ Prüfen Sie: Wurde der Onboarding-Wizard durchlaufen? Sind `01-Firma Home/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md` ausgefüllt?
+→ Prüfen Sie: Wurde der Onboarding-Wizard durchlaufen? Sind `01-Firma Home/brand.md`, `wunschkunde-icp.md`, `organization.md` ausgefüllt?
 
 ### "Wir brauchen einen Spezialisten, den es nicht gibt"
 

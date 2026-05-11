@@ -16,7 +16,7 @@ Die KI fragt:
 - Hauptkontakt: Name, Position, E-Mail?
 - Branche?
 - Größe (MA-Anzahl, Umsatz wenn bekannt)?
-- Welche Leistung wurde verkauft? (Verweis auf [[unsere-leistungen]])
+- Welche Leistung wurde verkauft? (Verweis auf [[organization]])
 - Vertragsstart?
 - Vertragsdauer?
 - Vertragswert (€)?
@@ -79,8 +79,8 @@ Phase 1: Setup (bis [Datum])
 - [[2026-06-01-konzept-v1]] (in Arbeit)
 
 ## Cross-Links
-- [[unsere-leistungen]] — Leistungs-Definition
-- [[unsere-kunden]] — passende ICP-Persona
+- [[organization]] — Leistungs-Definition
+- [[wunschkunde-icp]] — passende ICP-Persona
 ```
 
 ### 4. Briefing-Dokument
@@ -95,12 +95,12 @@ Die KI fragt: "Soll ich gleich einen Kickoff-Meeting-Termin vorschlagen?"
 
 Bei Ja:
 - Es wird geschrieben einen Vorschlag für die Kickoff-Agenda
-- Die KI entwirft eine E-Mail an den Hauptkontakt zur Terminfindung (in [[markenstimme]])
+- Die KI entwirft eine E-Mail an den Hauptkontakt zur Terminfindung (in [[brand]])
 
 ### 6. Cross-Linking
 
 Die KI prüft:
-- Passt der Kunde in eine bestehende ICP-Persona aus [[unsere-kunden]]? Wenn ja: Verweis hinzufügen.
+- Passt der Kunde in eine bestehende ICP-Persona aus [[wunschkunde-icp]]? Wenn ja: Verweis hinzufügen.
 - Gibt es ähnliche Kunden bereits im Vault, von denen dieser Kunde lernen kann?
 
 ### 7. Confirmation
@@ -121,7 +121,7 @@ Angelegt:
 ## Referenzen
 
 - [[kunden-onboarding]] (Vorlage)
-- [[unsere-leistungen]]
-- [[unsere-kunden]]
-- [[markenstimme]]
+- [[organization]]
+- [[wunschkunde-icp]]
+- [[brand]]
 - [[R-001-namenskonventionen]]

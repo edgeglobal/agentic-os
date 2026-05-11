@@ -9,9 +9,9 @@ Conducts the new-customer-onboarding flow defined in [[SOP-002-neuen-kunden-anle
 
 ## Inputs the skill reads
 
-- `01-Firma Home/markenstimme.md` — fuer den Stil der Kickoff-Mail
-- `01-Firma Home/unsere-leistungen.md` — fuer korrekte Leistungs-Bezeichnung
-- `01-Firma Home/unsere-kunden.md` — fuer Persona-Zuordnung
+- `01-Firma Home/brand.md` — fuer den Stil der Kickoff-Mail
+- `01-Firma Home/organization.md` — fuer korrekte Leistungs-Bezeichnung
+- `01-Firma Home/wunschkunde-icp.md` — fuer Persona-Zuordnung
 - `kunden-onboarding.md` — Briefing-Template
 - `Team-Wissen/Richtlinien/R-001-namenskonventionen.md` — fuer Filename-Regeln
 - `03-CRM/Unternehmen/` — pruefen dass kein Duplikat existiert
@@ -37,7 +37,7 @@ Ask in Bloecken (nicht eine Frage nach der anderen — Block fragt 4-5 zusammen)
 - Telefon (optional)?
 
 **Block C — Vertrag:**
-- Welche Leistung wurde verkauft? (zeige Liste aus `unsere-leistungen.md` zur Auswahl)
+- Welche Leistung wurde verkauft? (zeige Liste aus `organization.md` zur Auswahl)
 - Vertragsstart-Datum?
 - Vertragsdauer?
 - Vertragswert (€)?
@@ -89,8 +89,8 @@ Body: kurzer Hub-Aufbau mit Sektionen Status, Vertrag, Hauptkontakte, Aktuelle P
 
 Cross-Links setzen:
 - Wenn Angebot existiert: `[[YYYY-MM-DD-angebot-<slug>]]`
-- Auf passende ICP-Persona aus `unsere-kunden.md`
-- Auf gekaufte Leistung in `unsere-leistungen.md`
+- Auf passende ICP-Persona aus `wunschkunde-icp.md`
+- Auf gekaufte Leistung in `organization.md`
 
 ### Step 4: Briefing-Datei
 
@@ -103,7 +103,7 @@ Bei Luecken (z.B. fehlende Liefermeilensteine, fehlender Kommunikations-Rhythmus
 Frage: "Soll ich gleich einen Kickoff-Mail-Entwurf machen?"
 
 Bei Ja:
-- Die KI liest `01-Firma Home/markenstimme.md`
+- Die KI liest `01-Firma Home/brand.md`
 - Schreibt eine kurze E-Mail (3-5 Saetze) an den Hauptkontakt mit:
   - Begruessung in Markenstimme
   - Bestaetigung des Vertragsabschlusses
@@ -127,7 +127,7 @@ Pfad: 03-CRM/Unternehmen/<slug>/
 
 Cross-Links:
 - ICP-Persona: [[<persona-name>]]
-- Leistung: [[unsere-leistungen]]
+- Leistung: [[organization]]
 - Account-Lead: [[<name>]]
 
 Kickoff-Mail-Entwurf: [oben im Chat / nicht erstellt]
@@ -139,6 +139,6 @@ Naechster Schritt: Mail verschicken / Briefing-Luecken fuellen / Kickoff-Termin 
 
 1. **Kein Duplikat anlegen.** Wenn der Slug bereits existiert in `03-CRM/Unternehmen/`, fragen ob es derselbe Kunde ist (dann an existing anhaengen) oder ein anderer (dann Slug schaerfen).
 2. **Sensitive-Branchen-Flag.** Wenn Branche Anwalt/Arzt/Finanz/Behoerde, im `_hub.md` "**SENSITIV — keine Details aussserhalb dieses Ordners zitieren**" einfuegen.
-3. **Markenstimme strict.** Kickoff-Mail-Entwurf MUSS `markenstimme.md` befolgen — Tabu-Woerter checken.
+3. **Markenstimme strict.** Kickoff-Mail-Entwurf MUSS `brand.md` befolgen — Tabu-Woerter checken.
 4. **Read-only auf `01-Firma Home/`.** Nur 03-CRM/Unternehmen/-Pfade neu anlegen.
 5. **Frontmatter komplett.** Kein leeres Pflichtfeld.

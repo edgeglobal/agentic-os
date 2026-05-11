@@ -20,7 +20,7 @@ First run is the baseline. Re-run weekly to watch the score climb.
 
 | Schicht | Test |
 |---|---|
-| **Context** | Knows the business — `01-Firma Home/`, `markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`, `team-mitglieder.md` |
+| **Context** | Knows the business — `01-Firma Home/`, `brand.md`, `wunschkunde-icp.md`, `organization.md`, `team-mitglieder.md` |
 | **Connections** | Reaches the user's stuff — Org-Skills installed, MCPs configured, external tool integrations |
 | **Capabilities** | Knows how to do work — Spezialisten in `Team/`, SOPs in `Team-Wissen/SOPs/`, Workflows |
 | **Cadence** | Runs without being asked — Session-Logs being written, scheduled triggers, recurring rituals |
@@ -32,7 +32,7 @@ First run is the baseline. Re-run weekly to watch the score climb.
 The audit looks for **patterns and intent**, not exact paths. Use Glob and Read to check:
 
 **Operating manual:** `AGENTS.md` (root), `CLAUDE.md` if exists.
-**Knowledge files:** `01-Firma Home/markenstimme.md`, `01-Firma Home/unsere-kunden.md`, `01-Firma Home/unsere-leistungen.md`, `05-Team/team-mitglieder.md`.
+**Knowledge files:** `01-Firma Home/brand.md`, `01-Firma Home/wunschkunde-icp.md`, `01-Firma Home/organization.md`, `05-Team/team-mitglieder.md`.
 **Specialists:** `Team/<Name>/AGENTS.md` — count.
 **SOPs:** `Team-Wissen/SOPs/SOP-*.md` — count.
 **Workflows:** `Team-Wissen/Workflows/WF-*.md` — count.
@@ -52,9 +52,9 @@ The audit looks for **patterns and intent**, not exact paths. Use Glob and Read 
 | Criterion | Points | How to detect |
 |---|---|---|
 | AGENTS.md exists with proper structure | 5 | Read AGENTS.md, check for proper section structure |
-| markenstimme.md filled (>200 words, not just template) | 5 | Read file, count non-placeholder content |
-| unsere-kunden.md filled (>200 words) | 5 | Same |
-| unsere-leistungen.md filled (>200 words) | 5 | Same |
+| brand.md filled (>200 words, not just template) | 5 | Read file, count non-placeholder content |
+| wunschkunde-icp.md filled (>200 words) | 5 | Same |
+| organization.md filled (>200 words) | 5 | Same |
 | team-mitglieder.md has ≥1 real entry | 5 | Read file, check non-placeholder rows |
 
 #### Connections (25 pts)

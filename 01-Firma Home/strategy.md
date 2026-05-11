@@ -56,6 +56,6 @@ status: template
 
 ## Bezug zu anderen Files
 
-- Wer unsere Wunschkunden sind: [[unsere-kunden]]
-- Was wir verkaufen: [[unsere-leistungen]]
-- Wie wir klingen dabei: [[markenstimme]]
+- Wer unsere Wunschkunden sind: [[wunschkunde-icp]]
+- Was wir verkaufen: [[organization]]
+- Wie wir klingen dabei: [[brand]]

@@ -21,7 +21,7 @@ Walks the user through a 3-phase interview each week to surface and ship one new
 
 ## Inputs the skill reads
 
-- `01-Firma Home/markenstimme.md`, `unsere-kunden.md`, `unsere-leistungen.md`
+- `01-Firma Home/brand.md`, `wunschkunde-icp.md`, `organization.md`
 - `05-Team/team-mitglieder.md`
 - `Team/agent-index.md` — wer kann was
 - `Team-Wissen/Session-Logs/YYYY/MM/*.md` (letzte 7 Tage)

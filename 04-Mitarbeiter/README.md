@@ -32,7 +32,7 @@ Die KI liest den Roster bei jeder Session-Eroeffnung. Wenn ein Mitarbeiter sagt 
 
 ## Brand-Voice gehoert der Firma, nicht dem Mitarbeiter
 
-Die einheitliche Marken-Stimme der Firma liegt in [[01-Firma Home/markenstimme]]. Jeder Mitarbeiter nutzt diese Stimme fuer Firmen-Kommunikation (Angebote, Kunden-Mails, Newsletter).
+Die einheitliche Marken-Stimme der Firma liegt in [[01-Firma Home/brand]]. Jeder Mitarbeiter nutzt diese Stimme fuer Firmen-Kommunikation (Angebote, Kunden-Mails, Newsletter).
 
 Wenn ein einzelner Mitarbeiter im persoenlichen Bereich abweichen will (z.B. eigenes LinkedIn-Profil), kann er das in der Praeferenz-Spalte des Rosters vermerken. Aber: das ist die Ausnahme, nicht die Regel.
 

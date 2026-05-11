@@ -6,7 +6,7 @@
 
 1. **Englisch oder Deutsch — konsequent pro Bereich.** Standardordner sind deutsch (`01-Firma Home/`, `03-CRM/Unternehmen/`). System-Bereiche sind englisch (`Team/`, `.claude/`).
 2. **Kebab-Case bei Filenames.** `neuer-kunde.md`, nicht `Neuer Kunde.md` oder `neuer_kunde.md`.
-3. **Keine Umlaute in Filenames.** `markenstimme.md`, nicht `markenstimmë.md`. Inhalt darf Umlaute haben.
+3. **Keine Umlaute in Filenames.** `brand.md`, nicht `markenstimmë.md`. Inhalt darf Umlaute haben.
 4. **Keine Sonderzeichen außer `-` und `_`.** Vermeide Slashes, Klammern, Doppelpunkte in Filenames.
 5. **Datum-Prefix wenn chronologisch wichtig.** `2026-05-09-meeting-acme.md` für Meeting-Protokolle. ISO-Format: `YYYY-MM-DD`.
 

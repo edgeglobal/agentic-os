@@ -19,4 +19,4 @@ Alles was die Firmen-Webseite betrifft. Pflege durch Marketing & Vertrieb.
 
 ## Hinweis fuer KI
 
-Bei Webseiten-Texten: immer Markenstimme aus [[01-Firma Home/markenstimme]] einhalten. Bei SEO-relevanten Aenderungen: vor Veroeffentlichung mit Geschaeftsfuehrung abstimmen.
+Bei Webseiten-Texten: immer Markenstimme aus [[01-Firma Home/brand]] einhalten. Bei SEO-relevanten Aenderungen: vor Veroeffentlichung mit Geschaeftsfuehrung abstimmen.
