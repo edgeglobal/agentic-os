@@ -11,7 +11,7 @@ status: template
 
 ## Interne Schluesselpersonen
 
-> Die Personen die ueber das normale Mitarbeiter-Team hinaus relevant sind. Mitarbeiter selbst sind in `05-Mitarbeiter/team-mitglieder.md`.
+> Die Personen die ueber das normale Mitarbeiter-Team hinaus relevant sind. Mitarbeiter selbst sind in `04-Mitarbeiter/team-mitglieder.md`.
 
 | Name | Rolle | Wann relevant |
 |---|---|---|

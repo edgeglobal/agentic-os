@@ -70,7 +70,7 @@ last-updated: 2026-05-11
 
 ## Verknuepfte Projekte
 
-- [[04-Projekte/projekt-slug]]
+- [[01-Firma Home/projekte/projekt-slug]]
 - [...]
 
 ## Notizen

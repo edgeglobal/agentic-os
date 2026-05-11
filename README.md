@@ -1,5 +1,5 @@
 <!--
-AI OS v0.3.3 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.4.1 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT License — see LICENSE
 -->
 
@@ -104,8 +104,8 @@ Die KI liest `AGENTS.md`, stellt sich vor, fragt nach Ihrer Firma und füllt die
 │   ├── 01-Firma Home/     ← firmenweite SoT          │
 │   ├── 02-Teams/          ← pro Funktion eine Mini-Firma │
 │   ├── 03-CRM/            ← Unternehmen + Personen + Meetings │
-│   ├── 04-Projekte/       ← Cross-Team-Projekte      │
-│   ├── 05-Mitarbeiter/    ← Roster                   │
+│   ├── 01-Firma Home/projekte/       ← Cross-Team-Projekte      │
+│   ├── 04-Mitarbeiter/    ← Roster                   │
 │   ├── Team-Wissen/SOPs/  ← Standardabläufe          │
 │   ├── .claude/skills/    ← Firmenweite Skills       │
 │   └── ...                                            │
@@ -120,11 +120,11 @@ AI OS modelliert mehrere Schichten in **einem** Cloud-Folder, nicht in physisch 
 
 | Bereich | Wo | Wer schreibt | Wer liest |
 |---|---|---|---|
-| **Firma-weit** | `01-Firma Home/`, `04-Projekte/`, `.claude/skills/` | Operator + Geschäftsführung | alle Mitarbeiter |
+| **Firma-weit** | `01-Firma Home/`, `01-Firma Home/projekte/`, `.claude/skills/` | Operator + Geschäftsführung | alle Mitarbeiter |
 | **Team** (Mini-Firma) | `02-Teams/<team>/` (kontext, vorlagen, projekte, referenzen, ablage, skills) | Team-Mitglieder | Rest liest meist mit |
 | **Externe Unternehmen** | `03-CRM/Unternehmen/<firma>/` | Teams die den Kontakt pflegen | je nach Sensitivität |
 | **Externe Personen** | `03-CRM/Personen/<name>/` | Teams die den Kontakt pflegen | alle Mitarbeiter intern |
-| **Mitarbeiter-Roster** | `05-Mitarbeiter/team-mitglieder.md` | Operator | alle |
+| **Mitarbeiter-Roster** | `04-Mitarbeiter/team-mitglieder.md` | Operator | alle |
 | **Meetings** | `03-CRM/Meetings/internal/` und `external/` | Teilnehmer | je nach Vertraulichkeit |
 
 Das spart die Setup-Friktion von mehreren physisch getrennten Folder-Wurzeln. Permissions sind das was sie sein sollten: eine Eigenschaft des Ordners, nicht der Wurzel.

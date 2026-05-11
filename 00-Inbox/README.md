@@ -18,7 +18,7 @@ Jeder im Team kann hier Dateien, Notizen, Screenshots, Voice-Memos oder Brain-Du
 
 - Fertige Dokumente (gehören in `01-Firma Home/` oder ``)
 - Kunden-spezifisches Material (gehört in `03-CRM/Unternehmen/<kunde>/`)
-- Personalbezogene Daten (gehört in `05-Mitarbeiter/`)
+- Personalbezogene Daten (gehört in `04-Mitarbeiter/`)
 
 ## Wie die KI verarbeitet
 

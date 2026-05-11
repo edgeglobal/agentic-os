@@ -2,7 +2,7 @@
 
 Initiativen die das Team treibt und die ueber **mehr als 2 Wochen** laufen.
 
-Firmenweite Cross-Team-Projekte liegen in `04-Projekte/` auf Repo-Ebene.
+Firmenweite Cross-Team-Projekte liegen in `01-Firma Home/projekte/` auf Repo-Ebene.
 
 ## Wann ein Projekt hierhin gehoert
 

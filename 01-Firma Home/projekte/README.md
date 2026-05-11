@@ -1,4 +1,4 @@
-# 04-Projekte
+# 01-Firma Home/projekte
 
 **Aktive interne Projekte.**
 
@@ -18,7 +18,7 @@ Hier landen Projekte, die nicht direkt einem Kunden zuzuordnen sind:
 ## Struktur pro Projekt
 
 ```
-04-Projekte/
+01-Firma Home/projekte/
 └── q3-pricing-reform/
     ├── _hub.md
     ├── recherche/

@@ -7,7 +7,7 @@ AI OS — Agentic Operating System für KMUs
 
 Alle **externen** Personen mit denen ihr regelmaessig zu tun habt: Ansprechpartner bei Kunden, Lieferanten-Kontakte, Beirat, Investoren, Steuerberater, Anwalt, ehemalige Mitarbeiter die jetzt bei Kunden sind.
 
-> Nicht zu verwechseln mit `05-Mitarbeiter/` — das sind eure **eigenen** Mitarbeiter.
+> Nicht zu verwechseln mit `04-Mitarbeiter/` — das sind eure **eigenen** Mitarbeiter.
 
 ## Wann jemand hier rein gehoert
 

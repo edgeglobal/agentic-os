@@ -31,7 +31,7 @@ Jedes Meeting-File hat Wikilinks zu:
 
 - **Firma** → `[[03-CRM/Unternehmen/<firma>]]`
 - **Personen** → `[[03-CRM/Personen/<name>]]`
-- **Bezug auf Projekte** (falls relevant) → `[[04-Projekte/<projekt>]]`
+- **Bezug auf Projekte** (falls relevant) → `[[01-Firma Home/projekte/<projekt>]]`
 - **Verantwortliches Team** → z.B. `[[02-Teams/marketing-vertrieb]]`
 
 Diese Wikilinks erzeugen Backlinks in den jeweiligen Files — so baut sich das Wissens-Geflecht ueber die Jahre auf.

@@ -15,7 +15,7 @@
 - **Hauptordner:** Nummer-Prefix für Reihenfolge. `00-Inbox`, `01-Firma`, etc.
 - **Team-Ordner:** kebab-case Funktions-Name. Beispiel: `marketing-vertrieb/`, `fulfillment/`.
 - **Kunden:** kebab-case ohne Rechtsform-Suffix. `acme/` statt `acme-gmbh/`. Status im Frontmatter, nicht im Foldername.
-- **Mitarbeiter:** Eintrag im `05-Mitarbeiter/team-mitglieder.md`-Roster, kein eigener Sub-Folder.
+- **Mitarbeiter:** Eintrag im `04-Mitarbeiter/team-mitglieder.md`-Roster, kein eigener Sub-Folder.
 
 ## Dateien nach Typ
 

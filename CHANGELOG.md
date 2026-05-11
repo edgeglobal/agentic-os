@@ -5,6 +5,17 @@ Alle nennenswerten Änderungen an AI OS werden hier dokumentiert.
 Format folgt [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [0.4.1] — 2026-05-11
+
+### Changed
+
+- **Firmenweite Projekte unter `01-Firma Home/projekte/`** statt eigenem Top-Level-Folder. Konsistent mit "Mini-Firma"-Logik: jeder Container hat seine Projekte (Teams haben `projekte/`, jetzt auch Firma Home).
+- Renumerierung: `05-Mitarbeiter/` → `04-Mitarbeiter/` (Top-Level wird kompakter).
+
+### Architecture Decision
+
+- **Projekte gehoeren zum jeweiligen Container.** Firmen-weite Projekte unter `01-Firma Home/projekte/`, team-spezifische unter `02-Teams/<team>/projekte/`. Rationale: ein Projekt hat immer einen Verantwortungs-Kontext — entweder Team oder Firma. Top-Level-Folder fuer alles Projekt-bezogene war redundant.
+
 ## [0.4.0] — 2026-05-11
 
 ### Changed
@@ -29,8 +40,8 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
   - `07-Meetings/external/*` → `03-CRM/Meetings/` (nur externe)
 - **Interne Meetings wandern in den jeweiligen Team-Folder** unter `02-Teams/<team>/meetings/`. Standups, Wochen-Reviews, Retrospektiven gehoeren zum Team, nicht ins CRM.
 - Renumerierung:
-  - `05-Projekte/` → `04-Projekte/`
-  - `06-Mitarbeiter/` → `05-Mitarbeiter/`
+  - `05-Projekte/` → `01-Firma Home/projekte/`
+  - `06-Mitarbeiter/` → `04-Mitarbeiter/`
 - README, AGENTS, INSTALL aktualisiert auf neue Struktur.
 
 ### Added
@@ -73,8 +84,8 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 - **Folder-Renames + Renumerierung:**
   - `01-Firma/` → `01-Firma Home/` (mit Leerzeichen, SharePoint-Style)
   - `03-Kunden/` → `03-CRM/Unternehmen/` (alle externen Firmen, nicht nur Kunden)
-  - `04-Projekte/` → `04-Projekte/` (Platz fuer Personen)
-  - `05-Mitarbeiter/` → `05-Mitarbeiter/`
+  - `01-Firma Home/projekte/` → `01-Firma Home/projekte/` (Platz fuer Personen)
+  - `04-Mitarbeiter/` → `04-Mitarbeiter/`
   - `06-Teams/` → `07-Teams/`
   - `03-CRM/Meetings/` → `08-Meetings/`
 - `02-Vorlagen/` enthaelt nur noch firmenweite Templates (meeting-protokoll). Team-spezifische Vorlagen wandern in die Team-Folder.
@@ -100,7 +111,7 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Brand-Name: "Agentic OS" → "AI OS — Agentic Operating System für KMUs"
 - GitHub-Repo-Description white-label-konform (keine Quellen-Attribution mehr)
-- `05-Team/` umbenannt zu `05-Mitarbeiter/` (klarere Semantik: Menschen, nicht AI-Specialists)
+- `05-Team/` umbenannt zu `04-Mitarbeiter/` (klarere Semantik: Menschen, nicht AI-Specialists)
 - `06-Meetings/` umbenannt zu `03-CRM/Meetings/` (macht Platz für `06-Teams/`)
 - README.md, INSTALL.md, AGENTS.md auf neue Struktur aktualisiert
 
@@ -117,7 +128,7 @@ Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 ### Architecture Decisions
 
 - **Ein Cloud-Folder pro Firma, mehrere Schichten als Sub-Folder** statt physisch getrennter Folder-Wurzeln. Permissions kommen vom Cloud-Sync pro Sub-Folder. Rationale: weniger Setup-Friktion für Office-Worker, Pfade variieren nicht pro Mitarbeiter-Rechner.
-- **Kein Sub-Folder pro Mitarbeiter.** `05-Mitarbeiter/` enthält nur einen Roster (`team-mitglieder.md`) mit optionaler Präferenz-Spalte pro Person. Rationale: Brand-Voice ist firmenweit (`01-Firma Home/markenstimme.md`), persönliche Files pro Person bringen für KMU mehr Pflegeaufwand als Wert.
+- **Kein Sub-Folder pro Mitarbeiter.** `04-Mitarbeiter/` enthält nur einen Roster (`team-mitglieder.md`) mit optionaler Präferenz-Spalte pro Person. Rationale: Brand-Voice ist firmenweit (`01-Firma Home/markenstimme.md`), persönliche Files pro Person bringen für KMU mehr Pflegeaufwand als Wert.
 
 ## [0.1.0] — 2026-05-09
 

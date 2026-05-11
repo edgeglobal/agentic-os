@@ -36,7 +36,7 @@ Lies diese Files:
 - `01-Firma Home/strategie.md`
 - `01-Firma Home/unsere-tools.md`
 - `01-Firma Home/stakeholder.md`
-- `05-Mitarbeiter/team-mitglieder.md`
+- `04-Mitarbeiter/team-mitglieder.md`
 
 Pruefe was schon ausgefuellt ist vs. Platzhalter.
 
@@ -131,7 +131,7 @@ Optional, falls noch nicht da. Frage:
 
 > Wer ist im Team? Name, Rolle, Hauptteam, optional Kontakt. Lass dich nicht von "noch nicht ganz fertig" abhalten — wir koennen es spaeter ergaenzen.
 
-Trag in `05-Mitarbeiter/team-mitglieder.md` ein.
+Trag in `04-Mitarbeiter/team-mitglieder.md` ein.
 
 ### Phase 4: Scaffold
 
@@ -143,7 +143,7 @@ Schreibe in einem Rutsch (mit Backup nach `99-Archiv/intake-YYYY-MM-DD-HHMM/` fa
 4. `01-Firma Home/strategie.md` — aus Sektion 5
 5. `01-Firma Home/unsere-tools.md` — aus Sektion 6 (7-Bucket-Tabelle)
 6. `01-Firma Home/stakeholder.md` — aus Sektion 7
-7. `05-Mitarbeiter/team-mitglieder.md` — Roster
+7. `04-Mitarbeiter/team-mitglieder.md` — Roster
 8. `Team-Wissen/Session-Logs/YYYY/MM/YYYY-MM-DD-onboarding-firma.md` — Session-Log mit allen Antworten
 
 ### Phase 5: Abschluss
@@ -209,7 +209,7 @@ Notiere die Vorschlaege als Liste in `02-Teams/<team>/.claude/skills/README.md`.
 ### Phase 4: Scaffold
 
 1. `02-Teams/<team>/kontext.md` ausgefuellt
-2. Eintrag in `05-Mitarbeiter/team-mitglieder.md` falls neue Personen
+2. Eintrag in `04-Mitarbeiter/team-mitglieder.md` falls neue Personen
 3. `Team-Wissen/Session-Logs/YYYY/MM/YYYY-MM-DD-onboarding-team-<name>.md`
 
 ---

@@ -52,9 +52,9 @@ Ein Team-Folder ist eine **Mini-Firma** mit eigener Identitaet, eigenen Prozesse
 
 - **Externe Firmen** → `03-CRM/Unternehmen/`, Team verweist per Wikilink
 - **Externe Personen** → `03-CRM/Personen/`
-- **Mitarbeiter-Roster** → `05-Mitarbeiter/team-mitglieder.md` (firmenweit)
+- **Mitarbeiter-Roster** → `04-Mitarbeiter/team-mitglieder.md` (firmenweit)
 - **Firmenweite Vorlagen** (z.B. Meeting-Protokoll) → `03-CRM/Meetings/_protokoll-vorlage.md`
-- **Firmenweite Projekte mit mehreren Teams** → `04-Projekte/`
+- **Firmenweite Projekte mit mehreren Teams** → `01-Firma Home/projekte/`
 - **Externe Meetings** (mit Unternehmen oder Personen) → `03-CRM/Meetings/`
 - **Interne Meetings** des Teams (Standups, Reviews) → `meetings/` hier im Team-Folder
 

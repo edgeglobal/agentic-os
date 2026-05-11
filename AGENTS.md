@@ -1,5 +1,5 @@
 <!--
-AI OS v0.3.3 — © 2026 Gerald Eder · UmsatzAI
+AI OS v0.4.1 — © 2026 Gerald Eder · UmsatzAI
 Licensed under MIT — see LICENSE
 -->
 
@@ -20,14 +20,20 @@ You can open this folder in Claude Cowork (Desktop), Claude Code, Codex CLI, Gem
 ```
 agentic-os/
 ├── 00-Inbox/                ← Wo Mitarbeiter rohe Inputs reinwerfen
-├── 01-Firma Home/           ← Firmenweite SoT: markenstimme, unsere-kunden,
-│                              unsere-leistungen, unsere-tools, strategie, stakeholder
+├── 01-Firma Home/           ← Firmenweite SoT
+│   ├── markenstimme.md
+│   ├── unsere-kunden.md
+│   ├── unsere-leistungen.md
+│   ├── unsere-tools.md
+│   ├── strategie.md
+│   ├── stakeholder.md
+│   └── projekte/            ← firmenweite oder Cross-Team-Projekte
 ├── 02-Teams/                ← Pro Team-Funktion eine Mini-Firma
 │   ├── marketing-vertrieb/  ← Default-Team (mit website/ als team-spezifischer Sub-Container)
 │   ├── fulfillment/         ← Default-Team
 │   ├── finance-hr-admin/    ← Default-Team
 │   └── _neues-team/         ← Vorlage (kontext, vorlagen, projekte, referenzen, meetings, ablage, skills)
-├── 03-CRM/                  ← Customer Relationship: Unternehmen, Personen, Meetings
+├── 03-CRM/                  ← Customer Relationship: Unternehmen, Personen, externe Meetings
 │   ├── Unternehmen/         ← externe Firmen (Kunden, Lieferanten, Partner, Berater)
 │   │   ├── _neues-unternehmen/
 │   │   └── acme-gmbh/       ← Beispiel: kontext, gespraeche, ablage
@@ -36,12 +42,11 @@ agentic-os/
 │   │   └── hans-mueller/    ← Beispiel: kontext mit Verlauf, Vorlieben
 │   └── Meetings/            ← **externe** Meetings mit Unternehmen + Personen
 │       └── _protokoll-vorlage.md ← Standard-Meeting-Format
-
-(Interne Meetings — Standups, Team-Reviews — liegen in `02-Teams/<team>/meetings/`.)
-├── 04-Projekte/             ← Aktive firmenweite oder Cross-Team-Projekte
-├── 05-Mitarbeiter/          ← Roster aller Menschen in der Firma
+├── 04-Mitarbeiter/          ← Roster aller Menschen in der Firma
 │   └── team-mitglieder.md   ← Liste mit Name, Rolle, Team, optionale Praeferenzen
 ├── 99-Archiv/               ← Erledigtes
+
+(Interne Meetings — Standups, Team-Reviews — liegen in `02-Teams/<team>/meetings/`.)
 │
 ├── Team-Wissen/             ← Operating know-how
 │   ├── SOPs/                ← Standardabläufe (atomar, ein Job pro File)
@@ -55,7 +60,7 @@ agentic-os/
 
 ## Schichten (lebt im selben Folder, Permissions per Sub-Folder)
 
-- **Firma-weit** (`01-Firma Home/`, `04-Projekte/`, `05-Mitarbeiter/`, `.claude/skills/`) — alle Mitarbeiter lesen, Operator + Geschaeftsfuehrung schreiben
+- **Firma-weit** (`01-Firma Home/` inkl. `projekte/`, `04-Mitarbeiter/`, `.claude/skills/`) — alle Mitarbeiter lesen, Operator + Geschaeftsfuehrung schreiben
 - **Team** als Mini-Firma (`02-Teams/<team>/`) — eigene `kontext`, `vorlagen`, `projekte`, `referenzen`, `ablage`, `.claude/skills`. Team-Mitglieder schreiben, Rest liest.
 - **Externe Unternehmen** (`03-CRM/Unternehmen/<firma>/`) — gezielte Freigaben pro Firma, auch fuer Externe (Steuerberater etc.) moeglich
 - **Externe Personen** (`03-CRM/Personen/<name>/`) — Ansprechpartner, Beirat, Investoren, Berater. Pflege durch Teams die Kontakt haben.
