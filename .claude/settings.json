@@ -1,0 +1,8 @@
+{
+  "_comment": "Default settings. Onboard-Playbook copies role-template to this file during user onboarding.",
+  "setupMode": "solo",
+  "_role": "ceo",
+  "permissions": {
+    "deny": []
+  }
+}

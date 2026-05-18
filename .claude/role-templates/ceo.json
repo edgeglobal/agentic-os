@@ -1,0 +1,7 @@
+{
+  "_comment": "CEO role: full access. Copy to .claude/settings.json during onboarding.",
+  "_role": "ceo",
+  "permissions": {
+    "deny": []
+  }
+}

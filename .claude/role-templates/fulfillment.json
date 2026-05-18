@@ -1,0 +1,11 @@
+{
+  "_comment": "Fulfillment role: deny HR + Finance + Sales + Marketing internals.",
+  "_role": "fulfillment",
+  "permissions": {
+    "deny": [
+      "Read(~/ai-workspace/firma/finance-hr-admin/**)",
+      "Read(~/ai-workspace/firma/vertrieb/**)",
+      "Read(~/ai-workspace/firma/marketing/**)"
+    ]
+  }
+}

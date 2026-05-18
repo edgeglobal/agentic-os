@@ -1,0 +1,10 @@
+{
+  "_comment": "Marketing role: deny HR + Finance + Sales internals.",
+  "_role": "marketing",
+  "permissions": {
+    "deny": [
+      "Read(~/ai-workspace/firma/finance-hr-admin/**)",
+      "Read(~/ai-workspace/firma/vertrieb/**)"
+    ]
+  }
+}

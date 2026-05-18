@@ -1,0 +1,10 @@
+{
+  "_comment": "Vertrieb (Sales) role: deny HR + Finance + Marketing internals.",
+  "_role": "vertrieb",
+  "permissions": {
+    "deny": [
+      "Read(~/ai-workspace/firma/finance-hr-admin/**)",
+      "Read(~/ai-workspace/firma/marketing/**)"
+    ]
+  }
+}
