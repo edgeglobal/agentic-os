@@ -1,127 +1,93 @@
 # SOP-002 — Neuen Kunden anlegen
 
-**Wofür:** Wenn ein neuer Kunde gewonnen wurde (Vertrag unterschrieben).
-**Auslöser:** User sagt "wir haben einen neuen Kunden gewonnen: [Firma]"
-**Verantwortlich:** Die KI
-**Dauer:** ~10-15 Minuten interaktiv
+**Wofuer:** Wenn ein neuer Kunde gewonnen wurde (Vertrag, LOI, oder erste Beauftragung).
+**Ausloeser:** User sagt "neuer Kunde: [Firma]" oder "wir haben Acme gewonnen".
+**Verantwortlich:** Die KI fuehrt durch, Vertrieb / Account-Lead signt off.
+**Dauer:** 10-15 Minuten interaktiv.
 
 ---
 
 ## Schritte
 
-### 1. Stammdaten erfassen
+### 1. Schnellster Weg: `/onboard` Modus 3
 
-Die KI fragt:
-- Firmenname (offiziell)?
-- Hauptkontakt: Name, Position, E-Mail?
-- Branche?
-- Größe (MA-Anzahl, Umsatz wenn bekannt)?
-- Welche Leistung wurde verkauft? (Verweis auf [[organization]])
-- Vertragsstart?
-- Vertragsdauer?
-- Vertragswert (€)?
+In den meisten Faellen reicht der `onboard`-Skill im Modus **Unternehmen**:
 
-### 2. Ordner anlegen
+> "Onboarde uns einen neuen Kunden: Acme GmbH."
+
+Der Skill stellt 5 Sektionen Fragen, legt `03-CRM/Unternehmen/<slug>/` aus der `_neues-unternehmen/`-Vorlage an und fuellt `kontext.md`. Diese SOP beschreibt den manuellen Pfad falls der Skill nicht verfuegbar ist oder spezielle Felder gebraucht werden.
+
+### 2. Slug bestimmen
+
+Filename-Format: kebab-case, **ohne Rechtsform**.
+
+- `Acme GmbH` -> `acme`
+- `Mueller & Sohn KG` -> `mueller-und-sohn`
+- Bei Namens-Kollision: kurzer Branchen-Zusatz (`acme-baeckerei`, `acme-software`).
+
+Konvention siehe [[R-001-namenskonventionen]].
+
+### 3. Folder anlegen
 
 ```
-03-CRM/Unternehmen/
-└── <firma-kebab-case>/
-    ├── _hub.md
-    ├── briefing.md
-    ├── meetings/
-    ├── lieferungen/
-    └── notizen.md
+03-CRM/Unternehmen/<slug>/
+└── kontext.md
 ```
 
-Filename: kebab-case, ohne GmbH/AG suffix. Beispiel: `acme/`, nicht `acme-gmbh/`.
+Kopiere `03-CRM/Unternehmen/_neues-unternehmen/kontext.md` als Startpunkt.
 
-### 3. Hub-Datei `_hub.md` erstellen
+Weitere Files werden bei Bedarf dazu angelegt — **nicht praeventiv leere Folder erzeugen** (`meetings/`, `angebote/` etc. entstehen erst wenn der erste Eintrag kommt).
 
-```markdown
----
-type: kunde
-firma: Acme GmbH
-status: active
-branche: Maschinenbau
-groesse: 50 MA
-hauptkontakt: Max Mustermann
-hauptkontakt-email: max@acme.de
-vertragsstart: 2026-05-15
-vertragsdauer: 12 Monate
-vertragswert: 45000
-account-lead: [[<dein-name>]]
----
+### 4. `kontext.md` fuellen
 
-# Acme GmbH
+Die KI fragt fuer die 5 Bloecke (analog onboard-Skill):
 
-## Status
-Active — Phase 1 (Onboarding)
+1. **Stammdaten** — Branche, Standort, Webseite, Erstkontakt-Datum, Aufbauender Kollege
+2. **Beziehung** — Beziehungs-Status (aktiv/schlafend/eskaliert), Vertragsart, Hauptbetreuendes Team
+3. **Schluesselpersonen** — Hauptansprechpartner mit Rolle. Bei JA-Frage "wichtig genug fuer eigenen Personen-Folder?": Wikilink setzen, spaeter `/onboard` Modus 4 starten.
+4. **Was wir machen** — Verweis auf passende Leistung aus [[organization]]
+5. **Beziehung & Tonalitaet** — Anrede (Du/Sie), Kommunikationsvorlieben, Tabu-Themen
 
-## Vertrag
-Siehe [[2026-05-15-angebot]] — 12 Monate, €45.000.
+Frontmatter mindestens: `type: unternehmen`, `beziehung`, `status`, `seit`, `last-updated`.
 
-## Hauptkontakte
-- Max Mustermann (Geschäftsführer) — max@acme.de
-- Anna Beispiel (Marketing) — anna@acme.de
+### 5. Cross-Links pruefen
 
-## Aktuelle Phase
-Phase 1: Setup (bis [Datum])
+Die KI prueft und ergaenzt:
 
-## Nächste Termine
-- 2026-05-20: Kickoff-Meeting
-- 2026-06-15: Erstes Review
+- **ICP-Match:** passt der Kunde in eine Persona aus [[wunschkunde-icp]]? Wenn ja: Verweis in `kontext.md` ergaenzen.
+- **Aehnliche Kunden:** gibt es vergleichbare Cases in `03-CRM/Unternehmen/`? Hinweis in `kontext.md` Sektion "Querverbindungen".
+- **Roster-Cross-Ref:** der Account-Lead ist als Wikilink zu `04-Mitarbeiter/team-mitglieder.md` gesetzt.
 
-## Risiken & Offene Punkte
-- [Risiko/Punkt 1]
-- [Risiko/Punkt 2]
+### 6. Kickoff-Setup (optional)
 
-## Lieferungen
-- [[2026-06-01-konzept-v1]] (in Arbeit)
-
-## Cross-Links
-- [[organization]] — Leistungs-Definition
-- [[wunschkunde-icp]] — passende ICP-Persona
-```
-
-### 4. Briefing-Dokument
-
-Die KI schreibt: "Erstelle ein Onboarding-Briefing für Acme nach [[kunden-onboarding]] Vorlage."
-
-Die KI füllt die Vorlage aus den Stammdaten und fragt User nach Lücken (Wer auf Kunden-Seite welche Rolle? Erwartete Risiken? Spezielle Anforderungen?).
-
-### 5. Erstes Meeting planen
-
-Die KI fragt: "Soll ich gleich einen Kickoff-Meeting-Termin vorschlagen?"
+Die KI fragt: "Soll ich einen Kickoff-Termin vorschlagen?"
 
 Bei Ja:
-- Es wird geschrieben einen Vorschlag für die Kickoff-Agenda
-- Die KI entwirft eine E-Mail an den Hauptkontakt zur Terminfindung (in [[brand]])
 
-### 6. Cross-Linking
-
-Die KI prüft:
-- Passt der Kunde in eine bestehende ICP-Persona aus [[wunschkunde-icp]]? Wenn ja: Verweis hinzufügen.
-- Gibt es ähnliche Kunden bereits im Vault, von denen dieser Kunde lernen kann?
+- Erstelle ersten Meeting-Eintrag unter `03-CRM/Meetings/YYYY-MM-DD-acme-kickoff.md` (Vorlage [[03-CRM/Meetings/_protokoll-vorlage]])
+- Entwirf eine Terminfindungs-Mail in [[brand]]-Stil
+- Mail bleibt im Chat — User schickt manuell
 
 ### 7. Confirmation
 
-> "Kunde angelegt. Ordner in `03-CRM/Unternehmen/<firma>/`, Hub gefüllt, Briefing-Dokument in `briefing.md`. Kickoff-Mail Entwurf ist im Chat — bereit zum Verschicken."
+```
+[OK] 03-CRM/Unternehmen/<slug>/kontext.md angelegt + gefuellt
+[OK] Cross-Links zu ICP / organization / Account-Lead gesetzt
+[?]  Soll ich gleich Modus "Person" fuer den Hauptkontakt starten?
+```
 
 ---
 
 ## Output
 
-Angelegt:
-- `03-CRM/Unternehmen/<firma>/_hub.md`
-- `03-CRM/Unternehmen/<firma>/briefing.md`
-- `03-CRM/Unternehmen/<firma>/meetings/` (leerer Ordner)
-- `03-CRM/Unternehmen/<firma>/lieferungen/` (leerer Ordner)
-- `03-CRM/Unternehmen/<firma>/notizen.md` (Stub)
+- `03-CRM/Unternehmen/<slug>/kontext.md` — neu
+- optional: `03-CRM/Meetings/YYYY-MM-DD-<slug>-kickoff.md` — neu
+- optional: Kickoff-Mail im Chat
 
 ## Referenzen
 
-- [[kunden-onboarding]] (Vorlage)
 - [[organization]]
 - [[wunschkunde-icp]]
 - [[brand]]
+- [[03-CRM/Meetings/_protokoll-vorlage]]
 - [[R-001-namenskonventionen]]

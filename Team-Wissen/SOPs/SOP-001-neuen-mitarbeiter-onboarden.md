@@ -1,9 +1,9 @@
 # SOP-001 — Neuen Mitarbeiter onboarden
 
-**Wofür:** Wenn ein neuer Mitarbeiter ins Team kommt.
-**Auslöser:** User sagt "wir haben einen neuen Mitarbeiter: [Name] als [Rolle]"
-**Verantwortlich:** Die KI
-**Dauer:** ~10 Minuten interaktiv mit dem User
+**Wofuer:** Wenn jemand neu im Team startet.
+**Ausloeser:** User sagt "neuer Mitarbeiter: [Name] als [Rolle]" oder "Max faengt am ... an".
+**Verantwortlich:** Die KI fuehrt durch, Operator/HR signt off.
+**Dauer:** 10-15 Minuten interaktiv.
 
 ---
 
@@ -11,112 +11,75 @@
 
 ### 1. Stammdaten erfassen
 
-Die KI fragt:
-- Vollständiger Name?
-- Position/Rolle?
-- E-Mail im Unternehmen?
-- Start-Datum?
-- Anwesenheit (Vollzeit/Teilzeit, Tage)?
-- Direkter Vorgesetzter?
+Die KI fragt (max 3 Fragen pro Block):
 
-### 2. Zugang zu Tools
+- **Vollstaendiger Name + bevorzugter Vorname?**
+- **Position / Rolle in einem Satz?**
+- **Hauptteam?** (eines von `02-Teams/<team>/`)
+- **Mail im Unternehmen?** (optional)
+- **Startdatum?**
+- **Direkter Vorgesetzter?** (Wikilink falls schon im Roster)
 
-Die KI checkt mit User welche Zugänge nötig sind:
+### 2. Eintrag im Roster
 
-- [ ] dein AI-Tool
-- [ ] AI-Tool Desktop installiert
-- [ ] Cloud-Sync Zugang (Cloud-Storage)
-- [ ] E-Mail-Account
-- [ ] Slack/Teams Account
-- [ ] CRM-Zugang
-- [ ] Andere tool-spezifische Zugänge
+Schreibe neue Zeile in `04-Mitarbeiter/team-mitglieder.md`. Es gibt **keinen Sub-Folder pro Person** — Praeferenzen leben als Spalten im Roster.
 
-Die KI erstellt eine Checklist als Action Items im Hub-File des MA.
+Spalten (Standard): Name, Rolle, Team, Mail, Start, Manager, optional Anrede/Tonfall.
 
-### 3. Ordner anlegen
+### 3. Tool- & Zugangs-Checkliste
+
+Die KI gibt der User eine Action-Liste fuer technische Setups:
+
+- [ ] AI-Tool-Zugang (Claude / Codex / Gemini, je nach Stack)
+- [ ] Cloud-Storage-Zugang (Permission auf relevante Sub-Folder dieses Vaults)
+- [ ] Mail-Account
+- [ ] Chat (Slack / Teams)
+- [ ] CRM / ERP / Tool-spezifisch — siehe `01-Firma Home/tools.md`
+- [ ] Optional Team-spezifische Zugaenge — siehe `02-Teams/<team>/kontext.md` Sektion Tools
+
+Diese Liste landet als TODO beim Operator, **nicht als Datei im Vault**.
+
+### 4. Was lesen am Tag 1
+
+Standard-Leseliste (von der KI an den neuen MA verschickbar):
+
+1. `AGENTS.md` — wie der Vault aufgebaut ist
+2. `01-Firma Home/organization.md` — was die Firma macht
+3. `01-Firma Home/brand.md` — wie wir klingen
+4. `01-Firma Home/wunschkunde-icp.md` — fuer wen wir das machen
+5. `02-Teams/<team>/kontext.md` — Team-Regeln
+6. `Team-Wissen/INDEX.md` — wo SOPs/Workflows/Richtlinien liegen
+
+### 5. Welcome-Message
+
+Die KI entwirft eine 5-10-Zeilen-Welcome-Message in [[brand]]-Stil. Inhalt:
+
+- Begruessung
+- Erste 3 Files zum Lesen (siehe Schritt 4)
+- Wie man die KI nutzt (Beispiel-Prompt)
+- Wer der Buddy / Manager ist
+
+User schickt die Message manuell — die KI postet nichts ins Mail-System.
+
+### 6. Confirmation
+
+Drei-Zeilen-Output:
 
 ```
-05-Team/
-└── <vorname-nachname>/
-    ├── _hub.md         ← Profil, Rolle, Verantwortung
-    ├── ziele.md        ← Persönliche Ziele
-    └── 1-1s/           ← Wird mit Zeit gefüllt
+[OK] Mitarbeiter im Roster: 04-Mitarbeiter/team-mitglieder.md
+[OK] Welcome-Message ist im Chat — bereit zum Verschicken
+TODO Operator: Zugaenge anlegen laut Liste oben
 ```
-
-Filename-Format: kebab-case, ohne Umlaut. Beispiel: `max-mustermann/`.
-
-### 4. Hub-Datei `_hub.md` erstellen
-
-Inhalt:
-
-```markdown
----
-type: team-member
-name: Max Mustermann
-role: Marketing Manager
-email: max@firma.de
-start-date: 2026-05-15
-status: active
-manager: [[<vorgesetzter>]]
----
-
-# Max Mustermann
-
-## Rolle
-Marketing Manager — verantwortlich für [Bereich]
-
-## Anwesenheit
-Mo–Do, 8 Std/Tag
-
-## Verantwortlichkeiten
-- [Bereich 1]
-- [Bereich 2]
-
-## Aktuelle Projekte
-- [[Projekt A]]
-- [[Projekt B]]
-
-## 1:1 Rhythmus
-Wöchentlich, [Wochentag] um [Uhrzeit]
-```
-
-### 5. Eintragen in [[team-mitglieder]]
-
-Neue Zeile in der Tabelle in `05-Team/team-mitglieder.md`.
-
-### 6. Onboarding-Plan für die ersten 30 Tage
-
-Die KI fragt User:
-- Welche Tasks soll der MA in Woche 1 erledigen?
-- Mit welchen Personen sollte er Kennenlern-Gespräche haben?
-- Welche Wissens-Dateien sollte er zuerst lesen?
-
-Die KI legt einen 30-Tage-Plan in `05-Team/<vorname-nachname>/onboarding-plan.md` an.
-
-### 7. Welcome-Message für den MA
-
-Die KI entwirft eine kurze Willkommens-Nachricht in [[brand]]-Stil, die der User dem neuen MA schicken kann. Mit:
-- Begrüßung
-- Erste Aufgaben für Tag 1
-- Wichtigste Wissens-Datei zum Start: [[01-Firma Home/brand]]
-- Wie er die KI nutzen kann
-
-### 8. Confirmation an User
-
-> "Mitarbeiter angelegt. Hub-Datei in `05-Team/<name>/_hub.md`, Plan in `onboarding-plan.md`, Eintrag in `team-mitglieder.md`. Welcome-Message ist im Chat — bereit zum Verschicken."
 
 ---
 
 ## Output
 
-Folgende Dateien wurden angelegt/aktualisiert:
-- `05-Team/<name>/_hub.md` — neu
-- `05-Team/<name>/onboarding-plan.md` — neu
-- `05-Team/<name>/ziele.md` — leerer Stub
-- `05-Team/team-mitglieder.md` — Zeile hinzugefügt
+- `04-Mitarbeiter/team-mitglieder.md` — neue Zeile
 
 ## Referenzen
 
 - [[team-mitglieder]]
 - [[brand]]
+- [[organization]]
 - [[R-001-namenskonventionen]]

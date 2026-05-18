@@ -32,14 +32,18 @@ First run is the baseline. Re-run weekly to watch the score climb.
 The audit looks for **patterns and intent**, not exact paths. Use Glob and Read to check:
 
 **Operating manual:** `AGENTS.md` (root), `CLAUDE.md` if exists.
-**Knowledge files:** `01-Firma Home/brand.md`, `01-Firma Home/wunschkunde-icp.md`, `01-Firma Home/organization.md`, `05-Team/team-mitglieder.md`.
-**Specialists:** `Team/<Name>/AGENTS.md` — count.
+**Knowledge files:** `01-Firma Home/brand.md`, `01-Firma Home/wunschkunde-icp.md`, `01-Firma Home/organization.md`, `01-Firma Home/strategy.md`, `01-Firma Home/tools.md`, `01-Firma Home/stakeholder.md`, `04-Mitarbeiter/team-mitglieder.md`.
+**Teams:** `02-Teams/<team>/kontext.md` — count (ignore `_neues-team` template).
+**Team-Skills:** `02-Teams/<team>/.claude/skills/*/SKILL.md` — count.
 **SOPs:** `Team-Wissen/SOPs/SOP-*.md` — count.
 **Workflows:** `Team-Wissen/Workflows/WF-*.md` — count.
 **Richtlinien:** `Team-Wissen/Richtlinien/R-*.md` — count.
 **Session-Logs:** `Team-Wissen/Session-Logs/YYYY/MM/*.md` — count + most recent date.
-**Customer folders:** `03-CRM/Unternehmen/<name>/_hub.md` — count.
-**Project folders:** `01-Firma Home/projekte/<name>/_hub.md` — count.
+**Externe Unternehmen:** `03-CRM/Unternehmen/<firma>/kontext.md` — count (ignore `_neues-unternehmen`).
+**Externe Personen:** `03-CRM/Personen/<name>/kontext.md` — count (ignore `_neue-person`).
+**Externe Meetings:** `03-CRM/Meetings/*.md` — count (ignore `_protokoll-vorlage`).
+**Firmen-Projekte:** `01-Firma Home/projekte/<name>/briefing.md` — count.
+**Team-Projekte:** `02-Teams/<team>/projekte/<name>/briefing.md` — count.
 **Skills:** `.claude/skills/*/SKILL.md` — count + names.
 **Connection mechanisms:**
 - MCPs: `.mcp.json`, `.claude/settings.json`

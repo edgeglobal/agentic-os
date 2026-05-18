@@ -55,7 +55,7 @@ agentic-os/
 │   └── Session-Logs/        ← Append-only Sitzungs-Gedächtnis
 │
 └── .claude/skills/          ← Firmenweite Skills (audit, onboard, level-up,
-                               neuer-kunde, session-abschluss)
+                               session-abschluss)
 ```
 
 ## Schichten (lebt im selben Folder, Permissions per Sub-Folder)

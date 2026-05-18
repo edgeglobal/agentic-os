@@ -33,7 +33,7 @@ Die KI nutzt diesen Kontext, um in eurer Sprache zu schreiben, eure Kunden zu ke
 | **Team-Folder als Mini-Firma** | Jedes Team hat eigene kontext, vorlagen, projekte, referenzen, meetings, ablage, skills |
 | **Default-Teams** | Marketing & Vertrieb, Fulfillment, Finance/HR/Admin — anpassbar oder loeschbar |
 | **Universelle Context-Files** | organization, brand, wunschkunde-icp, strategy, tools, stakeholder |
-| **5 Skills** | audit, onboard, level-up, neuer-kunde, session-abschluss |
+| **4 Skills** | audit, onboard, level-up, session-abschluss |
 | **Tool-agnostisch** | `AGENTS.md` lesen Claude, Codex, Cursor, Gemini nativ |
 
 ---
@@ -134,12 +134,11 @@ Backlinks in den jeweiligen `kontext.md`-Files erscheinen automatisch. Ueber Jah
 
 ---
 
-## Die 5 Skills
+## Die 4 Skills
 
 - **`/audit`** — pruefen wo ihr steht (Score nach 4 C's: Context, Connections, Capabilities, Cadence)
 - **`/onboard`** — 4 Modi: neue Firma einrichten, neues Team anlegen, neues Unternehmen anlegen, neue Person anlegen
 - **`/level-up`** — woechentliches Verbesserungs-Ritual
-- **`/neuer-kunde`** — schneller Workflow fuer neuen Kunden-Folder
 - **`/session-abschluss`** — Session-Log am Tagesende schreiben
 
 ---
