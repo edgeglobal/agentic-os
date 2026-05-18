@@ -1,138 +1,56 @@
-<!--
-AI OS v0.5.0 — © 2026 Gerald Eder
-Licensed under MIT — see LICENSE
--->
+# agentic-os — Agent Operating Manual
 
-# AI OS — Root Orchestration Contract
+> Tool-agnostic intro. Read this first regardless of which AI tool you are (Claude, Cursor, Codex, Gemini, generic).
 
-This is the entry point for any LLM working inside this folder. Read this file first. It defines where things live and the rules that hold the system together.
+## What this workspace is
 
-> Diese Datei ist auf Englisch, weil sie ein Standard-Vertrag für AI-Tools ist (Claude Code, Codex, Cursor und Gemini lesen `AGENTS.md` nativ). Die User-Inhalte (Vorlagen, SOPs, Wissen) sind auf Deutsch.
+`~/ai-workspace/` is the operator's living folder structure. Two top-level layers:
 
-## What this folder is
+- **`personal/`** — User-owned context (profile, notes, tasks, journal). NEVER synced to company drives.
+- **`firma/`** — Company-owned context (brand, strategy, processes, customers). Cloud-synced, role-gated.
 
-A **markdown-only AI Operating System** for teams of any size. Plain text files connected by Obsidian-style `[[wikilinks]]` and per-section `INDEX.md` hubs. No databases. The vault is human-readable, optionally syncable, and works in any text editor or AI tool.
+You operate as a colleague who knows the company context. Read the three manifests in order before doing anything:
 
-You can open this folder in Claude Code, Codex CLI, Cursor, Gemini CLI, Obsidian, or VS Code. Works locally or in shared cloud storage — the folder structure is the same.
+1. **`KONTEXT.md`** — User-specific manifest with explicit scope (what you may read, what you must NOT read)
+2. **`personal/profil.md`** — Operator profile (role, voice, working style, preferences)
+3. **`firma/ueberblick.md`** — Company overview (mission, industry, operations)
 
-## Folder map
+Then load relevant `firma/` sections by topic. Read `_rules.md` for behavior rules.
 
-```
-agentic-os/
-├── 00-Inbox/                ← Wo Mitarbeiter rohe Inputs reinwerfen
-├── 01-Firma Home/           ← Firmenweite SoT
-│   ├── organization.md      ← Was wir machen, Branche, Operations
-│   ├── brand.md             ← Voice, Tonalitaet, Beispiele
-│   ├── wunschkunde-icp.md   ← Ideal Customer Profile
-│   ├── strategy.md          ← Ziele, Prioritaeten, Metriken
-│   ├── tools.md             ← Tech-Stack (7-Bucket-Tabelle)
-│   ├── stakeholder.md       ← interne + externe Schluesselpersonen
-│   └── projekte/            ← firmenweite oder Cross-Team-Projekte
-├── 02-Teams/                ← Pro Team-Funktion eine Mini-Firma
-│   ├── marketing-vertrieb/  ← Default-Team (mit website/ als team-spezifischer Sub-Container)
-│   ├── fulfillment/         ← Default-Team
-│   ├── finance-hr-admin/    ← Default-Team
-│   └── _neues-team/         ← Vorlage (kontext, vorlagen, projekte, referenzen, meetings, ablage, skills)
-├── 03-CRM/                  ← Customer Relationship: Unternehmen, Personen, externe Meetings
-│   ├── Unternehmen/         ← externe Firmen (Kunden, Lieferanten, Partner, Berater)
-│   │   ├── _neues-unternehmen/
-│   │   └── acme-gmbh/       ← Beispiel: kontext, gespraeche, ablage
-│   ├── Personen/            ← externe Personen (Ansprechpartner, Beirat, Investoren)
-│   │   ├── _neue-person/
-│   │   └── hans-mueller/    ← Beispiel: kontext mit Verlauf, Vorlieben
-│   └── Meetings/            ← **externe** Meetings mit Unternehmen + Personen
-│       └── _protokoll-vorlage.md ← Standard-Meeting-Format
-├── 04-Mitarbeiter/          ← Roster aller Menschen in der Firma
-│   └── team-mitglieder.md   ← Liste mit Name, Rolle, Team, optionale Praeferenzen
-├── 99-Archiv/               ← Erledigtes
+## How to do work
 
-(Interne Meetings — Standups, Team-Reviews — liegen in `02-Teams/<team>/meetings/`.)
-│
-├── Team-Wissen/             ← Operating know-how
-│   ├── SOPs/                ← Standardabläufe (atomar, ein Job pro File)
-│   ├── Workflows/           ← Wiederkehrende Orchestrierungen
-│   ├── Richtlinien/         ← Statische Regeln (Naming, Ton)
-│   └── Session-Logs/        ← Append-only Sitzungs-Gedächtnis
-│
-└── .claude/skills/          ← Firmenweite Skills (audit, onboard, level-up,
-                               session-abschluss)
-```
+- **Tasks**: folder-as-status pattern. `personal/aufgaben/offen/` → `in-arbeit/` → `erledigt/`. Move files; don't edit `status:` frontmatter.
+- **Notes**: atomic, in `personal/notizen/`. Wikilinks for entities (`[[firma/kunden/unternehmen/acme]]`).
+- **Decisions**: `personal/entscheidungen/` for personal, `firma/intelligence/decisions/` for company-level.
+- **Meetings**: external in `firma/kunden/meetings/`, internal in `firma/meetings-intern/`.
 
-## Schichten (lebt im selben Folder, Permissions per Sub-Folder)
+Never write to `firma/` folders not in your scope (see `KONTEXT.md`). Never invent a "scratch" or "workspace" folder. Never write to workspace root.
 
-- **Firma-weit** (`01-Firma Home/` inkl. `projekte/`, `04-Mitarbeiter/`, `.claude/skills/`) — alle Mitarbeiter lesen, Operator + Geschaeftsfuehrung schreiben
-- **Team** als Mini-Firma (`02-Teams/<team>/`) — eigene `kontext`, `vorlagen`, `projekte`, `referenzen`, `ablage`, `.claude/skills`. Team-Mitglieder schreiben, Rest liest.
-- **Externe Unternehmen** (`03-CRM/Unternehmen/<firma>/`) — gezielte Freigaben pro Firma, auch fuer Externe (Steuerberater etc.) moeglich
-- **Externe Personen** (`03-CRM/Personen/<name>/`) — Ansprechpartner, Beirat, Investoren, Berater. Pflege durch Teams die Kontakt haben.
+## Skills + Playbooks
 
-Es gibt **keinen Sub-Folder pro Mitarbeiter**. Persoenliche Praeferenzen (Tonfall, Anrede) leben als Spalte im Roster. Brand-Voice ist firmenweit in `01-Firma Home/brand.md`, nicht pro Person.
+Two capability layers under `.claude/`:
 
+- **`.claude/skills/`** — atomic capabilities (audit, check-sync-status, level-up)
+- **`.claude/playbooks/`** — orchestrators (bootstrap, onboard-firma, weekly-review, etc.)
 
+Invoke skills by name. Playbooks are multi-step processes with HUMAN-CHECKPOINTs at branch points.
 
-Wenn ihr im Cloud-Storage arbeitet: Permissions per Sub-Folder einstellen. Wenn lokal: Folder-Permissions des Betriebssystems.
+## Setup Modes
 
-## Wikilink-basiertes CRM-Light
+This workspace was bootstrapped in one of three modes (check `.claude/settings.json` field `setupMode`):
 
-Externe Firmen und Personen werden als eigene Folder gepflegt. Meeting-Notes in `03-CRM/Meetings/` verlinken via Wikilinks zu `[[03-CRM/Unternehmen/...]]` und `[[03-CRM/Personen/...]]`. Backlinks in den jeweiligen `kontext.md`-Files bauen ueber Jahre ein Wissens-Geflecht auf — kein separates CRM-Tool noetig.
+- `solo` — local-only + GitHub backup
+- `team-cloud` — cloud-drive primary + GitHub for template updates
+- `team-enterprise` — cloud-drive + MDM + branch-strategy
 
-## Hard rules
+Adapt behavior accordingly.
 
-### 1. SSOT (Single Source of Truth)
+## Voice + Language
 
-Jeder Fakt lebt in genau einer Datei. Überall sonst wird via `[[wikilink]]` darauf verwiesen. Keine Kopie. Keine Duplikate.
+Default language: DE. Denglish OK. Never force translation. Never use em dashes (use periods, commas, colons). Specific names, specific consequences. No AI-mush.
 
-Wenn du beim Schreiben den gleichen Fakt zweimal triffst — stop. Wähle ein Zuhause für ihn, und verlinke vom anderen Ort dorthin.
+## When in doubt
 
-### 2. Memory-Vorrang
+Ask the user. Don't synthesize across files into a new "wiki" structure — that breaks position-addressed memory.
 
-Lokale Datei schlägt globalen Memory. Wenn `AGENTS.md` in diesem Ordner X sagt und dein globaler Memory Y, folge X.
-
-### 3. Wikilink-Konvention
-
-Jeder Querverweis nutzt `[[wikilinks]]`.
-
-- `[[dateiname]]` wenn der Name im Vault eindeutig ist
-- `[[ordner/dateiname]]` bei Kollisionsrisiko
-- Bild-Embeds: `![[Bilder/2026/05/2026-05-09-screenshot.png]]`
-
-Siehe [[Team-Wissen/Richtlinien/R-001-namenskonventionen]].
-
-### 4. Datums-Ordner-Schachtelung
-
-`Team-Wissen/Session-Logs/` schachtelt nach Jahr und Monat: `<root>/YYYY/MM/YYYY-MM-DD-<slug>.md`. Wenn der Ordner nicht existiert, lege ihn an.
-
-Konzept-Ordner (Wissen, Vorlagen) bleiben flach. Eine Datei pro Konzept. Das Wiki verbindet sie.
-
-### 5. Markdown-only
-
-Keine SQLite. Keine Datenbank. Session-Logs sind Markdown. Cross-Session-Lerneffekte werden in `Team-Wissen/INDEX.md` angehängt.
-
-### 6. Team-Wissen Taxonomie
-
-- **SOPs** — atomare Verfahren. Ein Job, eine Datei. Dateiname: `SOP-NNN-<titel>.md`
-- **Workflows** — wiederkehrende Multi-Step-Orchestrierungen. Dateiname: `WF-NNN-<titel>.md`. Sie referenzieren SOPs und Richtlinien, duplizieren sie aber nie.
-- **Richtlinien** — statische Referenz-Info. Dateiname: `R-NNN-<titel>.md`. SOPs und Workflows verlinken via `[[wikilink]]` darauf.
-
-### 7. Nicht-Bemächtigung
-
-Du änderst niemals:
-- User-Content in `01-Firma Home/`, `03-CRM/Unternehmen/` ohne explizite Aufgabe
-- Diese Root-`AGENTS.md`
-
-## Where to start
-
-- **Erstmals hier?** Lies `Team-Wissen/INDEX.md` und starte das Onboarding via `/onboard` Skill (Claude Code) oder sage: "Lass uns AI OS einrichten."
-- **Neuen Mitarbeiter onboarden?** Folge [[SOP-001-neuen-mitarbeiter-onboarden]].
-- **Neuen Kunden anlegen?** Folge [[SOP-002-neuen-kunden-anlegen]].
-- **Brauchst Naming-Regeln?** Siehe [[R-001-namenskonventionen]].
-- **Sehen wo dein Setup steht?** Lass `/audit` laufen.
-
-## Session-Ende
-
-Am Ende jeder Session: schreibe ein Session-Log nach `Team-Wissen/Session-Logs/YYYY/MM/YYYY-MM-DD-<slug>.md`. Das Log enthält Entscheidungen, User-Realignments und Deltas zum vorherigen Plan. Cross-links zu früheren Logs via `[[wikilink]]`.
-
-Sag "Session abschließen" oder nutze `/session-abschluss` (Claude Code).
-
----
-
-MIT License — © 2026 Gerald Eder
+For Claude-specific behavior + @-imports + Orchestrator-Pattern, see `CLAUDE.md`. For full behavior rules, see `_rules.md`.

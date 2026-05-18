@@ -13,7 +13,6 @@ Thumbs.db
 .obsidian/cache
 
 # Tool-specific files (werden bei Init erstellt, nicht committen)
-CLAUDE.md
 GEMINI.md
 AGENTS.md.codex
 .cursor/
