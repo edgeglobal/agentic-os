@@ -1,111 +1,51 @@
-<!--
-AI OS v0.5.0 — © 2026 Gerald Eder
-Licensed under MIT — see LICENSE
--->
+# Business AOS Install Guide
 
-# Installation
+## Prerequisites
 
-In 5 Minuten startklar.
+- Git
+- An AI coding tool (Claude Code, Cursor, Codex, Gemini CLI)
+- `gh` CLI (optional, for repo creation)
+- macOS or Linux (Windows via WSL)
 
-## Schritt 1 — Repo herunterladen
-
-```bash
-git clone https://github.com/edgeglobal/agentic-os.git mein-ai-os
-cd mein-ai-os
-```
-
-Oder als ZIP: gehe auf `https://github.com/edgeglobal/agentic-os`, klicke **Code** → **Download ZIP**, entpacke und benenne den Folder um.
-
-Wenn du keinen eigenen git-Workflow brauchst:
+## Install
 
 ```bash
-rm -rf .git
+cd ~
+mkdir -p ai-os
+cd ai-os
+git clone https://github.com/gerald-eder/business-aos.git "Business AOS"
+cd "Business AOS"
 ```
 
-## Schritt 2 — Folder dorthin legen wo er gebraucht wird
+## Bootstrap
 
-Drei typische Optionen:
+Open the workspace in your AI tool, then invoke the `bootstrap` playbook. It will:
 
-- **Lokal** auf deinem Rechner (nur du arbeitest damit)
-- **Im Cloud-Storage** (du teilst mit dem Team — Permissions per Sub-Folder)
-- **In einem Git-Repo** (fuer technische Teams)
+1. Verify the folder name is `Business AOS` (auto-rename if needed).
+2. Ask for setup mode: `solo`, `team-cloud`, or `team-enterprise`.
+3. Configure workspace location (move to Cloud-Drive mount if team mode).
+4. Configure git remotes (`origin` = your repo, `upstream` = `gerald-eder/business-aos`).
+5. Run a sync-status check.
+6. Pick a first role-template.
+7. Detect optional `../Personal AI/` sibling.
 
-AI OS funktioniert in allen drei Varianten. Die Folder-Struktur ist die gleiche.
+## Combined Install (with Personal AI)
 
-## Schritt 3 — In deinem AI-Tool oeffnen
-
-Oeffne den Folder in einem Tool das `AGENTS.md` versteht — Claude Code, Codex CLI, Cursor, Gemini CLI, oder ein anderes.
-
-Sag zur KI:
-
-> **Initialisiere dich in diesem Ordner.**
-
-Die KI liest `AGENTS.md` und stellt sich kurz vor.
-
-## Schritt 4 — Onboarding-Wizard starten
-
-Sag zur KI:
-
-> **Nutze den Onboarding-Skill im Modus Firma.**
-
-Du bekommst ein Interview in 7 Sektionen:
-
-1. **Eure Firma** — was ihr macht, Branche, Mitbewerber
-2. **Eure Kunden** — wer kauft bei euch, welche Probleme loest ihr
-3. **Eure Positionierung** — wie ihr euch unterscheidet
-4. **Eure Markenstimme** — Tonalitaet, Beispiel-Texte (Originale einfuegen!)
-5. **Eure Strategie** — Quartals-Prioritaeten, 12-Monate-Ziel, Metriken
-6. **Operations & Tools** — welche Software ihr nutzt
-7. **Stakeholder** — interne + externe Schluesselpersonen
-
-Aus den Antworten fuellt die KI alle Files in `01-Firma Home/` automatisch. Plus den Mitarbeiter-Roster in `04-Mitarbeiter/`.
-
-Dauer: 20-30 Minuten.
-
-## Schritt 5 — Neue Mitarbeiter, Teams, Kunden, Kontakte
-
-Der gleiche `/onboard` Skill hat drei weitere Modi:
-
-- **Team** — neuen Team-Folder anlegen mit Kontext-Interview
-- **Unternehmen** — neuer Kunden- oder Lieferanten-Folder
-- **Person** — neuer externer Ansprechpartner
-
-Sag einfach:
-
-> **Wir haben einen neuen Kunden: Acme GmbH**
-> **Wir haben einen neuen Mitarbeiter: Max Mustermann**
-> **Leg ein neues Team an: Produktion**
-
-Die KI erkennt was du willst und startet den richtigen Modus.
-
-## Schritt 6 — Taegliche Nutzung
-
-Beispiele was du mit der KI machen kannst:
-
-| Aufgabe | Sag zur KI |
-|---|---|
-| Meeting-Protokoll schreiben | "Ich hatte gerade ein Meeting mit Acme. Hier die Stichpunkte: ..." |
-| Angebot vorbereiten | "Erstelle ein Angebot fuer Acme basierend auf unserem Standardangebot" |
-| LinkedIn-Post entwerfen | "Schreib einen LinkedIn-Post zum Thema X in unserem Stil" |
-| Inbox verarbeiten | "Verarbeite die Inbox" |
-| Audit | "Lauf /audit und zeig mir wo wir stehen" |
-| Tag abschliessen | "Schliess die Session ab" |
-
-Die KI nutzt jeden Kontext aus deinen Files — Markenstimme, Wunschkunden, Kunden-Historie, laufende Projekte.
-
-## Schritt 7 — Updates
-
-Wenn du eine neue Version von AI OS holen willst:
+If you also want the Personal AI companion:
 
 ```bash
-git pull
+cd ~/ai-os
+git clone https://github.com/gerald-eder/personal-ai.git "Personal AI"
+cd "Personal AI"
+# Run Personal AI's bootstrap playbook
 ```
 
-Oder neue ZIP herunterladen. Deine Inhalte in `01-Firma Home/`, `02-Teams/`, `03-CRM/`, `04-Mitarbeiter/` bleiben — nur die Struktur-Files (`AGENTS.md`, `README.md`, Skills) werden aktualisiert.
+Both repos will auto-detect each other.
 
-## Hilfe
+## Setup Modes
 
-- **Alle Konzepte:** lies `AGENTS.md` und die `README.md` in jedem Folder
-- **SOPs fuer wiederkehrende Workflows:** `Team-Wissen/SOPs/`
-- **Naming-Regeln:** `Team-Wissen/Richtlinien/R-001-namenskonventionen.md`
-- **Issues:** [GitHub Issues](https://github.com/edgeglobal/agentic-os/issues)
+- **solo** — single operator, local-only, GitHub as backup.
+- **team-cloud** — 5-20 people, Cloud-Drive primary (Google Drive, OneDrive, Dropbox).
+- **team-enterprise** — 50+ people, Cloud-Drive plus MDM.
+
+Cloud-Drive provider docs live in [`docs/INSTALL-google.md`](docs/INSTALL-google.md), [`docs/INSTALL-onedrive.md`](docs/INSTALL-onedrive.md), etc. (create per provider during onboarding).
