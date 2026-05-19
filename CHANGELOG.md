@@ -5,6 +5,39 @@ Alle nennenswerten Änderungen an AI OS werden hier dokumentiert.
 Format folgt [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
+## [2.0.0] — 2026-05-19
+
+### BREAKING
+
+- **Repo split.** `gerald-eder/agentic-os` renamed to `gerald-eder/business-aos`. The personal layer has moved to the new repo `gerald-eder/personal-ai`. Old clones with the personal layer still work, but updates will only land in the business layer.
+- **Single-business scope.** Multi-biz folder `_weitere-unternehmen/` removed. One repo clone = one business. For multiple businesses, clone the repo multiple times.
+- **Flattened structure.** All content from former `firma/*` is now at repo root.
+
+### Added
+
+- Optional sibling-detection: if `../Personal AI/` exists, business CLAUDE.md loads it as operator context.
+- `bootstrap` playbook now includes folder-auto-rename to standardize the workspace folder name to `Business AOS`.
+
+### Changed
+
+- `CLAUDE.md`, `AGENTS.md`, `_rules.md`, `KONTEXT.md`, `README.md`, `INSTALL.md` all rewritten as business-scoped.
+- Skills `audit`, `level-up`, `check-sync-status` rescoped to business layer only.
+
+### Removed
+
+- `personal/` folder (extracted to `gerald-eder/personal-ai`).
+- `firma/_weitere-unternehmen/` (multi-biz concept dropped).
+- `promote-multi-biz` playbook (if it existed).
+
+### Migration
+
+For users on v0.5.x or v1.0-dev:
+
+1. Pull the v2.0.0 main branch.
+2. If you had content in `firma/`, it now lives at repo root.
+3. If you had content in `personal/`, clone `gerald-eder/personal-ai` as a sibling.
+4. If you used `_weitere-unternehmen/`, that data is preserved in your local v1.0-dev branch; create separate Business AOS clones per business and move content manually.
+
 ## [0.5.0] — 2026-05-11
 
 ### Changed
