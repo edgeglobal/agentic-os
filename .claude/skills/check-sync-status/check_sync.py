@@ -39,9 +39,8 @@ def get_stub_files(paths: list[str]) -> list[str]:
 
 CRITICAL_PATHS = [
     "KONTEXT.md", "AGENTS.md", "CLAUDE.md", "_rules.md",
-    "personal/profil.md",
-    "firma/ueberblick.md", "firma/marke.md", "firma/wunschkunde-icp.md",
-    "firma/strategie.md", "firma/tools.md",
+    "ueberblick.md", "marke.md", "wunschkunde-icp.md",
+    "strategie.md", "tools.md",
     ".claude/settings.json",
 ]
 

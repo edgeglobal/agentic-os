@@ -14,8 +14,7 @@ Inspects critical workspace files for Cloud-Drive Stub-Status. Stubs = files tha
 ## Critical paths (must be local, not stub)
 
 - `KONTEXT.md`, `AGENTS.md`, `CLAUDE.md`, `_rules.md`
-- `personal/profil.md`
-- `firma/ueberblick.md`, `firma/marke.md`, `firma/wunschkunde-icp.md`, `firma/strategie.md`, `firma/tools.md`
+- `ueberblick.md`, `marke.md`, `wunschkunde-icp.md`, `strategie.md`, `tools.md`
 - `.claude/settings.json`
 - All files in `.claude/skills/`, `.claude/playbooks/`, `.claude/role-templates/`
 
